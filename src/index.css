@@ -1,0 +1,315 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  img {
+    will-change: opacity;
+    opacity: 0;
+  }
+
+  img[loaded] {
+    opacity: 1;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0%;
+    }
+    100% {
+      opacity: 100%;
+    }
+  }
+
+  .make_visible {
+    @apply pointer-events-auto opacity-100;
+  }
+
+  .imgfloat-right {
+    @apply float-right !mb-8 !mt-0 md:ml-4 md:mr-article-float-margin md:w-article-width-half;
+  }
+
+  .imgfloat-left {
+    @apply float-left !mb-8 !mt-0 md:ml-article-float-margin md:mr-4 md:w-article-width-half;
+  }
+
+  .imgfloat-right figcaption,
+  .imgfloat-left figcaption {
+    @apply !max-w-none;
+  }
+}
+
+@layer components {
+  .drop_cap {
+    @apply float-left -mb-2 -mt-2 pr-2 text-[5rem] leading-none;
+  }
+
+  /* --------- Pinned section --------- */
+
+  .pinned_section {
+    @apply relative grid min-h-screen w-full text-lg md:text-xl;
+  }
+
+  .pin_block .pinned_background {
+    @apply sticky left-0 top-0 h-screen;
+  }
+
+  .pin_clipped .pinned_background_wrapper {
+    @apply fixed top-0;
+  }
+
+  .pin_clipped .pinned_background {
+    @apply absolute h-full min-h-screen [-webkitclip-path:inset(0px_0px)] [clip-path:inset(0px_0px)];
+  }
+
+  /* ----- FOR THE PINNED FOREGROUND ----- */
+
+  .pinned_foreground {
+    @apply pointer-events-none relative col-start-1 row-start-1 flex flex-col items-center text-pretty text-white;
+  }
+
+  .pinned_foreground a {
+    @apply cursor-pointer text-neutral-50 underline;
+  }
+
+  .pinned_foreground a:hover {
+    @apply text-neutral-200;
+  }
+
+  .chapter_wrapper {
+    @apply pointer-events-none flex h-screen w-full flex-col justify-center;
+  }
+
+  .chapter_wrapper > * {
+    @apply pointer-events-auto text-balance;
+  }
+
+  .chapter_dark_background > * {
+    @apply bg-[rgba(0,0,0,0.6)] p-5 backdrop-blur-sm;
+  }
+
+  .chapter_wrapper.right {
+    @apply items-center md:items-end;
+  }
+  .chapter_wrapper.right p {
+    @apply text-center md:max-w-[50%];
+  }
+
+  .chapter_wrapper.left {
+    @apply items-center md:items-start;
+  }
+  .chapter_wrapper.left > * {
+    @apply text-center md:max-w-[50%];
+  }
+
+  .chapter_wrapper.center {
+    @apply items-center;
+  }
+  .chapter_wrapper.center > * {
+    @apply text-center md:max-w-[80%];
+  }
+
+  /* ----- FOR THE PINNED BACKGROUND  ----- */
+
+  .pinned_background {
+    @apply col-start-1 row-start-1 w-full;
+  }
+
+  .pinned_background_wrapper {
+    @apply sticky top-0 h-full max-h-screen w-full transform-gpu;
+  }
+
+  .pinned_background_wrapper:first-child {
+    @apply opacity-100;
+  }
+
+  .full_screen_media {
+    @apply pointer-events-none absolute left-0 top-0 h-full max-h-screen w-full object-cover opacity-0 transition-opacity duration-700 ease-in-out;
+  }
+
+  .full_screen_media img {
+    @apply h-screen w-full object-cover;
+  }
+
+  .full_screen_media figcaption {
+    @apply absolute bottom-0 right-0 mr-4 hidden w-fit text-nowrap bg-neutral-900/70 px-2 pt-1 font-base text-xs text-white opacity-100 sm:block sm:text-xs;
+  }
+}
+
+@layer base {
+  @font-face {
+    font-family: Libre Baskerville;
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src:
+      local('Libre Baskerville Italic'),
+      local('LibreBaskervilleItalic'),
+      url(https://cdn.theconversation.com/_next/static/media/libre-baskerville-style-italic-weight-400-latin-ext.85514b24.woff2)
+        format('woff2');
+    unicode-range: u+0100-024f, u+0259, u+1e??, u+2020, u+20a0-20ab, u+20ad-20cf, u+2113, u+2c60-2c7f, u+a720-a7ff;
+  }
+
+  @font-face {
+    font-family: Libre Baskerville;
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src:
+      local('Libre Baskerville Italic'),
+      local('LibreBaskervilleItalic'),
+      url(https://cdn.theconversation.com/_next/static/media/libre-baskerville-style-italic-weight-400-latin.88dcecf9.woff2)
+        format('woff2');
+    unicode-range: u+00??, u+0131, u+0152-0153, u+02bb-02bc, u+02c6, u+02da, u+02dc, u+2000-206f, u+2074, u+20ac, u+2122,
+      u+2191, u+2193, u+2212, u+2215, u+feff, u+fffd;
+  }
+
+  @font-face {
+    font-family: Libre Baskerville;
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src:
+      local('Libre Baskerville'),
+      local('LibreBaskerville'),
+      url(https://cdn.theconversation.com/_next/static/media/libre-baskerville-style-normal-weight-400-latin-ext.3e020463.woff2)
+        format('woff2');
+    unicode-range: u+0100-024f, u+0259, u+1e??, u+2020, u+20a0-20ab, u+20ad-20cf, u+2113, u+2c60-2c7f, u+a720-a7ff;
+  }
+
+  @font-face {
+    font-family: Libre Baskerville;
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src:
+      local('Libre Baskerville'),
+      local('LibreBaskerville'),
+      url(https://cdn.theconversation.com/_next/static/media/libre-baskerville-style-normal-weight-400-latin.640ece80.woff2)
+        format('woff2');
+    unicode-range: u+00??, u+0131, u+0152-0153, u+02bb-02bc, u+02c6, u+02da, u+02dc, u+2000-206f, u+2074, u+20ac, u+2122,
+      u+2191, u+2193, u+2212, u+2215, u+feff, u+fffd;
+  }
+
+  @font-face {
+    font-family: Libre Baskerville;
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src:
+      local('Libre Baskervill Bold'),
+      local('LibreBaskervilleBold'),
+      url(https://cdn.theconversation.com/_next/static/media/libre-baskerville-style-normal-weight-700-latin-ext.6ed04a86.woff2)
+        format('woff2');
+    unicode-range: u+0100-024f, u+0259, u+1e??, u+2020, u+20a0-20ab, u+20ad-20cf, u+2113, u+2c60-2c7f, u+a720-a7ff;
+  }
+
+  @font-face {
+    font-family: Libre Baskerville;
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src:
+      local('Libre Baskerville Bold'),
+      local('LibreBaskervilleBold'),
+      url(https://cdn.theconversation.com/_next/static/media/libre-baskerville-style-normal-weight-700-latin.d5fafdc7.woff2)
+        format('woff2');
+    unicode-range: u+00??, u+0131, u+0152-0153, u+02bb-02bc, u+02c6, u+02da, u+02dc, u+2000-206f, u+2074, u+20ac, u+2122,
+      u+2191, u+2193, u+2212, u+2215, u+feff, u+fffd;
+  }
+
+  @font-face {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src:
+      local('Montserrat Regular'),
+      local('MontserratRegular'),
+      url(https://cdn.theconversation.com/_next/static/media/montserrat-style-normal-weight-500-latin-ext.e1411e0a.woff2)
+        format('woff2');
+    unicode-range: u+0100-024f, u+0259, u+1e??, u+2020, u+20a0-20ab, u+20ad-20cf, u+2113, u+2c60-2c7f, u+a720-a7ff;
+  }
+
+  @font-face {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src:
+      local('Montserrat Regular'),
+      local('MontserratRegular'),
+      url(https://cdn.theconversation.com/_next/static/media/montserrat-style-normal-weight-500-latin.f23ca911.woff2)
+        format('woff2');
+    unicode-range: u+00??, u+0131, u+0152-0153, u+02bb-02bc, u+02c6, u+02da, u+02dc, u+2000-206f, u+2074, u+20ac, u+2122,
+      u+2191, u+2193, u+2212, u+2215, u+feff, u+fffd;
+  }
+
+  @font-face {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src:
+      local('Montserrat Bold'),
+      local('MontserratBold'),
+      url(https://cdn.theconversation.com/_next/static/media/montserrat-style-normal-weight-700-latin-ext.da2ba7e2.woff2)
+        format('woff2');
+    unicode-range: u+0100-024f, u+0259, u+1e??, u+2020, u+20a0-20ab, u+20ad-20cf, u+2113, u+2c60-2c7f, u+a720-a7ff;
+  }
+
+  @font-face {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src:
+      local('Montserrat Bold'),
+      local('MontserratBold'),
+      url(https://cdn.theconversation.com/_next/static/media/montserrat-style-normal-weight-700-latin.387f0342.woff2)
+        format('woff2');
+    unicode-range: u+00??, u+0131, u+0152-0153, u+02bb-02bc, u+02c6, u+02da, u+02dc, u+2000-206f, u+2074, u+20ac, u+2122,
+      u+2191, u+2193, u+2212, u+2215, u+feff, u+fffd;
+  }
+
+  @font-face {
+    font-family: Libre-Baskerville-fallback;
+    font-style: normal;
+    font-weight: 400;
+    size-adjust: 115%;
+    src: local('Georgia');
+  }
+
+  @font-face {
+    font-family: Libre-Baskerville-fallback;
+    font-style: italic;
+    font-weight: 400;
+    size-adjust: 105%;
+    src: local('Georgia Italic');
+  }
+
+  @font-face {
+    font-family: Libre-Baskerville-fallback;
+    font-style: normal;
+    font-weight: 700;
+    size-adjust: 115%;
+    src: local('Georgia');
+  }
+
+  @font-face {
+    font-family: Montserrat-fallback;
+    font-style: normal;
+    font-weight: 700;
+    size-adjust: 95%;
+    src: local('Verdana Bold');
+  }
+
+  @font-face {
+    font-family: Montserrat-fallback;
+    font-style: normal;
+    font-weight: 400;
+    size-adjust: 105%;
+    src: local('Verdana');
+  }
+}
