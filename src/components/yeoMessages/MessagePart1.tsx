@@ -12,14 +12,16 @@ export default function MessagePart1({ className }: { className: string }) {
       <PhoneGraphic className='mum_phone absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 opacity-20'>
         {/* Phone content */}
         <div className='flex h-full flex-col justify-between bg-neutral-700 p-4'>
-          <div className='max-h-[20%] flex-grow'>
+          <div className=''>
             <h1 className='pt-2 text-center text-3xl font-bold text-white sm:pt-4'>Ben's mum</h1>
           </div>
-          <img
-            className='not_fullscreen_media absolute left-1/2 top-20 mx-auto -translate-x-1/2 mix-blend-screen sm:top-24'
-            src='https://images.theconversation.com/files/640839/original/file-20250106-15-mqdogb.gif?ixlib=rb-4.1.0&q=10&auto=format&w=150&fit=crop&dpr=1'
-            alt=''
-          />
+          <div className='aspect-[30/17] h-full max-h-20'>
+            <img
+              className='not_fullscreen_media mx-auto mix-blend-screen'
+              src='https://images.theconversation.com/files/640839/original/file-20250106-15-mqdogb.gif?ixlib=rb-4.1.0&q=10&auto=format&w=150&fit=crop&dpr=1'
+              alt='audio waveform'
+            />
+          </div>
           <div className='mx-auto grid grid-cols-3 gap-4 text-center text-3xl text-neutral-700'>
             <div className='aspect-square h-12 place-content-center rounded-full bg-neutral-200 sm:h-14'>1</div>
             <div className='aspect-square h-12 place-content-center rounded-full bg-neutral-200 sm:h-14'>2</div>
@@ -60,14 +62,16 @@ export default function MessagePart1({ className }: { className: string }) {
       <PhoneGraphic className='aunt_phone'>
         {/* Phone content */}
         <div className='flex h-full flex-col justify-between bg-neutral-700 p-4'>
-          <div className='max-h-[20%] flex-grow'>
+          <div className=''>
             <h1 className='pt-2 text-center text-3xl font-bold text-white sm:pt-4'>Auntie</h1>
           </div>
-          <img
-            className='not_fullscreen_media absolute left-1/2 top-20 mx-auto -translate-x-1/2 mix-blend-screen sm:top-24'
-            src='https://images.theconversation.com/files/640839/original/file-20250106-15-mqdogb.gif?ixlib=rb-4.1.0&q=10&auto=format&w=150&fit=crop&dpr=1'
-            alt=''
-          />
+          <div className='aspect-[30/17] h-full max-h-20'>
+            <img
+              className='not_fullscreen_media mx-auto mix-blend-screen'
+              src='https://images.theconversation.com/files/640839/original/file-20250106-15-mqdogb.gif?ixlib=rb-4.1.0&q=10&auto=format&w=150&fit=crop&dpr=1'
+              alt='audio waveform'
+            />
+          </div>
           <div className='mx-auto grid grid-cols-3 gap-4 text-center text-3xl text-neutral-700'>
             <div className='aspect-square h-12 place-content-center rounded-full bg-neutral-200 sm:h-14'>1</div>
             <div className='aspect-square h-12 place-content-center rounded-full bg-neutral-200 sm:h-14'>2</div>
