@@ -6,11 +6,9 @@ import { DarkModeProvider } from './context/DarkModeProvider'
 import MarkdownProvider from './providers/MarkdownProvider'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
-import TextPlugin from 'gsap/TextPlugin'
 
 export default function App() {
   gsap.registerPlugin(ScrollTrigger)
-  gsap.registerPlugin(TextPlugin)
 
   useEffect(() => {
     document.querySelectorAll('img').forEach((img) => {
