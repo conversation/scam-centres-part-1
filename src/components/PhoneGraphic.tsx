@@ -5,7 +5,7 @@ export default function PhoneGraphic({ className, children }: { className?: stri
   return (
     <div
       className={cn(
-        'relative mx-auto flex aspect-[8/16] h-[90%] flex-col overflow-clip rounded-xl border-4 border-neutral-900 bg-neutral-900 font-base text-black drop-shadow-xl max-sm:max-h-[500px] sm:max-h-[600px] sm:max-w-[90%]',
+        'relative mx-auto flex aspect-[8/16] h-[90%] flex-col overflow-clip rounded-xl border-4 border-neutral-900 bg-neutral-900 font-base text-black drop-shadow-xl max-sm:max-h-[500px] sm:max-h-[700px] sm:max-w-[90%]',
         className
       )}
     >
