@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer utilities {
+  #root {
+    @apply overflow-x-clip;
+  }
+
   img {
     will-change: opacity;
     opacity: 0;
@@ -27,11 +31,11 @@
   }
 
   .imgfloat-right {
-    @apply float-right !mb-8 !mt-0 md:ml-4 md:mr-article-float-margin md:w-article-width-half;
+    @apply float-right !mb-8 !mt-0 sm:ml-4 sm:mr-article-float-margin sm:w-article-width-half;
   }
 
   .imgfloat-left {
-    @apply float-left !mb-8 !mt-0 md:ml-article-float-margin md:mr-4 md:w-article-width-half;
+    @apply float-left !mb-8 !mt-0 sm:ml-article-float-margin sm:mr-4 sm:w-article-width-half;
   }
 
   .imgfloat-right figcaption,
@@ -48,7 +52,7 @@
   /* --------- Pinned section --------- */
 
   .pinned_section {
-    @apply relative grid min-h-screen w-full text-lg md:text-xl;
+    @apply relative grid min-h-screen w-full text-lg sm:text-xl;
   }
 
   .pin_block .pinned_background {
@@ -69,6 +73,10 @@
     @apply pointer-events-none relative col-start-1 row-start-1 flex flex-col items-center text-pretty text-white;
   }
 
+  .lower_third .pinned_foreground {
+    @apply max-sm:pt-[66.66vh];
+  }
+
   .pinned_foreground a {
     @apply cursor-pointer text-neutral-50 underline;
   }
@@ -85,29 +93,33 @@
     @apply pointer-events-auto text-balance;
   }
 
+  .lower_third .chapter_wrapper {
+    @apply max-sm:h-[calc(100vh/3)];
+  }
+
   .chapter_dark_background > * {
     @apply bg-[rgba(0,0,0,0.6)] p-5 backdrop-blur-sm;
   }
 
   .chapter_wrapper.right {
-    @apply items-center md:items-end;
+    @apply items-center sm:items-end;
   }
   .chapter_wrapper.right p {
-    @apply text-center md:max-w-[50%];
+    @apply text-center sm:max-w-[50%];
   }
 
   .chapter_wrapper.left {
-    @apply items-center md:items-start;
+    @apply items-center sm:items-start;
   }
   .chapter_wrapper.left > * {
-    @apply text-center md:max-w-[50%];
+    @apply text-center sm:max-w-[50%];
   }
 
   .chapter_wrapper.center {
     @apply items-center;
   }
   .chapter_wrapper.center > * {
-    @apply text-center md:max-w-[80%];
+    @apply text-center sm:max-w-[80%];
   }
 
   /* ----- FOR THE PINNED BACKGROUND  ----- */
@@ -128,7 +140,7 @@
     @apply pointer-events-none absolute left-0 top-0 h-full max-h-screen w-full object-cover opacity-0 transition-opacity duration-700 ease-in-out;
   }
 
-  .full_screen_media img {
+  .full_screen_media img:not(.not_fullscreen_media) {
     @apply h-screen w-full object-cover;
   }
 
