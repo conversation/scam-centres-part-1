@@ -23,10 +23,11 @@ export function ScrollSection({
   const sectionRef = useRef<HTMLDivElement>(null)
   const setHeaderHeight = useSetAtom(headerHeight)
 
+  // General scroll section
   useGSAP(
     () => {
       const section = sectionRef.current
-      if (!section) return
+      if (!section || section.classList.contains('intro_section') || section.classList.contains('yeo_messages')) return
 
       const steps = section.querySelectorAll('.pinned_foreground .step')
       const backgroundElements = section.querySelectorAll('.pinned_background_wrapper > *')
@@ -36,6 +37,7 @@ export function ScrollSection({
 
         if (element) {
           ScrollTrigger.create({
+            // markers: true,
             trigger: step,
             start: 'top 90%',
             onEnter: () => {
@@ -58,6 +60,7 @@ export function ScrollSection({
       if (!section || !section.classList.contains('intro_section')) return
 
       setHeaderHeight(section.clientHeight)
+      const windowWidth = 640
 
       const steps = section.querySelectorAll('.pinned_foreground .step')
       const foreground = section.querySelectorAll('.pinned_foreground')
@@ -77,104 +80,164 @@ export function ScrollSection({
               scrub: true
             }
           })
-          .to(card, { rotationY: window.innerWidth < 768 ? 0 : 2, duration: 1, ease: 'power1.inOut' }, 0)
-          .to(background, { xPercent: window.innerWidth < 768 ? 0 : -90, duration: 1, ease: 'power1.inOut' }, 0)
-          .to(card, { rotationY: window.innerWidth < 768 ? 0 : -2, duration: 1, ease: 'power1.inOut' })
-          .to(background, { xPercent: window.innerWidth < 768 ? 0 : 0, duration: 1, ease: 'power1.inOut' }, '<')
+          .to(card, { rotationY: window.innerWidth < windowWidth ? 0 : 2, duration: 1, ease: 'power1.inOut' }, 0)
+          .to(
+            background,
+            { xPercent: window.innerWidth < windowWidth ? 0 : -100, duration: 1, ease: 'power1.inOut' },
+            0
+          )
+          .to(card, { rotationY: window.innerWidth < windowWidth ? 0 : -2, duration: 1, ease: 'power1.inOut' })
+          .to(background, { xPercent: window.innerWidth < windowWidth ? 0 : 0, duration: 1, ease: 'power1.inOut' }, '<')
           .to(card, { rotationY: 0, duration: 1, ease: 'power1.inOut' })
 
-        // First message animates on
-        gsap
-          .timeline()
-          .fromTo(
-            '.introTextMessage',
-            { alpha: 0, yPercent: 10 },
-            { yPercent: 0, alpha: 1, ease: 'power1.inOut', duration: 0.7, delay: 0.5, stagger: 0.5 }
-          )
-
         // Animate message delete
-        ScrollTrigger.create({
-          // markers: true,
-          trigger: steps[0],
-          start: 'top 90%',
-          onEnter: () => {
-            // Make visible
-            gsap.to('#introDeleteIcon', { display: 'block', alpha: 1, duration: 0.3, ease: 'power1.inOut' })
-            gsap.to('.introTextMessage', {
+        gsap
+          .timeline({
+            scrollTrigger: {
+              // markers: true,
+              trigger: steps[0],
+              start: 'top 90%',
+              end: `center ${window.innerWidth < 640 ? 83.33333333 : 60}%`,
+              scrub: true
+            }
+          })
+          .to('#introDeleteIcon', { display: 'block', autoAlpha: 1, duration: 0.3, ease: 'power1.inOut' })
+          .to(
+            '.introTextMessage',
+            {
               display: 'block',
               backgroundColor: '#ecc3C0',
               duration: 0.3,
               ease: 'power1.inOut'
-            })
+            },
+            0
+          )
 
-            // After pause make invisible
-            gsap.to('#introDeleteIcon', { alpha: 0, duration: 0.3, ease: 'power1.inOut', delay: 1.5 })
-            gsap.to('.introTextMessage', { alpha: 0, duration: 0.3, ease: 'power1.inOut', delay: 1.5, stagger: -0.5 })
-          },
-          onLeaveBack: () => {
-            // Make delete invisible
-            gsap.to('#introDeleteIcon', { alpha: 0, duration: 0.3, ease: 'power1.inOut' })
-            gsap.to('.introTextMessage', { backgroundColor: '#cefdef', duration: 0.3, ease: 'power1.inOut' })
+        // Animate angry reply
+        gsap
+          .timeline({
+            scrollTrigger: {
+              // markers: true,
+              trigger: steps[1],
+              start: 'top 90%',
+              end: `center ${window.innerWidth < 640 ? 83.33333333 : 60}%`,
+              scrub: true
+            }
+          })
+          .to('#introDeleteIcon', { xPercent: -150, autoAlpha: 0, ease: 'power1.inOut' })
+          .to('.introTextMessage', { xPercent: -150, autoAlpha: 0, ease: 'power1.inOut' }, 0)
+          .fromTo('.introTextMessageReply', { yPercent: 150 }, { yPercent: 0, autoAlpha: 1, ease: 'power1.inOut' }, 0.2)
+          .to('#introBlockBtn', { backgroundColor: '#d8352a', color: 'white', ease: 'power1.inOut' }, 0)
 
-            // Make message visible
-            gsap.to('.introTextMessage', { display: 'block', alpha: 1, duration: 0.3, ease: 'power1.inOut' })
-          }
-        })
-
-        ScrollTrigger.create({
-          markers: true,
-          trigger: steps[1],
-          start: 'top 90%',
-          onEnter: () => {
-            gsap.to('#introDeleteIcon', { display: 'none', alpha: 0 })
-            gsap.to('.introTextMessage', { display: 'none', alpha: 0 })
-            // gsap.to('.introTextMessageReply', { alpha: 1, duration: 0.3, ease: 'power1.inOut' })
-
-            gsap.to('#introReportBtn', {
-              color: 'white',
-              backgroundColor: '#d8352a',
-              duration: 0.3,
+        // Animate scammer reply
+        gsap
+          .timeline({
+            scrollTrigger: {
+              // markers: true,
+              trigger: steps[2],
+              start: 'top 90%',
+              end: `center ${window.innerWidth < 640 ? 83.33333333 : 60}%`,
+              scrub: true
+            }
+          })
+          .to(['#introDeleteIcon', '.introTextMessage'], { display: 'none' })
+          .fromTo(
+            '.scammerReply',
+            { y: 200, autoAlpha: 0 },
+            {
+              y: document.querySelector('.introTextMessageReply')!.clientHeight + 16,
+              autoAlpha: 1,
               ease: 'power1.inOut'
-            })
-            gsap.to('#introBlockBtn', {
-              color: 'white',
-              backgroundColor: '#d8352a',
-              duration: 0.3,
-              ease: 'power1.inOut'
-            })
-          },
-          onLeaveBack: () => {
-            gsap.to('#introDeleteIcon', { alpha: 1, duration: 0.3, ease: 'power1.inOut' })
-            gsap.to('.introTextMessage', { alpha: 1, duration: 0.3, ease: 'power1.inOut' })
-
-            gsap.to('#introReportBtn', {
-              color: '#148cb8',
-              backgroundColor: '#d6d6da',
-              duration: 0.3,
-              ease: 'power1.inOut'
-            })
-            gsap.to('#introBlockBtn', {
-              color: '#148cb8',
-              backgroundColor: '#d6d6da',
-              duration: 0.3,
-              ease: 'power1.inOut'
-            })
-          }
-        })
-
-        // ScrollTrigger.create({
-        //   markers: true,
-        //   trigger: steps[2],
-        //   start: 'top 90%',
-        //   onEnter: () => {
-        //     gsap.to('#introDeleteIcon', { display: 'none' })
-        //     gsap.to('.introTextMessage', { display: 'none' })
-
-        //     gsap.to('.introTextMessageReply', { opacity: 1, duration: 0.3, ease: 'power1.inOut' })
-        //   },
-        //   onLeaveBack: () => {}
-        // })
+            },
+            0
+          )
       }
+    },
+    { scope: sectionRef }
+  )
+
+  // Yeo messages animation
+  useGSAP(
+    () => {
+      const section = sectionRef.current
+      if (!section || !section.classList.contains('yeo_messages')) return
+
+      const steps = section.querySelectorAll('.pinned_foreground .step')
+      const backgroundElements = section.querySelectorAll('.pinned_background_wrapper > *')
+
+      const cantWaitheight = document.querySelector('.cant_wait')?.clientHeight
+      const dontKnowheight = document.querySelector('.dont_know')?.clientHeight
+
+      if (!steps.length || !backgroundElements.length || !cantWaitheight || !dontKnowheight) return
+
+      gsap.set('.mum_message_section', { y: cantWaitheight + dontKnowheight })
+
+      // First message animates on
+      gsap
+        .timeline({
+          scrollTrigger: {
+            // markers: true,
+            trigger: steps[0],
+            start: 'top 90%',
+            end: `center ${window.innerWidth < 640 ? 83.33333333 : 60}%`,
+            scrub: true
+          }
+        })
+        .to('.aunt_phone', { scale: 0.6, xPercent: -30, yPercent: 10, ease: 'power1.inOut' })
+        .fromTo(
+          '.mum_phone',
+          { xPercent: -60, yPercent: -60, autoAlpha: 0, ease: 'power1.inOut' },
+          { xPercent: -50, yPercent: -50, autoAlpha: 1, ease: 'power1.inOut' },
+          0
+        )
+
+      steps.forEach((step, index) => {
+        if (index !== 0 && index < 3) {
+          ScrollTrigger.create({
+            // markers: true,
+            trigger: step,
+            start: 'top 90%',
+            onEnter: () => {
+              backgroundElements[index].classList.add('make_visible')
+              if (window.innerWidth > 640) {
+                backgroundElements[index - 1].classList.remove('make_visible')
+              }
+            },
+            onLeaveBack: () => {
+              backgroundElements[index].classList.remove('make_visible')
+              if (window.innerWidth > 640) {
+                backgroundElements[index - 1].classList.add('make_visible')
+              }
+            }
+          })
+        }
+      })
+
+      gsap
+        .timeline({
+          scrollTrigger: {
+            // markers: true,
+            trigger: steps[3],
+            start: 'top bottom',
+            end: `center ${window.innerWidth < 640 ? 90 : 60}%`,
+            scrub: true
+          }
+        })
+        .to('.cant_wait', { alpha: 1 })
+        .to('.mum_message_section', { y: cantWaitheight - 28 }, 0)
+
+      gsap
+        .timeline({
+          scrollTrigger: {
+            // markers: true,
+            trigger: steps[4],
+            start: 'top bottom',
+            end: `center ${window.innerWidth < 640 ? 90 : 60}%`,
+            scrub: true
+          }
+        })
+        .to('.dont_know', { alpha: 1 })
+        .to('.mum_message_section', { y: cantWaitheight - dontKnowheight - 28 - 8 }, 0)
     },
     { scope: sectionRef }
   )
