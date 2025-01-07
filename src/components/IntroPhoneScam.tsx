@@ -1,56 +1,56 @@
+import PhoneGraphic from './PhoneGraphic'
+
 export default function IntroPhoneScam() {
   return (
-    <div className='grid h-full md:place-content-center'>
-      <div className='aspect-[8/16] h-[80vh] max-h-[650px] max-sm:mx-auto max-sm:mt-16 md:[perspective:100px]'>
-        <div className='phone_card to-transparent relative h-full w-full origin-center rounded-lg bg-gradient-to-t from-neutral-800 md:[transform-style:preserve-3d] md:[transform:rotateY(-2deg)]'>
-          {/* Phone element */}
-          <div className='flex h-full w-full flex-col overflow-hidden rounded-xl bg-neutral-800 font-base text-black drop-shadow-xl'>
-            <div className='flex items-center justify-end bg-neutral-900 px-4 py-2'>
-              <div className='flex h-4 items-end justify-end gap-1'>
-                <div className='h-[30%] w-1 bg-neutral-100'></div>
-                <div className='h-[50%] w-1 bg-neutral-100'></div>
-                <div className='h-[70%] w-1 bg-neutral-100'></div>
-                <div className='h-[90%] w-1 bg-neutral-500'></div>
-              </div>
-            </div>
-
-            <div className='flex-grow space-y-2 bg-neutral-700 pb-1 pt-2 transition-[height] duration-150 ease-in-out'>
+    <div className='relative h-full after:content-[""] max-sm:h-2/3 max-sm:bg-neutral-800 max-sm:after:absolute max-sm:after:top-[99.5%] max-sm:after:h-20 max-sm:after:w-full max-sm:after:bg-gradient-to-b max-sm:after:from-neutral-800'>
+      <div className='h-full pt-12 sm:[perspective:100px]'>
+        <div className='phone_card relative h-full w-full origin-center place-content-center rounded-lg sm:[transform-style:preserve-3d] sm:[transform:rotateY(-2deg)]'>
+          <PhoneGraphic>
+            <div className='flex-grow space-y-4 bg-neutral-700 pb-1 pt-2 transition-[height] duration-150 ease-in-out'>
               <div className='bg-neutral-400 p-1 text-center text-xs font-light opacity-55'>1 UNREAD MESSAGE</div>
 
               <div className='mx-auto w-min rounded bg-neutral-300 px-2 py-1 text-center text-xs'>Today</div>
 
-              {/* Message element */}
-              <div className='introTextMessage relative ml-3 max-w-[80%] rounded-md bg-green-100 p-2 shadow-md'>
-                <p className='text-xs md:text-sm'>Hello! Do you have time to talk about your car warranty?</p>
-                <p className='mt-1 text-right align-middle text-xs text-neutral-500 [font-size:x-small]'>
-                  {new Date().getHours()}:{new Date().getMinutes()}
-                </p>
-              </div>
-
-              <div className='introTextMessage relative ml-3 max-w-[65%] rounded-md bg-green-100 p-2 shadow-md'>
-                <p className='text-xs md:text-sm'>We need your name and date of birth...</p>
-                <p className='mt-1 text-right align-middle text-xs text-neutral-500 [font-size:x-small]'>
-                  {new Date().getHours()}:{new Date().getMinutes()}
-                </p>
-                <div
-                  className='absolute bottom-[-2rem] right-0 max-w-[80%] rounded-md bg-red-300 p-1 opacity-0 shadow-md'
-                  id='introDeleteIcon'
-                >
-                  <p className='text-xs'>Delete</p>
+              <div className='relative w-full'>
+                <div className='introTextMessage relative ml-3 max-w-[80%] animate-pulse rounded-md bg-green-100 p-2 shadow-md'>
+                  <p className='text-xs md:text-sm'>
+                    Do you want to make some money? Message "Yes" to earn $4,000 a week!
+                  </p>
+                  <p className='mt-1 text-right align-middle text-xs text-neutral-500 [font-size:x-small]'>
+                    {new Date().getHours()}:{new Date().getMinutes().toString().padStart(2, '0')}
+                  </p>
+                  <div
+                    className='absolute bottom-[-2rem] right-0 max-w-[80%] rounded-md bg-red-300 p-1 opacity-0 shadow-md'
+                    id='introDeleteIcon'
+                  >
+                    <p className='text-xs'>Delete</p>
+                  </div>
                 </div>
-              </div>
 
-              <div className='introTextMessageReply relative ml-auto mr-3 max-w-[65%] rounded-md bg-indigo-50 p-2 opacity-0 shadow-md'>
-                <p className='text-xs md:text-sm'>Stop messaging me!</p>
-                <p className='mt-1 text-right align-middle text-xs text-neutral-500 [font-size:x-small]'>
-                  {new Date().getHours()}:{new Date().getMinutes()}
-                </p>
+                <div className='introTextMessageReply absolute right-0 top-0 ml-auto mr-3 max-w-[65%] rounded-md bg-indigo-50 p-2 opacity-0 shadow-md'>
+                  <p className='text-xs md:text-sm'>Stop messaging me!</p>
+                  <p className='mt-1 text-right align-middle text-xs text-neutral-500 [font-size:x-small]'>
+                    {new Date().getHours()}:{new Date().getMinutes()}
+                  </p>
+                </div>
+
+                <div className='scammerReply absolute left-0 top-0 ml-3 max-w-[80%] rounded-md bg-green-100 p-2 opacity-0 shadow-md'>
+                  <p className='text-xs md:text-sm'>I'm not who you think I am...</p>
+                  <p className='mt-1 text-right align-middle text-xs text-neutral-500 [font-size:x-small]'>
+                    {new Date().getHours()}:{new Date().getMinutes().toString().padStart(2, '0')}
+                  </p>
+                  <div
+                    className='absolute bottom-[-2rem] right-0 max-w-[80%] rounded-md bg-red-300 p-1 opacity-0 shadow-md'
+                    id='introDeleteIcon'
+                  >
+                    <p className='text-xs'>Delete</p>
+                  </div>
+                </div>
               </div>
             </div>
 
+            {/* Block and report */}
             <div className='space-y-2 bg-neutral-300 py-2'>
-              {/* <div className='text-center text-xs max-md:hidden'>This sender is not in your contacts.</div> */}
-
               <div className='grid gap-2 px-2 font-bold'>
                 <div className='flex items-center justify-evenly gap-2'>
                   <div
@@ -66,16 +66,14 @@ export default function IntroPhoneScam() {
                     Report
                   </div>
                 </div>
-                {/* <div className='rounded bg-neutral-200 px-2 py-1 text-center text-xs text-blue-600'>
-                  Add to Contacts
-                </div> */}
               </div>
             </div>
 
+            {/* Send message */}
             <div className='flex items-center space-x-2 bg-neutral-900 px-4 py-3'>
               <div className='flex-grow'>
-                <div className='flex min-h-6 items-center rounded-full bg-neutral-800 px-4 py-2 text-neutral-200'>
-                  <span className='flex-grow text-xs leading-none text-neutral-600 max-md:hidden'>Type a message</span>
+                <div className='flex min-h-7 items-center rounded-full bg-neutral-800 px-4 py-2 text-neutral-200'>
+                  <span className='flex-grow text-xs leading-none text-neutral-600'>Type a message</span>
                 </div>
               </div>
               <div className='flex items-center space-x-2'>
@@ -83,7 +81,7 @@ export default function IntroPhoneScam() {
                   <svg
                     height='15'
                     width='15'
-                    xmlns='http://www.w3.org/2000/svg'
+                    xmlns='http:www.w3.org/2000/svg'
                     viewBox='0 0 512 512'
                     xmlSpace='preserve'
                     className='fill-neutral-50'
@@ -93,7 +91,7 @@ export default function IntroPhoneScam() {
                 </div>
               </div>
             </div>
-          </div>
+          </PhoneGraphic>
         </div>
       </div>
     </div>
