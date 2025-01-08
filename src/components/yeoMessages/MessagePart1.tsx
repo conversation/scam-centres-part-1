@@ -10,6 +10,8 @@ export default function MessagePart1({ className }: { className: string }) {
       )}
     >
       <PhoneGraphic className='mum_phone absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 opacity-20'>
+        <p className='absolute left-1/2 mt-1 -translate-x-1/2 font-base text-sm text-white'>10:47am</p>
+
         {/* Phone content */}
         <div className='flex h-full flex-col justify-between bg-neutral-700 p-4'>
           <div className=''>
@@ -59,7 +61,9 @@ export default function MessagePart1({ className }: { className: string }) {
           </div>
         </div>
       </PhoneGraphic>
-      <PhoneGraphic className='aunt_phone'>
+      <PhoneGraphic className='aunt_phone relative'>
+        <p className='absolute left-1/2 mt-1 -translate-x-1/2 font-base text-sm text-white'>March 13 2024</p>
+
         {/* Phone content */}
         <div className='flex h-full flex-col justify-between bg-neutral-700 p-4'>
           <div className=''>

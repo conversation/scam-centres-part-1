@@ -10,6 +10,7 @@ export default function MessagePart2({ className }: { className: string }) {
       )}
     >
       <PhoneGraphic>
+        <p className='absolute left-1/2 mt-1 -translate-x-1/2 font-base text-sm text-white'>March 13 2024</p>
         {/* Phone content */}
         <div className='flex h-full flex-col bg-neutral-700 p-4'>
           <div className='mx-auto grid w-fit grid-cols-2 rounded-md bg-neutral-800 text-sm text-white'>
@@ -49,7 +50,7 @@ export default function MessagePart2({ className }: { className: string }) {
                 </div>
               </div>
               <div className='place-content-center text-right text-xs text-neutral-300'>
-                <p>11:50am</p>
+                <p>3.49pm</p>
               </div>
             </div>
             <div className='grid w-full grid-cols-[15%_1fr_30%] items-center gap-4 py-1 sm:py-2'>
@@ -76,7 +77,7 @@ export default function MessagePart2({ className }: { className: string }) {
                 </div>
               </div>
               <div className='place-content-center text-right text-xs text-neutral-300'>
-                <p>11:22am</p>
+                <p>3.26pm</p>
               </div>
             </div>
             <div className='grid w-full grid-cols-[15%_1fr_30%] items-center gap-4 py-1 sm:py-2'>
@@ -103,7 +104,7 @@ export default function MessagePart2({ className }: { className: string }) {
                 </div>
               </div>
               <div className='place-content-center text-right text-xs text-neutral-300'>
-                <p>10:48am</p>
+                <p>1.03pm</p>
               </div>
             </div>
             <div className='grid w-full grid-cols-[15%_1fr_30%] items-center gap-4 py-1 sm:py-2'>
@@ -130,7 +131,7 @@ export default function MessagePart2({ className }: { className: string }) {
                 </div>
               </div>
               <div className='place-content-center text-right text-xs text-neutral-300'>
-                <p>9:16am</p>
+                <p>12:36pm</p>
               </div>
             </div>
             <div className='grid w-full grid-cols-[15%_1fr_30%] items-center gap-4 py-1 sm:py-2'>
@@ -157,7 +158,7 @@ export default function MessagePart2({ className }: { className: string }) {
                 </div>
               </div>
               <div className='place-content-center text-right text-xs text-neutral-300'>
-                <p>8:20am</p>
+                <p>11.54am</p>
               </div>
             </div>
             <div className='grid w-full grid-cols-[15%_1fr_30%] items-center gap-4 py-1 sm:py-2'>
@@ -184,7 +185,7 @@ export default function MessagePart2({ className }: { className: string }) {
                 </div>
               </div>
               <div className='place-content-center text-right text-xs text-neutral-300'>
-                <p>8:08am</p>
+                <p>11.13am</p>
               </div>
             </div>
             <div className='grid w-full grid-cols-[15%_1fr_30%] items-center gap-4 py-1 sm:py-2'>
@@ -211,7 +212,7 @@ export default function MessagePart2({ className }: { className: string }) {
                 </div>
               </div>
               <div className='place-content-center text-right text-xs text-neutral-300'>
-                <p>7:55am</p>
+                <p>10.47am</p>
               </div>
             </div>
           </div>

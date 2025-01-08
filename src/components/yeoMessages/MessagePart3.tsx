@@ -10,6 +10,7 @@ export default function MessagePart3({ className }: { className: string }) {
       )}
     >
       <PhoneGraphic className=''>
+        {/* <p className='absolute left-1/2 mt-1 -translate-x-1/2 font-base text-sm text-white'>March 14</p> */}
         <div className='relative flex h-full flex-col justify-between bg-neutral-900'>
           {/* Contact name */}
           <div className='relative z-10 mx-auto flex w-full items-center justify-between bg-neutral-600 px-2 py-1 text-center text-xs'>
@@ -75,19 +76,27 @@ export default function MessagePart3({ className }: { className: string }) {
                     />
                   </g>
                 </svg>
-                <p className='mt-1 text-right align-middle text-xs text-neutral-500 [font-size:x-small]'>3:47pm</p>
+                <p className='mt-1 text-right align-middle text-xs text-neutral-500 [font-size:x-small]'>
+                  March 13 7:22pm
+                </p>
               </div>
               <div className='relative ml-auto mr-3 max-w-[45%] rounded-md bg-indigo-50 p-2 shadow-md'>
                 <p className='text-xs md:text-sm'>Mum, here's my location.</p>
-                <p className='mt-1 text-right align-middle text-xs text-neutral-500 [font-size:x-small]'>3:47pm</p>
+                <p className='mt-1 text-right align-middle text-xs text-neutral-500 [font-size:x-small]'>
+                  March 13 7:22pm
+                </p>
               </div>
               <div className='cant_wait relative ml-auto mr-3 max-w-[70%] rounded-md bg-indigo-50 p-2 opacity-0 shadow-md'>
                 <p className='text-xs md:text-sm'>Don’t think can wait anymore. Deadline is by tomorrow’s evening.</p>
-                <p className='mt-1 text-right align-middle text-xs text-neutral-500 [font-size:x-small]'>4:29pm</p>
+                <p className='mt-1 text-right align-middle text-xs text-neutral-500 [font-size:x-small]'>
+                  March 14 8:21pm
+                </p>
               </div>
               <div className='dont_know relative ml-auto mr-3 max-w-[70%] rounded-md bg-indigo-50 p-2 opacity-0 shadow-md'>
                 <p className='text-xs md:text-sm'>I don’t know what is going to happen later on.</p>
-                <p className='mt-1 text-right align-middle text-xs text-neutral-500 [font-size:x-small]'>5:03pm</p>
+                <p className='mt-1 text-right align-middle text-xs text-neutral-500 [font-size:x-small]'>
+                  March 14 10:27pm
+                </p>
               </div>
             </div>
           </div>
