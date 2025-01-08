@@ -16,9 +16,9 @@ export default function IntroPhoneScam() {
                   <p className='text-xs md:text-sm'>
                     Do you want to make some money? Message "Yes" to earn $4,000 a week!
                   </p>
-                  <p className='mt-1 text-right align-middle text-xs text-neutral-500 [font-size:x-small]'>
+                  {/* <p className='mt-1 text-right align-middle text-xs text-neutral-500 [font-size:x-small]'>
                     {new Date().getHours()}:{new Date().getMinutes().toString().padStart(2, '0')}
-                  </p>
+                  </p> */}
                   <div
                     className='absolute bottom-[-2rem] right-0 max-w-[80%] rounded-md bg-red-300 p-1 opacity-0 shadow-md'
                     id='introDeleteIcon'
@@ -29,16 +29,16 @@ export default function IntroPhoneScam() {
 
                 <div className='introTextMessageReply absolute right-0 top-0 ml-auto mr-3 max-w-[65%] rounded-md bg-indigo-50 p-2 opacity-0 shadow-md'>
                   <p className='text-xs md:text-sm'>Stop messaging me!</p>
-                  <p className='mt-1 text-right align-middle text-xs text-neutral-500 [font-size:x-small]'>
-                    {new Date().getHours()}:{new Date().getMinutes()}
-                  </p>
+                  {/* <p className='mt-1 text-right align-middle text-xs text-neutral-500 [font-size:x-small]'>
+                    {new Date().getHours()}:{new Date().getMinutes().toString().padStart(2, '0')}
+                  </p> */}
                 </div>
 
                 <div className='scammerReply absolute left-0 top-0 ml-3 max-w-[80%] rounded-md bg-green-100 p-2 opacity-0 shadow-md'>
                   <p className='text-xs md:text-sm'>I'm not who you think I am...</p>
-                  <p className='mt-1 text-right align-middle text-xs text-neutral-500 [font-size:x-small]'>
+                  {/* <p className='mt-1 text-right align-middle text-xs text-neutral-500 [font-size:x-small]'>
                     {new Date().getHours()}:{new Date().getMinutes().toString().padStart(2, '0')}
-                  </p>
+                  </p> */}
                   <div
                     className='absolute bottom-[-2rem] right-0 max-w-[80%] rounded-md bg-red-300 p-1 opacity-0 shadow-md'
                     id='introDeleteIcon'
