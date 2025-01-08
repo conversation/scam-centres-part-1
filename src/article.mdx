@@ -24,11 +24,13 @@ import TitleTextBorder from './components/TitleTextBorder'
   standfirst="Inside Southeast Asia's slavery scam centres"
 />
 
-<ScrollSection className='intro_section lower_third'>
+<ScrollSection className='intro_section lower_third mb-10'>
   <ScrollForeground className=''>
-    <ScrollTextChapter className='ml-auto  md:mt-0' position='left'>
-      Chances are, you’ve received a text message like this from a scammer.<br/><br/>
-      <span className='text-neutral-400 text-sm'>Keep scrolling <svg class="mx-auto animate-bounce mt-2 h-6 w-6 text-neutral-400" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewBox="0 0 24 24" stroke="currentColor"><path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg></span>
+    <ScrollTextChapter className='ml-auto md:mt-0 ' position='left'>
+      <div className='relative '>
+        Chances are, you’ve received a text message like this from a scammer.
+        <span className='text-neutral-400 text-sm absolute top-full left-1/2 -translate-x-1/2 translate-y-1/3'>Keep scrolling <svg className="mx-auto animate-bounce mt-2 h-6 w-6 text-neutral-400" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" viewBox="0 0 24 24" stroke="currentColor"><path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg></span>
+      </div>
     </ScrollTextChapter>
     <ScrollTextChapter step={true} position='right' className=''>
       You’ve probably been annoyed and immediately deleted it.
