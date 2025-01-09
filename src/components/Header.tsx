@@ -6,7 +6,7 @@ export default function Header() {
 
   return (
     <>
-      <header className='not-prose pointer-events-auto absolute top-0 z-50 -mb-[48px] w-full bg-neutral-900 px-4 py-2'>
+      <header className='not-prose pointer-events-auto w-full bg-neutral-900 px-4 py-2'>
         <nav className=''>
           <ul className='flex items-center gap-2'>
             <li className='mt-px flex items-center'>
