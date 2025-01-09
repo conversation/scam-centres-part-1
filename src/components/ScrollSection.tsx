@@ -1,4 +1,4 @@
-import { ReactNode, useRef } from 'react'
+import { ReactNode, useEffect, useRef } from 'react'
 import { addClassToChildren, cn } from '../util/helpers'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
@@ -22,12 +22,24 @@ export function ScrollSection({
 }) {
   const sectionRef = useRef<HTMLDivElement>(null)
   const setHeaderHeight = useSetAtom(headerHeight)
+  const windowWidth = 0
+
+  useEffect(() => {
+    const refreshScrolls = () => ScrollTrigger.refresh()
+
+    window.addEventListener('resize', refreshScrolls)
+
+    return () => {
+      window.removeEventListener('resize', refreshScrolls)
+    }
+  }, [])
 
   // General scroll section
   useGSAP(
     () => {
       const section = sectionRef.current
-      if (!section || section.classList.contains('intro_section') || section.classList.contains('yeo_messages')) return
+      if (!section || className!.includes('intro_section') || className!.includes('yeo_messages')) return
+      // if (!section || section.classList.contains('intro_section') || section.classList.contains('yeo_messages')) return
 
       const steps = section.querySelectorAll('.pinned_foreground .step')
       const backgroundElements = section.querySelectorAll('.pinned_background_wrapper > *')
@@ -57,15 +69,15 @@ export function ScrollSection({
   useGSAP(
     () => {
       const section = sectionRef.current
-      if (!section || !section.classList.contains('intro_section')) return
+      if (!section || !className!.includes('intro_section')) return
 
       setHeaderHeight(section.clientHeight)
-      const windowWidth = 640
 
       const steps = section.querySelectorAll('.pinned_foreground .step')
       const foreground = section.querySelectorAll('.pinned_foreground')
       const background = section.querySelectorAll('.pinned_background')
       const card = section.querySelectorAll('.phone_card')
+      const windowWidth2 = 640
 
       if (foreground && background && card) {
         // Card moves side to side and perspective changes
@@ -80,14 +92,18 @@ export function ScrollSection({
               scrub: true
             }
           })
-          .to(card, { rotationY: window.innerWidth < windowWidth ? 0 : 2, duration: 1, ease: 'power1.inOut' }, 0)
+          .to(card, { rotationY: window.innerWidth < windowWidth2 ? 0 : 2, duration: 1, ease: 'power1.inOut' }, 0)
           .to(
             background,
-            { xPercent: window.innerWidth < windowWidth ? 0 : -100, duration: 1, ease: 'power1.inOut' },
+            { xPercent: window.innerWidth < windowWidth2 ? 0 : -100, duration: 1, ease: 'power1.inOut' },
             0
           )
-          .to(card, { rotationY: window.innerWidth < windowWidth ? 0 : -2, duration: 1, ease: 'power1.inOut' })
-          .to(background, { xPercent: window.innerWidth < windowWidth ? 0 : 0, duration: 1, ease: 'power1.inOut' }, '<')
+          .to(card, { rotationY: window.innerWidth < windowWidth2 ? 0 : -2, duration: 1, ease: 'power1.inOut' })
+          .to(
+            background,
+            { xPercent: window.innerWidth < windowWidth2 ? 0 : 0, duration: 1, ease: 'power1.inOut' },
+            '<'
+          )
           .to(card, { rotationY: 0, duration: 1, ease: 'power1.inOut' })
 
         // Animate message delete
@@ -97,7 +113,7 @@ export function ScrollSection({
               // markers: true,
               trigger: steps[0],
               start: 'top 90%',
-              end: `center ${window.innerWidth < 640 ? 83.33333333 : 60}%`,
+              end: `center ${window.innerWidth < windowWidth ? 83.33333333 : 60}%`,
               scrub: true
             }
           })
@@ -120,7 +136,7 @@ export function ScrollSection({
               // markers: true,
               trigger: steps[1],
               start: 'top 90%',
-              end: `center ${window.innerWidth < 640 ? 83.33333333 : 60}%`,
+              end: `center ${window.innerWidth < windowWidth ? 83.33333333 : 60}%`,
               scrub: true
             }
           })
@@ -136,7 +152,7 @@ export function ScrollSection({
               // markers: true,
               trigger: steps[2],
               start: 'top 90%',
-              end: `center ${window.innerWidth < 640 ? 83.33333333 : 60}%`,
+              end: `center ${window.innerWidth < windowWidth ? 83.33333333 : 60}%`,
               scrub: true
             }
           })
@@ -160,7 +176,7 @@ export function ScrollSection({
   useGSAP(
     () => {
       const section = sectionRef.current
-      if (!section || !section.classList.contains('yeo_messages')) return
+      if (!section || !className!.includes('yeo_messages')) return
 
       const steps = section.querySelectorAll('.pinned_foreground .step')
       const backgroundElements = section.querySelectorAll('.pinned_background_wrapper > *')
@@ -179,37 +195,41 @@ export function ScrollSection({
             // markers: true,
             trigger: steps[0],
             start: 'top 90%',
-            end: `center ${window.innerWidth < 640 ? 83.33333333 : 60}%`,
+            end: `center ${window.innerWidth < windowWidth ? 83.33333333 : 60}%`,
             scrub: true
           }
         })
         .to('.aunt_phone', { scale: 0.6, xPercent: -30, yPercent: 10, ease: 'power1.inOut' })
         .fromTo(
           '.mum_phone',
-          { xPercent: -60, yPercent: -60, autoAlpha: 0, ease: 'power1.inOut' },
-          { xPercent: -50, yPercent: -50, autoAlpha: 1, ease: 'power1.inOut' },
+          { xPercent: -20, yPercent: -20, autoAlpha: 0, ease: 'power1.inOut' },
+          { xPercent: 0, yPercent: 0, autoAlpha: 1, ease: 'power1.inOut' },
           0
         )
 
-      steps.forEach((step, index) => {
-        if (index !== 0 && index < 3) {
-          ScrollTrigger.create({
-            // markers: true,
-            trigger: step,
-            start: 'top 90%',
-            onEnter: () => {
-              backgroundElements[index].classList.add('make_visible')
-              if (window.innerWidth > 640) {
-                backgroundElements[index - 1].classList.remove('make_visible')
-              }
-            },
-            onLeaveBack: () => {
-              backgroundElements[index].classList.remove('make_visible')
-              if (window.innerWidth > 640) {
-                backgroundElements[index - 1].classList.add('make_visible')
-              }
-            }
-          })
+      ScrollTrigger.create({
+        // markers: true,
+        trigger: steps[1],
+        start: 'top 90%',
+        onEnter: () => {
+          backgroundElements[2].classList.add('make_visible')
+          backgroundElements[0].classList.remove('make_visible')
+        },
+        onLeaveBack: () => {
+          backgroundElements[2].classList.remove('make_visible')
+          backgroundElements[0].classList.add('make_visible')
+        }
+      })
+
+      ScrollTrigger.create({
+        // markers: true,
+        trigger: steps[2],
+        start: 'top 90%',
+        onEnter: () => {
+          backgroundElements[3].classList.add('make_visible')
+        },
+        onLeaveBack: () => {
+          backgroundElements[3].classList.remove('make_visible')
         }
       })
 
@@ -219,7 +239,7 @@ export function ScrollSection({
             // markers: true,
             trigger: steps[3],
             start: 'top bottom',
-            end: `center ${window.innerWidth < 640 ? 90 : 60}%`,
+            end: `center ${window.innerWidth < windowWidth ? 90 : 60}%`,
             scrub: true
           }
         })
@@ -232,7 +252,7 @@ export function ScrollSection({
             // markers: true,
             trigger: steps[4],
             start: 'top bottom',
-            end: `center ${window.innerWidth < 640 ? 90 : 60}%`,
+            end: `center ${window.innerWidth < windowWidth ? 90 : 60}%`,
             scrub: true
           }
         })
