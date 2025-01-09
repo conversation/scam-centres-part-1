@@ -5,7 +5,7 @@ export default function MessagePart2({ className }: { className: string }) {
   return (
     <div
       className={cn(
-        'h-full place-content-center after:absolute after:top-[99.5%] after:h-20 after:w-full after:bg-gradient-to-b after:from-neutral-800 after:content-[""] max-sm:h-2/3 max-sm:bg-neutral-800',
+        'full_screen_media h-full place-content-center bg-neutral-800 after:absolute after:top-[99.5%] after:h-20 after:w-full after:bg-gradient-to-b after:from-neutral-800 after:content-[""]',
         className
       )}
     >
@@ -27,7 +27,15 @@ export default function MessagePart2({ className }: { className: string }) {
 
           <div className='mx-auto w-full divide-y text-white sm:space-y-2'>
             <div className='grid w-full grid-cols-[15%_1fr_30%] items-center gap-4 py-1 sm:py-2'>
-              <div className='aspect-square place-content-center rounded-full bg-neutral-400'>
+              <img
+                src='https://images.theconversation.com/files/641408/original/file-20250109-15-kx43t5.png?ixlib=rb-4.1.0&q=10&auto=format&w=100&h=100&fit=crop&dpr=1'
+                alt=''
+                className='not_fullscreen_media mx-auto aspect-square h-7 sm:h-10'
+              />
+              {/* <div className='aspect-square place-content-center rounded-full bg-neutral-400'>
+
+
+
                 <svg
                   className='mx-auto aspect-square h-5 sm:h-6'
                   viewBox='0 0 16 16'
@@ -40,7 +48,7 @@ export default function MessagePart2({ className }: { className: string }) {
                   />
                   <path d='M14 12C14 10.3431 12.6569 9 11 9H5C3.34315 9 2 10.3431 2 12V15H14V12Z' fill='#000000' />
                 </svg>
-              </div>
+              </div> */}
               <div>
                 <div>
                   <p className='font-bold'>Mum</p>
@@ -54,7 +62,7 @@ export default function MessagePart2({ className }: { className: string }) {
               </div>
             </div>
             <div className='grid w-full grid-cols-[15%_1fr_30%] items-center gap-4 py-1 sm:py-2'>
-              <div className='aspect-square place-content-center rounded-full bg-neutral-400'>
+              {/* <div className='aspect-square place-content-center rounded-full bg-neutral-400'>
                 <svg
                   className='mx-auto aspect-square h-5 sm:h-6'
                   viewBox='0 0 16 16'
@@ -67,7 +75,12 @@ export default function MessagePart2({ className }: { className: string }) {
                   />
                   <path d='M14 12C14 10.3431 12.6569 9 11 9H5C3.34315 9 2 10.3431 2 12V15H14V12Z' fill='#000000' />
                 </svg>
-              </div>
+              </div> */}
+              <img
+                src='https://images.theconversation.com/files/641408/original/file-20250109-15-kx43t5.png?ixlib=rb-4.1.0&q=10&auto=format&w=100&h=100&fit=crop&dpr=1'
+                alt=''
+                className='not_fullscreen_media mx-auto aspect-square h-7 sm:h-10'
+              />
               <div>
                 <div>
                   <p className='font-bold'>Mum</p>
@@ -81,7 +94,7 @@ export default function MessagePart2({ className }: { className: string }) {
               </div>
             </div>
             <div className='grid w-full grid-cols-[15%_1fr_30%] items-center gap-4 py-1 sm:py-2'>
-              <div className='aspect-square place-content-center rounded-full bg-neutral-400'>
+              {/* <div className='aspect-square place-content-center rounded-full bg-neutral-400'>
                 <svg
                   className='mx-auto aspect-square h-5 sm:h-6'
                   viewBox='0 0 16 16'
@@ -94,7 +107,12 @@ export default function MessagePart2({ className }: { className: string }) {
                   />
                   <path d='M14 12C14 10.3431 12.6569 9 11 9H5C3.34315 9 2 10.3431 2 12V15H14V12Z' fill='#000000' />
                 </svg>
-              </div>
+              </div> */}
+              <img
+                src='https://images.theconversation.com/files/641408/original/file-20250109-15-kx43t5.png?ixlib=rb-4.1.0&q=10&auto=format&w=100&h=100&fit=crop&dpr=1'
+                alt=''
+                className='not_fullscreen_media mx-auto aspect-square h-7 sm:h-10'
+              />
               <div>
                 <div>
                   <p className='font-bold'>Mum</p>
@@ -108,7 +126,7 @@ export default function MessagePart2({ className }: { className: string }) {
               </div>
             </div>
             <div className='grid w-full grid-cols-[15%_1fr_30%] items-center gap-4 py-1 sm:py-2'>
-              <div className='aspect-square place-content-center rounded-full bg-neutral-400'>
+              {/* <div className='aspect-square place-content-center rounded-full bg-neutral-400'>
                 <svg
                   className='mx-auto aspect-square h-5 sm:h-6'
                   viewBox='0 0 16 16'
@@ -121,7 +139,12 @@ export default function MessagePart2({ className }: { className: string }) {
                   />
                   <path d='M14 12C14 10.3431 12.6569 9 11 9H5C3.34315 9 2 10.3431 2 12V15H14V12Z' fill='#000000' />
                 </svg>
-              </div>
+              </div> */}
+              <img
+                src='https://images.theconversation.com/files/641408/original/file-20250109-15-kx43t5.png?ixlib=rb-4.1.0&q=10&auto=format&w=100&h=100&fit=crop&dpr=1'
+                alt=''
+                className='not_fullscreen_media mx-auto aspect-square h-7 sm:h-10'
+              />
               <div>
                 <div>
                   <p className='font-bold'>Mum</p>
@@ -135,7 +158,7 @@ export default function MessagePart2({ className }: { className: string }) {
               </div>
             </div>
             <div className='grid w-full grid-cols-[15%_1fr_30%] items-center gap-4 py-1 sm:py-2'>
-              <div className='aspect-square place-content-center rounded-full bg-neutral-400'>
+              {/* <div className='aspect-square place-content-center rounded-full bg-neutral-400'>
                 <svg
                   className='mx-auto aspect-square h-5 sm:h-6'
                   viewBox='0 0 16 16'
@@ -148,7 +171,12 @@ export default function MessagePart2({ className }: { className: string }) {
                   />
                   <path d='M14 12C14 10.3431 12.6569 9 11 9H5C3.34315 9 2 10.3431 2 12V15H14V12Z' fill='#000000' />
                 </svg>
-              </div>
+              </div> */}
+              <img
+                src='https://images.theconversation.com/files/641408/original/file-20250109-15-kx43t5.png?ixlib=rb-4.1.0&q=10&auto=format&w=100&h=100&fit=crop&dpr=1'
+                alt=''
+                className='not_fullscreen_media mx-auto aspect-square h-7 sm:h-10'
+              />
               <div>
                 <div>
                   <p className='font-bold'>Mum</p>
@@ -162,7 +190,7 @@ export default function MessagePart2({ className }: { className: string }) {
               </div>
             </div>
             <div className='grid w-full grid-cols-[15%_1fr_30%] items-center gap-4 py-1 sm:py-2'>
-              <div className='aspect-square place-content-center rounded-full bg-neutral-400'>
+              {/* <div className='aspect-square place-content-center rounded-full bg-neutral-400'>
                 <svg
                   className='mx-auto aspect-square h-5 sm:h-6'
                   viewBox='0 0 16 16'
@@ -175,7 +203,12 @@ export default function MessagePart2({ className }: { className: string }) {
                   />
                   <path d='M14 12C14 10.3431 12.6569 9 11 9H5C3.34315 9 2 10.3431 2 12V15H14V12Z' fill='#000000' />
                 </svg>
-              </div>
+              </div> */}
+              <img
+                src='https://images.theconversation.com/files/641408/original/file-20250109-15-kx43t5.png?ixlib=rb-4.1.0&q=10&auto=format&w=100&h=100&fit=crop&dpr=1'
+                alt=''
+                className='not_fullscreen_media mx-auto aspect-square h-7 sm:h-10'
+              />
               <div>
                 <div>
                   <p className='font-bold'>Mum</p>
@@ -189,7 +222,7 @@ export default function MessagePart2({ className }: { className: string }) {
               </div>
             </div>
             <div className='grid w-full grid-cols-[15%_1fr_30%] items-center gap-4 py-1 sm:py-2'>
-              <div className='aspect-square place-content-center rounded-full bg-neutral-400'>
+              {/* <div className='aspect-square place-content-center rounded-full bg-neutral-400'>
                 <svg
                   className='mx-auto aspect-square h-5 sm:h-6'
                   viewBox='0 0 16 16'
@@ -202,7 +235,12 @@ export default function MessagePart2({ className }: { className: string }) {
                   />
                   <path d='M14 12C14 10.3431 12.6569 9 11 9H5C3.34315 9 2 10.3431 2 12V15H14V12Z' fill='#000000' />
                 </svg>
-              </div>
+              </div> */}
+              <img
+                src='https://images.theconversation.com/files/641408/original/file-20250109-15-kx43t5.png?ixlib=rb-4.1.0&q=10&auto=format&w=100&h=100&fit=crop&dpr=1'
+                alt=''
+                className='not_fullscreen_media mx-auto aspect-square h-7 sm:h-10'
+              />
               <div>
                 <div>
                   <p className='font-bold'>Mum</p>

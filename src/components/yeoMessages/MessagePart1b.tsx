@@ -1,21 +1,21 @@
 import { cn } from '../../util/helpers'
 import PhoneGraphic from '../PhoneGraphic'
 
-export default function MessagePart1({ className }: { className: string }) {
+export default function MessagePart1b({ className }: { className: string }) {
   return (
     <div
       className={cn(
-        'full_screen_media h-full place-content-center after:absolute after:top-[99.5%] after:h-20 after:w-full after:bg-gradient-to-b after:from-neutral-800 after:content-[""]',
+        'full_screen_media h-full place-content-center bg-neutral-800 after:absolute after:top-[99.5%] after:h-20 after:w-full after:bg-gradient-to-b after:from-neutral-800 after:content-[""]',
         className
       )}
     >
-      <PhoneGraphic className='aunt_phone'>
-        <p className='absolute left-1/2 mt-1 -translate-x-1/2 font-base text-sm text-white'>March 13 2024</p>
+      <PhoneGraphic className='mum_phone'>
+        <p className='absolute left-1/2 mt-1 -translate-x-1/2 font-base text-sm text-white'>10:47am</p>
 
         {/* Phone content */}
         <div className='flex h-full flex-col justify-between bg-neutral-700 p-4'>
           <div className=''>
-            <h1 className='pt-2 text-center text-3xl font-bold text-white sm:pt-4'>Auntie</h1>
+            <h1 className='pt-2 text-center text-3xl font-bold text-white sm:pt-4'>Ben's mum</h1>
           </div>
           <div className='place-content-center'>
             <img

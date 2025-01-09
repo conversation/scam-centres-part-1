@@ -1,11 +1,12 @@
 import { cn } from '../../util/helpers'
+import BackgroundImage from '../BackgroundImage'
 import PhoneGraphic from '../PhoneGraphic'
 
 export default function MessagePart3({ className }: { className: string }) {
   return (
     <div
       className={cn(
-        'h-full place-content-center after:absolute after:top-[99.5%] after:h-20 after:w-full after:bg-gradient-to-b after:from-neutral-800 after:content-[""] max-sm:h-2/3 max-sm:bg-neutral-800',
+        'h-full place-content-center bg-neutral-800 after:absolute after:top-[99.5%] after:h-20 after:w-full after:bg-gradient-to-b after:from-neutral-800 after:content-[""]',
         className
       )}
     >
@@ -49,45 +50,32 @@ export default function MessagePart3({ className }: { className: string }) {
 
           {/* Messages */}
           <div className='relative flex-grow overflow-clip bg-neutral-700'>
-            <div className='mum_message_section absolute flex h-full flex-grow flex-col justify-end space-y-2'>
-              <div className='relative ml-auto mr-3 max-w-[80%] rounded-md bg-indigo-50 p-2 shadow-md'>
-                <img
-                  className='not_fullscreen_media aspect-square w-full'
-                  src='https://images.theconversation.com/files/640852/original/file-20250107-17-9hk612.png?ixlib=rb-4.1.0&q=45&auto=format&w=200&h=200&fit=crop&dpr=1'
+            <div className='mum_message_section absolute flex h-full w-full flex-grow flex-col justify-end space-y-2'>
+              <div className='relative ml-auto mr-3 w-full max-w-[80%] rounded-md bg-indigo-50 p-2 shadow-md'>
+                {/* <img
+                  className='not_fullscreen_media w-full'
+                  src='https://images.theconversation.com/files/641409/original/file-20250109-15-1seuw7.png?ixlib=rb-4.1.0&q=45&auto=format&w=200&h=200&fit=crop&dpr=1'
                   alt=''
-                />
+                /> */}
+                <div className='aspect-square h-auto w-full'>
+                  <BackgroundImage
+                    className='not_fullscreen_media'
+                    src='https://images.theconversation.com/files/641409/original/file-20250109-15-1seuw7.png'
+                  />
+                </div>
 
-                <svg
-                  className='absolute left-1/2 top-1/2 h-5 w-5 -translate-x-3 -translate-y-5 fill-red-500'
-                  viewBox='0 0 297 297'
-                >
-                  <g>
-                    <path
-                      d='M148.5,0C87.43,0,37.747,49.703,37.747,110.797c0,91.026,99.729,179.905,103.976,183.645
-		c1.936,1.705,4.356,2.559,6.777,2.559c2.421,0,4.841-0.853,6.778-2.559c4.245-3.739,103.975-92.618,103.975-183.645
-		C259.253,49.703,209.57,0,148.5,0z M148.5,272.689c-22.049-21.366-90.243-93.029-90.243-161.892
-		c0-49.784,40.483-90.287,90.243-90.287s90.243,40.503,90.243,90.287C238.743,179.659,170.549,251.322,148.5,272.689z'
-                    />
-                    <path
-                      d='M148.5,59.183c-28.273,0-51.274,23.154-51.274,51.614c0,28.461,23.001,51.614,51.274,51.614
-		c28.273,0,51.274-23.153,51.274-51.614C199.774,82.337,176.773,59.183,148.5,59.183z M148.5,141.901
-		c-16.964,0-30.765-13.953-30.765-31.104c0-17.15,13.801-31.104,30.765-31.104c16.964,0,30.765,13.953,30.765,31.104
-		C179.265,127.948,165.464,141.901,148.5,141.901z'
-                    />
-                  </g>
-                </svg>
                 <p className='mt-1 text-right align-middle text-xs text-neutral-500 [font-size:x-small]'>
                   March 13 7:22pm
                 </p>
               </div>
-              <div className='relative ml-auto mr-3 max-w-[45%] rounded-md bg-indigo-50 p-2 shadow-md'>
+              <div className='relative ml-auto mr-3 max-w-[50%] rounded-md bg-indigo-50 p-2 shadow-md'>
                 <p className='text-xs md:text-sm'>Mum, here's my location.</p>
                 <p className='mt-1 text-right align-middle text-xs text-neutral-500 [font-size:x-small]'>
                   March 13 7:22pm
                 </p>
               </div>
               <div className='cant_wait relative ml-auto mr-3 max-w-[70%] rounded-md bg-indigo-50 p-2 opacity-0 shadow-md'>
-                <p className='text-xs md:text-sm'>Don’t think can wait anymore. Deadline is by tomorrow’s evening.</p>
+                <p className='text-xs md:text-sm'>Don’t think can wait anymore. Deadline is by tomorrow evening.</p>
                 <p className='mt-1 text-right align-middle text-xs text-neutral-500 [font-size:x-small]'>
                   March 14 8:21pm
                 </p>
