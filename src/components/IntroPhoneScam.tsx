@@ -2,11 +2,11 @@ import PhoneGraphic from './PhoneGraphic'
 
 export default function IntroPhoneScam() {
   return (
-    <div className='relative h-full after:content-[""] max-sm:h-2/3 max-sm:bg-neutral-800 max-sm:after:absolute max-sm:after:top-[99.5%] max-sm:after:h-20 max-sm:after:w-full max-sm:after:bg-gradient-to-b max-sm:after:from-neutral-800'>
-      <div className='h-full pt-12 sm:[perspective:100px]'>
+    <div className='relative h-full after:content-[""] max-sm:bg-neutral-800 max-sm:after:absolute max-sm:after:top-[99.5%] max-sm:after:h-20 max-sm:after:w-full max-sm:after:bg-gradient-to-b max-sm:after:from-neutral-800'>
+      <div className='h-full sm:[perspective:100px]'>
         <div className='phone_card relative h-full w-full origin-center place-content-center rounded-lg sm:[transform-style:preserve-3d] sm:[transform:rotateY(-2deg)]'>
           <PhoneGraphic>
-            <div className='flex-grow space-y-4 bg-neutral-700 pb-1 pt-2 transition-[height] duration-150 ease-in-out'>
+            <div className='flex-grow space-y-4 overflow-clip bg-neutral-700 pb-1 pt-2'>
               <div className='bg-neutral-400 p-1 text-center text-xs font-light opacity-55'>1 UNREAD MESSAGE</div>
 
               <div className='mx-auto w-min rounded bg-neutral-300 px-2 py-1 text-center text-xs'>Today</div>
@@ -50,7 +50,7 @@ export default function IntroPhoneScam() {
             </div>
 
             {/* Block and report */}
-            <div className='space-y-2 bg-neutral-300 py-2'>
+            <div className='z-10 space-y-2 bg-neutral-300 py-2'>
               <div className='grid gap-2 px-2 font-bold'>
                 <div className='flex items-center justify-evenly gap-2'>
                   <div
@@ -73,7 +73,7 @@ export default function IntroPhoneScam() {
             <div className='flex items-center space-x-2 bg-neutral-900 px-4 py-3'>
               <div className='flex-grow'>
                 <div className='flex min-h-7 items-center rounded-full bg-neutral-800 px-4 py-2 text-neutral-200'>
-                  <span className='flex-grow text-xs leading-none text-neutral-600'>Type a message</span>
+                  <span className='flex-grow text-xs leading-none text-neutral-600 max-sm:hidden'>Type a message</span>
                 </div>
               </div>
               <div className='flex items-center space-x-2'>
