@@ -67,14 +67,40 @@
     @apply absolute h-full min-h-screen [-webkitclip-path:inset(0px_0px)] [clip-path:inset(0px_0px)];
   }
 
+  /* @media screen and (max-width: 640px) {
+    .lower_third .pinned_foreground {
+      padding-top: calc(100vh * (2 / 3));
+      padding-top: calc(var(--vh) * 100 * (2 / 3));
+    }
+
+    .lower_third .chapter_wrapper {
+      height: calc(100vh / 3);
+      height: calc((var(--vh) * 100) / 3);
+    }
+
+    .lower_third .pinned_background_wrapper > * {
+      border: 1px solid red;
+      height: calc(100vh * (2 / 3));
+      height: calc(var(--vh) * 100 * (2 / 3));
+    }
+  } */
+
+  /* .lower_third .pinned_background_wrapper > * {
+    @apply max-sm:h-[calc(var(--vh)*(2/3)*100)];
+  } */
+
+  /* .lower_third .pinned_foreground {
+    @apply max-sm:pt-[calc(var(--vh)*(2/3)*100)];
+  } */
+
+  /* .lower_third .chapter_wrapper {
+    @apply max-sm:h-[calc((var(--vh)*100)/3)];
+  } */
+
   /* ----- FOR THE PINNED FOREGROUND ----- */
 
   .pinned_foreground {
     @apply pointer-events-none relative col-start-1 row-start-1 flex flex-col items-center text-pretty text-white;
-  }
-
-  .lower_third .pinned_foreground {
-    @apply max-sm:pt-[66.66vh];
   }
 
   .pinned_foreground a {
@@ -91,10 +117,6 @@
 
   .chapter_wrapper > * {
     @apply pointer-events-auto text-balance;
-  }
-
-  .lower_third .chapter_wrapper {
-    @apply max-sm:h-[calc(100vh/3)];
   }
 
   .chapter_dark_background > * {
