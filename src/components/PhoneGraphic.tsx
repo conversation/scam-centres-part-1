@@ -3,7 +3,7 @@ import { cn } from '../util/helpers'
 
 export default function PhoneGraphic({ className, children }: { className?: string; children: ReactNode }) {
   return (
-    <div className={cn('mx-auto aspect-[8/16] h-auto max-h-[90%] w-auto max-sm:max-w-[80%] sm:max-w-[90%]', className)}>
+    <div className={cn('mx-auto aspect-[8/16] h-auto max-h-[90%] w-auto max-sm:max-w-[75%] sm:max-w-[90%]', className)}>
       <div
         className={cn(
           'relative flex h-full w-full flex-col overflow-clip rounded-xl border-4 border-neutral-900 bg-neutral-900 font-base text-black drop-shadow-xl'
