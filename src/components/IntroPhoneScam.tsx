@@ -2,7 +2,7 @@ import PhoneGraphic from './PhoneGraphic'
 
 export default function IntroPhoneScam() {
   return (
-    <div className='relative h-full after:content-[""] max-sm:bg-neutral-800 max-sm:after:absolute max-sm:after:top-[99.5%] max-sm:after:h-20 max-sm:after:w-full max-sm:after:bg-gradient-to-b max-sm:after:from-neutral-800'>
+    <div className='phone_card_background full_screen_media make_visible relative h-full max-sm:pt-14'>
       <div className='h-full sm:[perspective:100px]'>
         <div className='phone_card relative h-full w-full origin-center place-content-center rounded-lg sm:[transform-style:preserve-3d] sm:[transform:rotateY(-2deg)]'>
           <PhoneGraphic>
