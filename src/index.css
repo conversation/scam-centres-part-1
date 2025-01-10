@@ -60,11 +60,11 @@
   }
 
   .pin_clipped .pinned_background_wrapper {
-    @apply fixed top-0;
+    @apply fixed top-0 h-screen;
   }
 
   .pin_clipped .pinned_background {
-    @apply absolute h-full min-h-screen [-webkitclip-path:inset(0px_0px)] [clip-path:inset(0px_0px)];
+    @apply absolute top-0 h-full min-h-screen [-webkitclip-path:inset(0px_0px)] [clip-path:inset(0px_0px)];
   }
 
   /* @media screen and (max-width: 640px) {
