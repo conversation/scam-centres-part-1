@@ -4,12 +4,8 @@ import Footer from './components/Footer'
 import Header from './components/Header'
 import { DarkModeProvider } from './context/DarkModeProvider'
 import MarkdownProvider from './providers/MarkdownProvider'
-import gsap from 'gsap'
-import ScrollTrigger from 'gsap/ScrollTrigger'
 
 export default function App() {
-  gsap.registerPlugin(ScrollTrigger)
-
   useEffect(() => {
     document.querySelectorAll('img').forEach((img) => {
       img.addEventListener('load', () => {
@@ -19,8 +15,6 @@ export default function App() {
         img.setAttribute('loaded', '')
       }
     })
-
-    window.addEventListener('resize', () => ScrollTrigger.refresh())
   }, [])
 
   return (
