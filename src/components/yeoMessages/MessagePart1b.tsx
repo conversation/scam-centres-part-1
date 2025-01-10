@@ -1,14 +1,10 @@
 import { cn } from '../../util/helpers'
 import PhoneGraphic from '../PhoneGraphic'
+import WaveformVideo from './WaveformVideo'
 
 export default function MessagePart1b({ className }: { className: string }) {
   return (
-    <div
-      className={cn(
-        'full_screen_media h-full place-content-center bg-neutral-800 after:absolute after:top-[99.5%] after:h-20 after:w-full after:bg-gradient-to-b after:from-neutral-800 after:content-[""]',
-        className
-      )}
-    >
+    <div className={cn('place-content-center', className)}>
       <PhoneGraphic className='mum_phone'>
         <p className='absolute left-1/2 mt-1 -translate-x-1/2 font-base text-sm text-white'>10:47am</p>
 
@@ -18,11 +14,7 @@ export default function MessagePart1b({ className }: { className: string }) {
             <h1 className='pt-2 text-center text-3xl font-bold text-white sm:pt-4'>Ben's mum</h1>
           </div>
           <div className='place-content-center'>
-            <img
-              className='not_fullscreen_media mx-auto mix-blend-screen'
-              src='https://images.theconversation.com/files/640839/original/file-20250106-15-mqdogb.gif?ixlib=rb-4.1.0&q=10&auto=format&w=150&fit=crop&dpr=1'
-              alt='audio waveform'
-            />
+            <WaveformVideo />
           </div>
 
           <div className='mx-auto grid w-[80%] grid-cols-3 gap-2 border text-center text-neutral-700 sm:gap-5'>
