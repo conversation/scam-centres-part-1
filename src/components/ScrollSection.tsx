@@ -4,8 +4,8 @@ import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 import { useGSAP } from '@gsap/react'
 import { ARTICLEWIDTH } from '../util/constants'
-import { useSetAtom } from 'jotai'
-import { headerHeight } from '../context/atom'
+// import { useSetAtom } from 'jotai'
+// import { headerHeight } from '../context/atom'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -21,8 +21,7 @@ export function ScrollSection({
   id?: string
 }) {
   const sectionRef = useRef<HTMLDivElement>(null)
-  const setHeaderHeight = useSetAtom(headerHeight)
-  const windowWidth = 0
+  // const setHeaderHeight = useSetAtom(headerHeight)
 
   useEffect(() => {
     const refreshScrolls = () => ScrollTrigger.refresh()
@@ -71,40 +70,35 @@ export function ScrollSection({
       const section = sectionRef.current
       if (!section || !className!.includes('intro_section')) return
 
-      setHeaderHeight(section.clientHeight)
+      // setHeaderHeight(section.clientHeight)
 
       const steps = section.querySelectorAll('.pinned_foreground .step')
       const foreground = section.querySelectorAll('.pinned_foreground')
-      const background = section.querySelectorAll('.pinned_background')
+      const background = section.querySelectorAll('.phone_card_background')
       const card = section.querySelectorAll('.phone_card')
       const windowWidth2 = 640
 
       if (foreground && background && card) {
         // Card moves side to side and perspective changes
-        gsap
-          .timeline({
-            scrollTrigger: {
-              // markers: true,
-              trigger: foreground,
-              start: 'top top-=10%',
-              endTrigger: '#introLastTrigger',
-              end: 'bottom top',
-              scrub: true
-            }
-          })
-          .to(card, { rotationY: window.innerWidth < windowWidth2 ? 0 : 2, duration: 1, ease: 'power1.inOut' }, 0)
-          .to(
-            background,
-            { xPercent: window.innerWidth < windowWidth2 ? 0 : -100, duration: 1, ease: 'power1.inOut' },
-            0
-          )
-          .to(card, { rotationY: window.innerWidth < windowWidth2 ? 0 : -2, duration: 1, ease: 'power1.inOut' })
-          .to(
-            background,
-            { xPercent: window.innerWidth < windowWidth2 ? 0 : 0, duration: 1, ease: 'power1.inOut' },
-            '<'
-          )
-          .to(card, { rotationY: 0, duration: 1, ease: 'power1.inOut' })
+
+        if (window.innerWidth > windowWidth2) {
+          gsap
+            .timeline({
+              scrollTrigger: {
+                // markers: true,
+                trigger: foreground,
+                start: 'top top-=10%',
+                endTrigger: '#introLastTrigger',
+                end: 'bottom top',
+                scrub: true
+              }
+            })
+            .to(card, { rotationY: 2, duration: 1, ease: 'power1.inOut' }, 0)
+            .to(background, { xPercent: -100, duration: 1, ease: 'power1.inOut' }, 0)
+            .to(card, { rotationY: -2, duration: 1, ease: 'power1.inOut' })
+            .to(background, { xPercent: 0, duration: 1, ease: 'power1.inOut' }, '<')
+            .to(card, { rotationY: 0, duration: 1, ease: 'power1.inOut' })
+        }
 
         // Animate message delete
         gsap
@@ -113,7 +107,7 @@ export function ScrollSection({
               // markers: true,
               trigger: steps[0],
               start: 'top 90%',
-              end: `center ${window.innerWidth < windowWidth ? 83.33333333 : 60}%`,
+              end: 'center 60%',
               scrub: true
             }
           })
@@ -136,7 +130,7 @@ export function ScrollSection({
               // markers: true,
               trigger: steps[1],
               start: 'top 90%',
-              end: `center ${window.innerWidth < windowWidth ? 83.33333333 : 60}%`,
+              end: 'center 60%',
               scrub: true
             }
           })
@@ -152,7 +146,7 @@ export function ScrollSection({
               // markers: true,
               trigger: steps[2],
               start: 'top 90%',
-              end: `center ${window.innerWidth < windowWidth ? 83.33333333 : 60}%`,
+              end: 'center 60%',
               scrub: true
             }
           })
@@ -195,7 +189,7 @@ export function ScrollSection({
             // markers: true,
             trigger: steps[0],
             start: 'top 90%',
-            end: `center ${window.innerWidth < windowWidth ? 83.33333333 : 60}%`,
+            end: 'center 60%',
             scrub: true
           }
         })
@@ -239,7 +233,7 @@ export function ScrollSection({
             // markers: true,
             trigger: steps[3],
             start: 'top bottom',
-            end: `center ${window.innerWidth < windowWidth ? 90 : 60}%`,
+            end: 'center 60%',
             scrub: true
           }
         })
@@ -252,7 +246,7 @@ export function ScrollSection({
             // markers: true,
             trigger: steps[4],
             start: 'top bottom',
-            end: `center ${window.innerWidth < windowWidth ? 90 : 60}%`,
+            end: 'center 60%',
             scrub: true
           }
         })
