@@ -47,11 +47,6 @@ export default function MessagePart3({ className }: { className: string }) {
           <div className='relative flex-grow overflow-clip bg-neutral-700'>
             <div className='mum_message_section absolute flex h-full w-full flex-grow flex-col justify-end space-y-2'>
               <div className='relative ml-auto mr-3 w-full max-w-[80%] rounded-md bg-indigo-50 p-2 shadow-md'>
-                {/* <img
-                  className='not_fullscreen_media w-full'
-                  src='https://images.theconversation.com/files/641409/original/file-20250109-15-1seuw7.png?ixlib=rb-4.1.0&q=45&auto=format&w=200&h=200&fit=crop&dpr=1'
-                  alt=''
-                /> */}
                 <div className='aspect-square h-auto w-full'>
                   <BackgroundImage
                     className='not_fullscreen_media'
