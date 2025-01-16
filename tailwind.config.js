@@ -93,7 +93,12 @@ export default {
       margin: {
         'article-float-margin': `max(20px, calc((100% - ${ARTICLEWIDTH.maxWidth}px) / 2))`
       },
-
+      height: {
+        screen: ['100vh', '100lvh']
+      },
+      minHeight: {
+        screen: ['100vh', '100lvh']
+      },
       typography: ({ theme }) => ({
         light: {
           css: {
