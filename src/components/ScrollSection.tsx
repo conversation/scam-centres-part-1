@@ -73,95 +73,91 @@ export function ScrollSection({
       // setHeaderHeight(section.clientHeight)
 
       const steps = section.querySelectorAll('.pinned_foreground .step')
-      const foreground = section.querySelectorAll('.pinned_foreground')
-      const background = section.querySelectorAll('.phone_card_background')
-      const card = section.querySelectorAll('.phone_card')
-      const windowWidth2 = 640
 
-      if (foreground && background && card) {
-        // Card moves side to side and perspective changes
+      // const windowWidth2 = 1000000
+      // // const windowWidth2 = 640
 
-        if (window.innerWidth > windowWidth2) {
-          gsap
-            .timeline({
-              scrollTrigger: {
-                // markers: true,
-                trigger: foreground,
-                start: 'top top-=10%',
-                endTrigger: '#introLastTrigger',
-                end: 'bottom top',
-                scrub: true
-              }
-            })
-            .to(card, { rotationY: 2, duration: 1, ease: 'power1.inOut' }, 0)
-            .to(background, { xPercent: -100, duration: 1, ease: 'power1.inOut' }, 0)
-            .to(card, { rotationY: -2, duration: 1, ease: 'power1.inOut' })
-            .to(background, { xPercent: 0, duration: 1, ease: 'power1.inOut' }, '<')
-            .to(card, { rotationY: 0, duration: 1, ease: 'power1.inOut' })
-        }
+      // // Card moves side to side and perspective changes
 
-        // Animate message delete
-        gsap
-          .timeline({
-            scrollTrigger: {
-              // markers: true,
-              trigger: steps[0],
-              start: 'top 90%',
-              end: 'center 60%',
-              scrub: true
-            }
-          })
-          .to('#introDeleteIcon', { display: 'block', autoAlpha: 1, duration: 0.3, ease: 'power1.inOut' })
-          .to(
-            '.introTextMessage',
-            {
-              display: 'block',
-              backgroundColor: '#ecc3C0',
-              duration: 0.3,
-              ease: 'power1.inOut'
-            },
-            0
-          )
+      // if (window.innerWidth > windowWidth2) {
+      //   gsap
+      //     .timeline({
+      //       scrollTrigger: {
+      //         // markers: true,
+      //         trigger: '.pinned_foreground',
+      //         start: 'top top-=10%',
+      //         endTrigger: '#introLastTrigger',
+      //         end: 'bottom top',
+      //         scrub: true
+      //       }
+      //     })
+      //     .to('.phone_card', { rotationY: 2, duration: 1, ease: 'power1.inOut' }, 0)
+      //     .to('.phone_card_background', { xPercent: -100, duration: 1, ease: 'power1.inOut' }, 0)
+      //     .to('.phone_card', { rotationY: -2, duration: 1, ease: 'power1.inOut' })
+      //     .to('.phone_card_background', { xPercent: 0, duration: 1, ease: 'power1.inOut' }, '<')
+      //     .to('.phone_card', { rotationY: 0, duration: 1, ease: 'power1.inOut' })
+      // }
 
-        // Animate angry reply
-        gsap
-          .timeline({
-            scrollTrigger: {
-              // markers: true,
-              trigger: steps[1],
-              start: 'top 90%',
-              end: 'center 60%',
-              scrub: true
-            }
-          })
-          .to('#introDeleteIcon', { xPercent: -150, autoAlpha: 0, ease: 'power1.inOut' })
-          .to('.introTextMessage', { xPercent: -150, autoAlpha: 0, ease: 'power1.inOut' }, 0)
-          .fromTo('.introTextMessageReply', { yPercent: 150 }, { yPercent: 0, autoAlpha: 1, ease: 'power1.inOut' }, 0.2)
-          .to('#introBlockBtn', { backgroundColor: '#d8352a', color: 'white', ease: 'power1.inOut' }, 0)
+      // Animate message delete
+      gsap
+        .timeline({
+          scrollTrigger: {
+            // markers: true,
+            trigger: steps[0],
+            start: 'top 90%',
+            end: 'center 60%',
+            scrub: true
+          }
+        })
+        .to('#introDeleteIcon', { autoAlpha: 1, duration: 0.3, ease: 'power1.inOut' })
+        .to(
+          '.introTextMessage',
+          {
+            backgroundColor: '#ecc3C0',
+            duration: 0.3,
+            ease: 'power1.inOut'
+          },
+          0
+        )
 
-        // Animate scammer reply
-        gsap
-          .timeline({
-            scrollTrigger: {
-              // markers: true,
-              trigger: steps[2],
-              start: 'top 90%',
-              end: 'center 60%',
-              scrub: true
-            }
-          })
-          .to(['#introDeleteIcon', '.introTextMessage'], { display: 'none' })
-          .fromTo(
-            '.scammerReply',
-            { y: 200, autoAlpha: 0 },
-            {
-              y: document.querySelector('.introTextMessageReply')!.clientHeight + 16,
-              autoAlpha: 1,
-              ease: 'power1.inOut'
-            },
-            0
-          )
-      }
+      // Animate angry reply
+      gsap
+        .timeline({
+          scrollTrigger: {
+            // markers: true,
+            trigger: steps[1],
+            start: 'top 90%',
+            end: 'center 60%',
+            scrub: true
+          }
+        })
+        .to('#introDeleteIcon', { xPercent: -150, autoAlpha: 0, ease: 'power1.inOut' })
+        .to('.introTextMessage', { xPercent: -150, autoAlpha: 0, ease: 'power1.inOut' }, 0)
+        .fromTo('.introTextMessageReply', { yPercent: 150 }, { yPercent: 0, autoAlpha: 1, ease: 'power1.inOut' }, 0.2)
+        .to('#introBlockBtn', { backgroundColor: '#d8352a', color: 'white', ease: 'power1.inOut' }, 0)
+
+      // Animate scammer reply
+      gsap
+        .timeline({
+          scrollTrigger: {
+            // markers: true,
+            trigger: steps[2],
+            start: 'top 90%',
+            end: 'center 60%',
+            scrub: true
+          }
+        })
+        .to(['#introDeleteIcon', '.introTextMessage'], { display: 'none' })
+        .fromTo(
+          '.scammerReply',
+          { y: 200, autoAlpha: 0 },
+          {
+            y: document.querySelector('.introTextMessageReply')!.clientHeight + 16,
+            autoAlpha: 1,
+            ease: 'power1.inOut'
+          },
+          0
+        )
     },
     { scope: sectionRef }
   )
