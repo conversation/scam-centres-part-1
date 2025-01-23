@@ -11,7 +11,9 @@ export default function IntroPhoneScam() {
 
           <div className='relative w-full'>
             <div className='introTextMessage relative ml-3 max-w-[80%] animate-pulse rounded-md bg-green-100 p-2 shadow-md'>
-              <p className='text-xs md:text-sm'>Do you want to make some money? Message "Yes" to earn $4,000 a week!</p>
+              <p className='text-pretty text-base sm:text-lg'>
+                Do you want to make some money? Message "Yes" to earn $4,000 a week!
+              </p>
               <div
                 className='absolute bottom-[-2rem] right-0 max-w-[80%] rounded-md bg-red-300 p-1 opacity-0 shadow-md'
                 id='introDeleteIcon'
@@ -21,11 +23,11 @@ export default function IntroPhoneScam() {
             </div>
 
             <div className='introTextMessageReply absolute right-0 top-0 ml-auto mr-3 max-w-[65%] rounded-md bg-indigo-50 p-2 opacity-0 shadow-md'>
-              <p className='text-xs md:text-sm'>Stop messaging me!</p>
+              <p className='text-pretty text-base sm:text-lg'>Who are you?</p>
             </div>
 
             <div className='scammerReply absolute left-0 top-0 ml-3 max-w-[80%] rounded-md bg-green-100 p-2 opacity-0 shadow-md'>
-              <p className='text-xs md:text-sm'>I'm not who you think I am...</p>
+              <p className='text-pretty text-base sm:text-lg'>I'm not who you think I am...</p>
               <div
                 className='absolute bottom-[-2rem] right-0 max-w-[80%] rounded-md bg-red-300 p-1 opacity-0 shadow-md'
                 id='introDeleteIcon'
