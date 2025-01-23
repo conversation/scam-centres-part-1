@@ -258,7 +258,7 @@ export function ScrollSection({
       const section = sectionRef.current
       if (!section || !className!.includes('barbedWireQuotes')) return
 
-      const backgroundElements = section.querySelectorAll('.pinned_background_wrapper > *')
+      const backgroundElements = section.querySelectorAll('.pinned_background_wrapper img')
       const foregroundElement = section.querySelectorAll('.foregroundElement')
 
       if (!foregroundElement || !backgroundElements.length) return
@@ -274,7 +274,7 @@ export function ScrollSection({
             scrub: true
           }
         })
-        .to(backgroundElements[0], { scale: 1.5, ease: 'power1.inOut' })
+        .to(backgroundElements, { scale: 1.5, ease: 'power1.inOut' })
     },
     { scope: sectionRef }
   )
