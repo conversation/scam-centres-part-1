@@ -8,13 +8,16 @@ export default function SeverancePaymentBill() {
   const sectionRef = useRef<HTMLElement | null>(null)
 
   useEffect(() => {
-    const refreshScrolls = () => ScrollTrigger.refresh()
+    const observer = new ResizeObserver(() => {
+      console.log('resize')
+      ScrollTrigger.refresh()
+    })
 
-    window.addEventListener('resize', refreshScrolls)
+    document.querySelectorAll('.tweet1').forEach((el) => observer.observe(el))
 
-    return () => {
-      window.removeEventListener('resize', refreshScrolls)
-    }
+    window.addEventListener('load', () => {
+      ScrollTrigger.refresh()
+    })
   }, [])
 
   useGSAP(
