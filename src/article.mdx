@@ -14,15 +14,17 @@ import MessagePart1b from './components/yeoMessages/MessagePart1b'
 import MessagePart2 from './components/yeoMessages/MessagePart2'
 import MessagePart3 from './components/yeoMessages/MessagePart3'
 import TitleTextBorder from './components/TitleTextBorder'
+import Tweet1 from './components/Tweet1'
+import SeverancePaymentBill from './components/SeverancePaymentBill'
 
 <ArticleSetup
   theme='dark'
-  title='Part 1'
+  title="Surviving Asia's brutal scamming empires"
   dropCap={true}
   author='Ivan Franceschini & Ling Li'
   image='https://images.theconversation.com/files/629474/original/file-20241101-17-hvuwhr.png?auto=format&fit=crop&q=30&ixlib=react-9.10.0&w=1946'
   keywords={['Southeast Asia', 'Myanmar', 'scam', 'scam centre', 'scammers', 'Chinese scams']}
-  standfirst="Inside Southeast Asia's slavery scam centres"
+  standfirst="Surviving Asia's brutal scamming empires"
 />
 
 <ScrollSection className='intro_section' pinType='pin_block'>
@@ -53,15 +55,15 @@ import TitleTextBorder from './components/TitleTextBorder'
     <TitleTextBorder
     as={'h1'}
     className='text-balance text-center font-base text-4xl font-bold md:text-5xl lg:text-6xl'
-    >"We could hear the screams continuing until midnight"</TitleTextBorder>
+    >Surviving Asia's brutal scamming empires</TitleTextBorder>
     <br />
   </div>
 
-  <h3 className='text-center font-base'>Scam centres of South-East Asia Part 1</h3>
+  <h3 className='text-center font-base'>Part one: life inside the compounds</h3>
 
   <div className='text-center'>
     <span className='inline-block font-base text-sm'>By [Ivan Franceschini](https://theconversation.com/profiles/ivan-franceschini-1529038), [Ling
-    Li](https://theconversation.com/profiles/ling-li-1529042) and The Conversation [Digital Storytelling Team]()</span><br/><span className='font-base text-xs opacity-50'>Published: <time className=''>{new Date().toDateString()}</time></span>
+    Li](https://theconversation.com/profiles/ling-li-1529042) and The Conversation Digital Storytelling Team. Photos by Roun Ry</span><br/><span className='font-base text-xs opacity-50'>Published: <time className=''>{new Date().toDateString()}</time></span>
   </div>
 </div>
 
@@ -98,42 +100,90 @@ Ben Yeo found himself trapped in a scam centre in Cambodia in early 2024. He was
 
 ## How did Ben end up there?
 
-Ben was a self-made businessman from Malaysia who had travelled all over Southeast Asia for work – organising government investment conferences in Cambodia and Myanmar.
+Ben was a self-made businessman from Malaysia who had travelled all over Southeast Asia for work – organising government investment conferences in Cambodia and Myanmar. 
 
 In early 2024, he and his Filipino wife Moira began looking for a new opportunity in Cambodia.
 
 They thought they got lucky right away: a recruitment agency was hiring staff for a casino in the town of Bavet, near the Vietnamese border. 
 
-Ben did some research on the company and everything seemed to check out. It was registered and had a recruitment licence from the Cambodian government.
+Ben did some research on the company and everything seemed to check out. It was registered and had a recruitment licence from the Cambodian government. 
 
-<Image
+{/* <Image
   src='https://images.theconversation.com/files/640867/original/file-20250107-15-bnrhmv.jpeg'
   align=''
   className=''
   imgClassName='aspect-[103/78] max-w-[80%] mx-auto'
   loading='lazy'
   alt='A scam job ad from Facebook in Vietnamese'
-  source='Author provided/Facebook'
+  source='Source: Author provided/Facebook'
   caption='A scam job ad from Facebook in Vietnamese'
+/>  */}
+
+<Image
+  src='https://images.theconversation.com/files/643966/original/file-20250122-17-zoavvq.png'
+  align=''
+  className=''
+  imgClassName='aspect-[309/436] h-auto w-full max-w-[70%] mx-auto'
+  loading='lazy'
+  alt='A scam job ad from WhatsApp'
+  source='Source: Ben Yeo/Facebook'
+  caption='A scam job ad Ben and Moira recieved on WhatsApp. The company Asia HR appeared to be a legitimate agency.'
 /> 
+
+{/* <Image
+  src='https://images.theconversation.com/files/643964/original/file-20250122-15-g8b7dz.png?ixlib=rb-4.1.0&q=45&auto=format&w=754&h=387&fit=crop&dpr=1'
+  align=''
+  className=''
+  imgClassName='aspect-[309/436] h-auto w-full max-w-[70%] mx-auto'
+  loading='lazy'
+  alt='A scam job ad from WhatsApp'
+  source='Author provided/Facebook'
+  caption='A scam job ad Ben and Moira recieved on WhatsApp. The company Asia HR appeared to be a legitimate agency.'
+/>  */}
 
 They both negotiated new jobs, Ben doing business development and Moira as a card dealer in the casino.
 
 When they arrived at the compound in February last year, however, Ben got a bad feeling. As he told The Conversation in a podcast interview:
 
-<Pullquote className='' quote="It had these tall walls, barbed wire and cameras everywhere […] And when we got into the compound, we were told we weren't allowed to get out." />
 
-<Pullquote className='' quote="Then they said, I'm sorry, this whole thing, it's not a casino. This is not a casino industry. As a matter of fact, we are doing scams." startQuoteIcon={false} />
+<Pullquote className='text-white' quote="It had these tall walls, barbed wire and cameras everywhere […] And when we got into the compound, we were told we weren't allowed to get out." />
 
-<Pullquote className='' quote="We were very taken aback. I was quite upset because we let go of my home in Malaysia and we were really prepared for work, we wanted to do something legitimate." startQuoteIcon={false} />
+<Pullquote className='text-white' quote="Then they said, I'm sorry, this whole thing, it's not a casino. This is not a casino industry. As a matter of fact, we are doing scams." startQuoteIcon={false} />
 
-<Pullquote className='py-5 pb-8 text-red-50 text-xl sm:text-2xl text-balance text-center' quote="I remember telling my wife that we have to sort of get through this with a soft approach. We can't fight our way through the gates, you know?" startQuoteIcon={false} endQuoteIcon={true} />
+<Image
+  src='https://images.theconversation.com/files/643964/original/file-20250122-15-g8b7dz.png'
+  align=''
+  className=''
+  imgClassName='aspect-[150/77] h-auto w-full'
+  loading='lazy'
+  alt='This compound in Myanmar has barbed wire around the perimeter.'
+  source='Source: Ling Li'
+  caption='This compound in Myanmar has barbed wire around the perimeter.'
+/>
+
+<Pullquote className='text-white' quote="We were very taken aback. I was quite upset because we let go of my home in Malaysia and we were really prepared for work, we wanted to do something legitimate." startQuoteIcon={false} />
+
+<Pullquote className='text-white' quote="I remember telling my wife that we have to sort of get through this with a soft approach. We can't fight our way through the gates, you know?" startQuoteIcon={false} endQuoteIcon={true} />
+
+{/* <div className='relative grid grid-cols-1 grid-rows-1'>
+  <BackgroundImage className='barbedWire h-full w-auto left-0 opacity-30 col-start-1 row-start-1 [box-shadow:0_0_20px_20px_#383838_inset]' src='https://images.theconversation.com/files/643964/original/file-20250122-15-g8b7dz.png' />
+
+  <div className='col-start-1 row-start-1'>
+    <Pullquote className='text-white' quote="It had these tall walls, barbed wire and cameras everywhere […] And when we got into the compound, we were told we weren't allowed to get out." />
+
+    <Pullquote className='text-white' quote="Then they said, I'm sorry, this whole thing, it's not a casino. This is not a casino industry. As a matter of fact, we are doing scams." startQuoteIcon={false} />
+
+    <Pullquote className='text-white' quote="We were very taken aback. I was quite upset because we let go of my home in Malaysia and we were really prepared for work, we wanted to do something legitimate." startQuoteIcon={false} />
+
+    <Pullquote className='text-white' quote="I remember telling my wife that we have to sort of get through this with a soft approach. We can't fight our way through the gates, you know?" startQuoteIcon={false} endQuoteIcon={true} />
+  </div>
+</div> */}
 
 Ben and Moira aren’t alone. There are many more victims in the industry across Southeast Asia. 
 
 The United Nations High Commissioner for Human Rights reports that in 2023, at least 120,000 people were forced into criminality in scam centres in Myanmar and another 100,000 in Cambodia. This figure, however, remains contested and difficult to verify, as the industry is very volatile. There is simply no way to know how many people are in these compounds willingly.
 
-<Readmore description='This is a four-part series on the slavery scam compounds of Southeast Asia. ' url='' linkText='Read part 2 on the anatomy of a scam here'/>
+<Readmore iconSrc='https://images.theconversation.com/files/643993/original/file-20250122-15-av4juc.jpg?ixlib=rb-4.1.0&q=45&auto=format&w=754&h=1000&fit=crop&dpr=1' description='This is a four-part series on the slavery scam compounds of Southeast Asia. ' url='' linkText='Read part 2 on the anatomy of a scam here'/>
 
 ## How we know about this
 
@@ -146,7 +196,7 @@ The two of us, alongside our research partner, Mark Bo, have been investigating 
   imgClassName='aspect-[103/58]'
   loading='lazy'
   alt='Drone shot of flats taken from the courtyard of the Jinshui compound in Otres Village, Sihanoukville'
-  source='Photo by Roun Ry'
+  source='Photo: Roun Ry'
   caption='Drone shot taken from the courtyard of the Jinshui compound in Otres Village, Sihanoukville, September 2022. The complex, popularly known as ‘Chinatown’, has been implicated in dozens of reports detailing online scams and gambling operations, with former workers reporting conditions of bonded labour, violence, and suicides.'
 /> 
 
@@ -159,11 +209,9 @@ We rely heavily on in-depth interviews Ling conducted between 2022 and 2024 with
   imgClassName='aspect-[103/58]'
   loading='lazy'
   alt='Drone shot of balconies taken from the courtyard of the Jinshui compound in Otres Village, Sihanoukville'
-  source='Photo by Roun Ry'
+  source='Photo: Roun Ry'
   caption='Zooming in on the balconies of the Jinshui compound in Otres, Sihanoukville, September 2022.'
 />  */}
-
-
 
 <ScrollSection pinType='pin_clipped' className='my-12'>
   <ScrollBackground>
@@ -172,10 +220,10 @@ We rely heavily on in-depth interviews Ling conducted between 2022 and 2024 with
       loading='eager'
       className='full_screen_media make_visible'
       imgClassName='object-bottom-center'
-      caption='Testing the caption.'
-      source='The Conversation'
+      caption='Aerial view of the Kaibo compound in Otres Village, Sihanoukville.'
+      source='Photo: Roun Ry'
       sourceLink=''
-      alt=''
+      alt='Aerial view of the Kaibo compound in Otres Village, Sihanoukville.'
       focalPoint={{
         mobile: { x: 0.5, y: 0.5 },
         tablet: { x: 0.5, y: 0.5 },
@@ -190,8 +238,8 @@ We rely heavily on in-depth interviews Ling conducted between 2022 and 2024 with
       loading='lazy'
       className='full_screen_media'
       imgClassName='object-bottom-center'
-      caption='Testing the caption.'
-      source='The Conversation'
+      caption=''
+      source='Photo: Roun Ry'
       sourceLink=''
       alt=''
       focalPoint={{
@@ -207,8 +255,8 @@ We rely heavily on in-depth interviews Ling conducted between 2022 and 2024 with
       loading='lazy'
       className='full_screen_media'
       imgClassName='object-bottom-center'
-      caption='Testing the caption.'
-      source='The Conversation'
+      caption=''
+      source='Photo: Roun Ry'
       sourceLink=''
       alt=''
       focalPoint={{
@@ -224,8 +272,8 @@ We rely heavily on in-depth interviews Ling conducted between 2022 and 2024 with
       loading='lazy'
       className='full_screen_media'
       imgClassName='object-bottom-center'
-      caption='Testing the caption.'
-      source='The Conversation'
+      caption=''
+      source='Photo: Roun Ry'
       sourceLink=''
       alt=''
       focalPoint={{
@@ -241,8 +289,8 @@ We rely heavily on in-depth interviews Ling conducted between 2022 and 2024 with
       loading='lazy'
       className='full_screen_media'
       imgClassName='object-bottom-center'
-      caption='Testing the caption.'
-      source='The Conversation'
+      caption=''
+      source='Photo: Roun Ry'
       sourceLink=''
       alt=''
       focalPoint={{
@@ -258,8 +306,8 @@ We rely heavily on in-depth interviews Ling conducted between 2022 and 2024 with
       loading='lazy'
       className='full_screen_media'
       imgClassName='object-bottom-center'
-      caption='Testing the caption.'
-      source='The Conversation'
+      caption=''
+      source='Photo: Roun Ry'
       sourceLink=''
       alt=''
       focalPoint={{
@@ -296,11 +344,11 @@ This blurred line between a willingness to cause harm and coercion has turned pu
 
 ## ‘My children were starving’
 
-Desperation drives many people into the scamming world, whether willingly or not.
+Desperation drives many people into the scamming world, whether willingly or not. 
 
 Those who become trapped in the compounds come from all walks of life. While there's no lack of skilled personnel inside scam operations, many have no language or IT skills whatsoever. This is particularly true for Chinese scam workers, whom the Chinese authorities refer to as the "three lows" (_san di_), meaning they have low income, education and age. As such, their options for legitimate employment are limited.
 
-This is confirmed by our findings. In an [online survey](https://link.springer.com/article/10.1007/s12117-024-09552-2) we conducted in 2023 with 62 survivors from mainland China, more than half were under the age of 25. Just under half had only a middle school education, while some had even less. They were overwhelmingly men.
+This is confirmed by our findings. In an [online survey](https://link.springer.com/article/10.1007/s12117-024-09552-2) we conducted in 2023 with 62 survivors from mainland China, more than half were under the age of 25. Just under half had only a middle school education, while some had even less. They were overwhelmingly men. 
 
 Several of our interviewees also said they turned to scamming due to financial strain, in many cases related to the COVID pandemic. For instance, a Chinese restaurant owner who lost his business in 2021 told us:
 
@@ -314,46 +362,94 @@ Several of our interviewees also said they turned to scamming due to financial s
 
 Many of those tricked into the industry fall for deceptive, vague-sounding ads on job-recruitment websites or social media. 
 
-**VIS: image of job ad**
-{/* <img src='./job ads in Vietnamese.jpeg' alt=''/> */}
+Telegram is a particularly popular platform for recruiters. The jobs often sound like legitimate opportunities in customer service, sales or promotions. Some ads, though, are for jobs in sectors as diverse as construction, food and tourism. Recently, a Chinese actor was [even lured](https://edition.cnn.com/2025/01/14/china/china-actor-thailand-scam-myanmar-intl-hnk/index.html) to Thailand for a fake movie casting call and ended up in a Myanmar scam compound.
 
-Telegram is a particularly popular platform for recruiters. The jobs often sound like legitimate opportunities in customer service, sales or promotions. Some ads, though, are for jobs in sectors as diverse as construction, food and tourism. 
+<div className='clear-both'><Tweet1 /></div>
 
 There are often promises of high salaries, year-end bonuses and promotion opportunities. Yet, many ads have minimal skill requirements, such as basic computer literacy and fluency in a specific language. This is a red flag. As is the offer to cover food, accommodation and travel expenses. 
 
+<Image
+  src='https://images.theconversation.com/files/643962/original/file-20250122-15-qmfqy7.png'
+  align='right'
+  className=''
+  imgClassName='max-h-[600px] object-contain'
+  loading='lazy'
+  alt='A job ad in Mandarin promising ¥19,000 (A$4,169) a month salary and 8 working hours, 5 days a week.'
+  source='Source: Ben Yeo/Telegram'
+  sourceLink=''
+  caption='A telegram ad promising ¥19,000 (A$4,169) a month salary and 8 working hours, 5 days a week.'
+/>
+
 Others are tempted into the industry through brokers, who may spend months building personal connections with their victims before approaching them with an “unmissable” job opportunity. They are typically paid a fee by the scam company, which then becomes a debt the victim or their family must later pay to secure their freedom.  
 
-Some are duped by people in their social circles, acquaintances or even relatives. 
+Some are duped by people in their social circles, friends or even relatives. 
 
 One 19-year-old Chinese man we interviewed, Xiaozan*, lost his job on a construction site in Cambodia during the pandemic. A co-worker from his region of China offered him a maintenance job at a new compound. Once he arrived, however, his passport was confiscated, he was severely beaten and he was eventually sold to five different scam centres. (*The names of victims in this story have been changed to protect their identities.)
 
-And frighteningly, some victims are kidnapped right off the street. During the pandemic, for instance, gangsters hired by casinos in Cambodia to collect debts found themselves unemployed and turned to kidnapping people for scam operations to make a living. The recent [kidnapping of a Chinese actor](https://edition.cnn.com/2025/01/14/china/china-actor-thailand-scam-myanmar-intl-hnk/index.html) in Bangkok has made many Chinese tourists fearful of travelling to the country.
+And frighteningly, some victims are kidnapped right off the street. During the pandemic, for instance, gangsters hired by casinos in Cambodia to collect debts found themselves unemployed and turned to kidnapping people for scam operations to make a living. 
 
 ## ‘Billions in gold’ or torture
 
 Life is hell [inside the compounds](https://www.tandfonline.com/doi/full/10.1080/14672715.2023.2268104). Victims are often ruthlessly exploited because they begin their new "jobs" with a massive debt – the money used to cover possible flights, visas, permits, and broker or trafficker fees. 
 
+<Image
+  src='https://images.theconversation.com/files/611302/original/file-20240805-19-yyuymh.jpg'
+  align=''
+  className=''
+  imgClassName=''
+  loading='lazy'
+  alt='Kaibo compound in Otres Village, Sihanoukville.'
+  source='Photo: Roun Ry'
+  caption='Kaibo compound in Otres Village, Sihanoukville.'
+/> 
+
 These debts only rise the longer they are held. Even though scammers are usually paid a nominal monthly salary, their accommodation, food and other expenses are generally not covered. The image below shows the bill for a worker in a scam compound in Cambodia, who was charged for the portion of the floor he "consumed", usage of the toilet and even the "seaside air" he breathed.
 
-<Image
+<SeverancePaymentBill />
+
+{/* <Image
   src='https://images.theconversation.com/files/639930/original/file-20241220-17-2ecnyg.jpeg'
   align=''
   className=''
   imgClassName='max-h-[600px] object-contain'
   loading='lazy'
-  alt='A list of charges for scam centre employees, including fees for using the toilet and viewing the sea air'
-  source='Tencent QQ'
+  alt='A list of charges for scam centre employees, including fees for using the toilet and viewing the sea air.'
+  source="Source: Ling Li"
   sourceLink='https://news.qq.com/rain/a/20221031A05BT400'
-  caption='Internet fraud companies charge their employees all sorts of fees, including "toilet usage fees", "sea view air fees", "floor wear and tear fees", etc'
-/>
+  caption='Internet fraud companies charge their employees all sorts of fees, including "toilet usage fees", "sea view air fees", "floor wear and tear fees", etc.'
+/> */}
+
+
 
 Victims also have to work punishing hours. One of our interviewees had to juggle more than ten phones at his compound in the Cambodian scam hub of Sihanoukville from 7am to midnight if the targets were in Asia, or from 1am to 4pm if the targets were in the United States. He worked seven days a week.
+
+<Image
+  src='https://images.theconversation.com/files/611355/original/file-20240805-17-1q7sei.jpg'
+  align=''
+  className=''
+  imgClassName=''
+  loading='lazy'
+  alt='Aerial view of the White Sand Hotel, Sihanoukville.'
+  source='Photo: Roun Ry'
+  caption='Aerial view of the White Sand Hotel in Sihanoukville, which is reported to have housed online scam operations, with testimonies of survivors alleging severe violence and several instances of illegal detention.'
+/> 
 
 In many compounds, the shifts begin with everyone chanting a slogan, such as:
 
 <Pullquote className='' quote='Two hands typing on a keyboard can earn you billions in gold; work hard on marketing and you will win. Go for it!' />
 
 But only a lucky few actually "win". The performance benchmarks they are expected to meet are extremely high. One employee in a Cambodian compound told us they were expected to generate US$10,000 (A$16,000) in revenue each month and entice two to three new victims a day. 
+
+<Image
+  src='https://images.theconversation.com/files/611286/original/file-20240805-23-wjps1j.jpeg'
+  align=''
+  className=''
+  imgClassName=''
+  loading='lazy'
+  alt='Balconies of the Jinshui compound in Otres, Sihanoukville, September 2022.'
+  source='Photo: Roun Ry'
+  caption='Zooming in on the balconies of the Jinshui compound in Otres, Sihanoukville, September 2022.'
+/> 
 
 The most successful employees are held up as models for the rest. Some compounds give them lucrative bonuses and the chance to move up the "corporate" ladder to become a team leader or manager.
 
@@ -367,7 +463,7 @@ For those who cannot meet their targets, life quickly becomes a nightmare. In th
 
 Some even endure sexual violence. A Taiwanese woman named Alice told us that when she refused to engage in scam work, she was sold numerous times between compounds and repeatedly raped. Before she was finally rescued, the gangsters threatened to lock her up in a brothel-like clubhouse at a scam compound to serve at the pleasure of the managers and workforce. We have also come across stories of male victims who were forced to perform sexual acts on each other as a form of punishment.
 
-Another harrowing aspect of life inside the compounds is the potential to be sold like a slave to the highest bidder. 
+Another harrowing aspect of life inside the compounds is the potential to be sold like a slave to the highest bidder.
 
 According to our interviews, skilled workers fluent in Mandarin fetched as much as US$10,000–15,000 (A$16,000–24,000) in Sihanoukville in 2022. In Myanmar, this rate could be double, given the logistical challenges of getting them into a country embroiled in a civil war.
 
@@ -383,11 +479,33 @@ The threats escalated.
 
 Then Ben was separated from his wife. He was forced to sit in a chair facing a wall with a knife positioned between his legs.
 
-The next day, he was moved to a locked room and the scam bosses ordered Ben and Moira to phone their families to demand a US$10,000 (A$16,000) "penalty" each to allow them to walk free.
+<Image
+  src='https://images.theconversation.com/files/644242/original/file-20250122-21-4tcblv.jpg'
+  align=''
+  className=''
+  imgClassName='aspect-[377/264]'
+  loading='lazy'
+  alt=''
+  source='Source: Ben Yeo'
+  caption='Moira in hospital after getting out of the compound.'
+/> 
+
+The next day, he was moved to a locked room and the scam bosses ordered Ben and Moira to phone their families to demand a US$10,000 (A$16,000) "penalty" each to allow them to walk free. 
 
 <Pullquote className='' quote="It's a combination between a prison and a madhouse. So the walls are like padded with, I think, four-inch pads. If you start screaming in there, no one will be able to hear you." />
 
 <Pullquote className='pt-5 pb-9 text-red-50 text-xl sm:text-2xl text-balance text-center' quote="And in the room, there's only one railing, which is half a foot above the ground. And basically they handcuffed me on that railing. So I wasn't even able to stand up and they were starving me, depriving me of toilets, water, food." startQuoteIcon={false} endQuoteIcon={true}/>
+
+<Image
+  src='https://images.theconversation.com/files/644243/original/file-20250122-18-fkko2l.jpg'
+  align=''
+  className=''
+  imgClassName='aspect-[377/264]'
+  loading='lazy'
+  alt='A family friend came to pick Ben and Moira up from the police station'
+  source='Source: Ben Yeo'
+  caption="A family friend came to pick Ben and Moira up from the police station"
+/> 
 
 After eight days, help finally arrived. Ben's father alerted the Malaysian embassy in Phnom Penh, the capital, and the local police intervened. But securing their freedom would still be a distressing ordeal, with the scam centre loathe to let them go.
 
