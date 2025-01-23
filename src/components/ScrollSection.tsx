@@ -252,6 +252,33 @@ export function ScrollSection({
     { scope: sectionRef }
   )
 
+  // barbedWireQuotes animation
+  useGSAP(
+    () => {
+      const section = sectionRef.current
+      if (!section || !className!.includes('barbedWireQuotes')) return
+
+      const backgroundElements = section.querySelectorAll('.pinned_background_wrapper > *')
+      const foregroundElement = section.querySelectorAll('.foregroundElement')
+
+      if (!foregroundElement || !backgroundElements.length) return
+
+      // First message animates on
+      gsap
+        .timeline({
+          scrollTrigger: {
+            // markers: true,
+            trigger: foregroundElement,
+            start: 'top bottom',
+            end: 'bottom top',
+            scrub: true
+          }
+        })
+        .to(backgroundElements[0], { scale: 1.5, ease: 'power1.inOut' })
+    },
+    { scope: sectionRef }
+  )
+
   return (
     <section
       id={id}
