@@ -9,7 +9,6 @@ export default function SeverancePaymentBill() {
 
   useEffect(() => {
     const observer = new ResizeObserver(() => {
-      console.log('resize')
       ScrollTrigger.refresh()
     })
 
