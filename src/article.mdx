@@ -54,12 +54,19 @@ import SeverancePaymentBill from './components/SeverancePaymentBill'
   <div className='mx-auto max-w-[45ch] text-center'>
     <TitleTextBorder
     as={'h1'}
-    className='text-balance text-center font-base text-4xl font-bold md:text-5xl lg:text-6xl'
-    >Surviving Asia's brutal scamming empires</TitleTextBorder>
+    className='text-balance text-center font-base text-5xl font-bold md:text-6xl lg:text-7xl'
+    >Scam Factories</TitleTextBorder>
     <br />
   </div>
 
-  <h3 className='text-center font-base'>Part one: life inside the compounds</h3>
+  <div className='mx-auto max-w-[35ch] text-center'>
+    <TitleTextBorder
+    as={'h1'}
+    className='text-center font-body text-xl font-bold md:text-3xl'
+    >Survival stories from the dark underbelly of Asia’s scamming industry</TitleTextBorder>
+  </div>
+
+  <h3 className='text-center font-body'>Part one: life inside the compounds</h3>
 
   <div className='text-center'>
     <span className='inline-block font-base text-sm'>By [Ivan Franceschini](https://theconversation.com/profiles/ivan-franceschini-1529038), [Ling
@@ -146,6 +153,57 @@ They both negotiated new jobs, Ben doing business development and Moira as a car
 When they arrived at the compound in February last year, however, Ben got a bad feeling. As he told The Conversation in a podcast interview:
 
 
+<ScrollSection pinType='pin_clipped' className='my-12 barbedWireQuotes'>
+  <ScrollBackground>
+    <Picture
+      src='https://images.theconversation.com/files/643964/original/file-20250122-15-g8b7dz.png'
+      loading='eager'
+      className='full_screen_media make_visible !opacity-60'
+      imgClassName='object-bottom-center'
+      caption=''
+      source=''
+      sourceLink=''
+      alt=''
+      focalPoint={{
+        mobile: { x: 0.5, y: 0.5 },
+        tablet: { x: 0.5, y: 0.5 },
+        tabletLandscape: { x: 0.5, y: 0.5 },
+        laptop: { x: 0.5, y: 0.5 },
+        desktop: { x: 0.5, y: 0.5 }
+      }}
+    />
+  </ScrollBackground>
+  <ScrollForeground>
+    <ScrollTextChapter className='' position='center' >
+    <Pullquote className='text-white' quote="It had these tall walls, barbed wire and cameras everywhere […] And when we got into the compound, we were told we weren't allowed to get out." />
+    </ScrollTextChapter>
+    <ScrollTextChapter step={true} position='center' className=''>
+    <Pullquote className='text-white' quote="Then they said, I'm sorry, this whole thing, it's not a casino. This is not a casino industry. As a matter of fact, we are doing scams." startQuoteIcon={false} />
+    </ScrollTextChapter>
+    <ScrollTextChapter step={true} position='center' className=''>
+    <Pullquote className='text-white' quote="We were very taken aback. I was quite upset because we let go of my home in Malaysia and we were really prepared for work, we wanted to do something legitimate." startQuoteIcon={false} />
+    </ScrollTextChapter>
+    <ScrollTextChapter step={true} position='center' className=''>
+    <Pullquote className='text-white' quote="I remember telling my wife that we have to sort of get through this with a soft approach. We can't fight our way through the gates, you know?" startQuoteIcon={false} endQuoteIcon={true} />
+    </ScrollTextChapter>
+  </ScrollForeground>
+</ScrollSection>
+
+{/* <div className='relative grid grid-cols-1 grid-rows-1'>
+  <BackgroundImage className='barbedWire h-full w-auto left-0 opacity-30 col-start-1 row-start-1 [box-shadow:0_0_20px_20px_#383838_inset]' src='https://images.theconversation.com/files/643964/original/file-20250122-15-g8b7dz.png' />
+
+  <div className='col-start-1 row-start-1'>
+    <Pullquote className='text-white' quote="It had these tall walls, barbed wire and cameras everywhere […] And when we got into the compound, we were told we weren't allowed to get out." />
+
+    <Pullquote className='text-white' quote="Then they said, I'm sorry, this whole thing, it's not a casino. This is not a casino industry. As a matter of fact, we are doing scams." startQuoteIcon={false} />
+
+    <Pullquote className='text-white' quote="We were very taken aback. I was quite upset because we let go of my home in Malaysia and we were really prepared for work, we wanted to do something legitimate." startQuoteIcon={false} />
+
+    <Pullquote className='text-white' quote="I remember telling my wife that we have to sort of get through this with a soft approach. We can't fight our way through the gates, you know?" startQuoteIcon={false} endQuoteIcon={true} />
+  </div>
+</div> */}
+{/* 
+
 <Pullquote className='text-white' quote="It had these tall walls, barbed wire and cameras everywhere […] And when we got into the compound, we were told we weren't allowed to get out." />
 
 <Pullquote className='text-white' quote="Then they said, I'm sorry, this whole thing, it's not a casino. This is not a casino industry. As a matter of fact, we are doing scams." startQuoteIcon={false} />
@@ -163,21 +221,8 @@ When they arrived at the compound in February last year, however, Ben got a bad 
 
 <Pullquote className='text-white' quote="We were very taken aback. I was quite upset because we let go of my home in Malaysia and we were really prepared for work, we wanted to do something legitimate." startQuoteIcon={false} />
 
-<Pullquote className='text-white' quote="I remember telling my wife that we have to sort of get through this with a soft approach. We can't fight our way through the gates, you know?" startQuoteIcon={false} endQuoteIcon={true} />
+<Pullquote className='text-white' quote="I remember telling my wife that we have to sort of get through this with a soft approach. We can't fight our way through the gates, you know?" startQuoteIcon={false} endQuoteIcon={true} /> */}
 
-{/* <div className='relative grid grid-cols-1 grid-rows-1'>
-  <BackgroundImage className='barbedWire h-full w-auto left-0 opacity-30 col-start-1 row-start-1 [box-shadow:0_0_20px_20px_#383838_inset]' src='https://images.theconversation.com/files/643964/original/file-20250122-15-g8b7dz.png' />
-
-  <div className='col-start-1 row-start-1'>
-    <Pullquote className='text-white' quote="It had these tall walls, barbed wire and cameras everywhere […] And when we got into the compound, we were told we weren't allowed to get out." />
-
-    <Pullquote className='text-white' quote="Then they said, I'm sorry, this whole thing, it's not a casino. This is not a casino industry. As a matter of fact, we are doing scams." startQuoteIcon={false} />
-
-    <Pullquote className='text-white' quote="We were very taken aback. I was quite upset because we let go of my home in Malaysia and we were really prepared for work, we wanted to do something legitimate." startQuoteIcon={false} />
-
-    <Pullquote className='text-white' quote="I remember telling my wife that we have to sort of get through this with a soft approach. We can't fight our way through the gates, you know?" startQuoteIcon={false} endQuoteIcon={true} />
-  </div>
-</div> */}
 
 Ben and Moira aren’t alone. There are many more victims in the industry across Southeast Asia. 
 
@@ -479,33 +524,11 @@ The threats escalated.
 
 Then Ben was separated from his wife. He was forced to sit in a chair facing a wall with a knife positioned between his legs.
 
-<Image
-  src='https://images.theconversation.com/files/644242/original/file-20250122-21-4tcblv.jpg'
-  align=''
-  className=''
-  imgClassName='aspect-[377/264]'
-  loading='lazy'
-  alt=''
-  source='Source: Ben Yeo'
-  caption='Moira in hospital after getting out of the compound.'
-/> 
-
 The next day, he was moved to a locked room and the scam bosses ordered Ben and Moira to phone their families to demand a US$10,000 (A$16,000) "penalty" each to allow them to walk free. 
 
 <Pullquote className='' quote="It's a combination between a prison and a madhouse. So the walls are like padded with, I think, four-inch pads. If you start screaming in there, no one will be able to hear you." />
 
 <Pullquote className='pt-5 pb-9 text-red-50 text-xl sm:text-2xl text-balance text-center' quote="And in the room, there's only one railing, which is half a foot above the ground. And basically they handcuffed me on that railing. So I wasn't even able to stand up and they were starving me, depriving me of toilets, water, food." startQuoteIcon={false} endQuoteIcon={true}/>
-
-<Image
-  src='https://images.theconversation.com/files/644243/original/file-20250122-18-fkko2l.jpg'
-  align=''
-  className=''
-  imgClassName='aspect-[377/264]'
-  loading='lazy'
-  alt='A family friend came to pick Ben and Moira up from the police station'
-  source='Source: Ben Yeo'
-  caption="A family friend came to pick Ben and Moira up from the police station"
-/> 
 
 After eight days, help finally arrived. Ben's father alerted the Malaysian embassy in Phnom Penh, the capital, and the local police intervened. But securing their freedom would still be a distressing ordeal, with the scam centre loathe to let them go.
 
