@@ -99,6 +99,10 @@ export default {
       minHeight: {
         screen: ['100vh', '100lvh']
       },
+      width: {
+        'image-width-md': FIGUREWIDTH.widthCalc,
+        'image-width': FIGUREWIDTH.base
+      },
       typography: ({ theme }) => ({
         light: {
           css: {
