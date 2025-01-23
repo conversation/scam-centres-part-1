@@ -77,7 +77,7 @@ export default function SeverancePaymentBill() {
         caption='Internet fraud companies charge their employees all sorts of fees, including using the toilet and breathing fresh air.'
       />
 
-      <div className='not-prose max-md:w-image-width w-image-width-md absolute left-1/2 top-[-0.6%] aspect-[1075/1263] -translate-x-1/2 border max-sm:left-[55%] sm:aspect-[103/121]'>
+      <div className='not-prose max-md:w-image-width w-image-width-md absolute left-1/2 top-[-0.6%] aspect-[1075/1263] -translate-x-1/2 max-sm:left-[55%] sm:aspect-[103/121]'>
         <div className='absolute right-[12%] top-[42.7%] rotate-[6.1deg]'>
           <span className='scramble1 bg-neutral-900 p-1 opacity-0'>Floor Damage Fee</span>
           <span className='scramble1 ml-6 bg-neutral-900 p-1 opacity-0 md:ml-10'>US$1,179.33</span>
