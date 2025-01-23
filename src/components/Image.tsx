@@ -40,23 +40,25 @@ export default function Image({
   }
 
   const renderSource = () => {
-    if (!source) return null
-
-    return sourceLink ? (
-      <>
-        {' '}
-        <span>
-          <a href={sourceLink} target='_blank' rel='noopener noreferrer'>
-            {source}
-          </a>
-        </span>
-      </>
-    ) : (
-      <>
-        {' '}
-        <span>{source}</span>
-      </>
-    )
+    if (source && sourceLink && caption) {
+      return (
+        <figcaption className={`${align ? 'max-w-none' : ''}`}>
+          {caption}{' '}
+          <span className='opacity-70'>
+            <a href={sourceLink} target='_blank' rel='noopener noreferrer'>
+              {source}
+            </a>
+          </span>
+        </figcaption>
+      )
+    } else if (source || caption) {
+      return (
+        <figcaption className={`${align ? 'max-w-none' : ''}`}>
+          {caption} <span className='opacity-70'>{source}</span>
+        </figcaption>
+      )
+    }
+    return <></>
   }
 
   const alignmentSize = align?.length ? `${ARTICLEWIDTH.maxWidth / 2}px` : `${FIGUREWIDTH.maxWidth}px`
@@ -78,10 +80,7 @@ export default function Image({
         src={src}
         sizes={sizes}
       />
-      <figcaption className={`${align ? 'max-w-none' : ''}`}>
-        {caption}
-        {renderSource()}
-      </figcaption>
+      {renderSource()}
     </figure>
   )
 }
