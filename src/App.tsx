@@ -17,10 +17,6 @@ export default function App() {
     })
   }, [])
 
-  useEffect(() => {
-    window.history.scrollRestoration = 'manual'
-  }, [])
-
   return (
     <DarkModeProvider>
       <MarkdownProvider>
