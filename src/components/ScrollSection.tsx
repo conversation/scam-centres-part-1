@@ -42,6 +42,8 @@ export function ScrollSection({
 
       const steps = section.querySelectorAll('.pinned_foreground .step')
       const backgroundElements = section.querySelectorAll('.pinned_background_wrapper > *')
+      const backgroundImageElements = section.querySelectorAll('.pinned_background_wrapper img')
+      const foregroundElement = section.querySelectorAll('.foregroundElement')
 
       steps.forEach((step, index) => {
         const element = backgroundElements[index + 1]
@@ -60,6 +62,20 @@ export function ScrollSection({
           })
         }
       })
+
+      if (backgroundImageElements.length) {
+        gsap
+          .timeline({
+            scrollTrigger: {
+              // markers: true,
+              trigger: foregroundElement,
+              start: 'top bottom',
+              end: 'bottom top',
+              scrub: true
+            }
+          })
+          .to(backgroundImageElements, { scale: 1.5, ease: 'power1.inOut' })
+      }
     },
     { scope: sectionRef }
   )
@@ -217,33 +233,6 @@ export function ScrollSection({
         })
         .to('.dont_know', { alpha: 1 })
         .to('.mum_message_section', { y: cantWaitheight - dontKnowheight - 28 - 8 }, 0)
-    },
-    { scope: sectionRef }
-  )
-
-  // barbedWireQuotes animation
-  useGSAP(
-    () => {
-      const section = sectionRef.current
-      if (!section || !className!.includes('barbedWireQuotes')) return
-
-      const backgroundElements = section.querySelectorAll('.pinned_background_wrapper img')
-      const foregroundElement = section.querySelectorAll('.foregroundElement')
-
-      if (!foregroundElement || !backgroundElements.length) return
-
-      // First message animates on
-      gsap
-        .timeline({
-          scrollTrigger: {
-            // markers: true,
-            trigger: foregroundElement,
-            start: 'top bottom',
-            end: 'bottom top',
-            scrub: true
-          }
-        })
-        .to(backgroundElements, { scale: 1.5, ease: 'power1.inOut' })
     },
     { scope: sectionRef }
   )
