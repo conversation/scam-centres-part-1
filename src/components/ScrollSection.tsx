@@ -70,33 +70,7 @@ export function ScrollSection({
       const section = sectionRef.current
       if (!section || !className!.includes('intro_section')) return
 
-      // setHeaderHeight(section.clientHeight)
-
       const steps = section.querySelectorAll('.pinned_foreground .step')
-
-      // const windowWidth2 = 1000000
-      // // const windowWidth2 = 640
-
-      // // Card moves side to side and perspective changes
-
-      // if (window.innerWidth > windowWidth2) {
-      //   gsap
-      //     .timeline({
-      //       scrollTrigger: {
-      //         // markers: true,
-      //         trigger: '.pinned_foreground',
-      //         start: 'top top-=10%',
-      //         endTrigger: '#introLastTrigger',
-      //         end: 'bottom top',
-      //         scrub: true
-      //       }
-      //     })
-      //     .to('.phone_card', { rotationY: 2, duration: 1, ease: 'power1.inOut' }, 0)
-      //     .to('.phone_card_background', { xPercent: -100, duration: 1, ease: 'power1.inOut' }, 0)
-      //     .to('.phone_card', { rotationY: -2, duration: 1, ease: 'power1.inOut' })
-      //     .to('.phone_card_background', { xPercent: 0, duration: 1, ease: 'power1.inOut' }, '<')
-      //     .to('.phone_card', { rotationY: 0, duration: 1, ease: 'power1.inOut' })
-      // }
 
       // Animate message delete
       gsap
