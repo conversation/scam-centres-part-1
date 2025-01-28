@@ -1,6 +1,7 @@
 import { cn } from '../../util/helpers'
 import PhoneGraphic from '../PhoneGraphic'
-import WaveformVideo from './WaveformVideo'
+import CallTimer from './CallTimer'
+// import WaveformVideo from './WaveformVideo'
 
 export default function MessagePart1b({ className }: { className: string }) {
   return (
@@ -9,52 +10,50 @@ export default function MessagePart1b({ className }: { className: string }) {
         <p className='absolute left-1/2 mt-1 -translate-x-1/2 font-base text-sm text-white'>10:47am</p>
 
         {/* Phone content */}
-        <div className='flex h-full flex-col justify-between bg-neutral-700 p-4'>
-          <div className=''>
-            <h1 className='pt-2 text-center text-3xl font-bold text-white sm:pt-4'>Ben's mum</h1>
-          </div>
-          <div className='place-content-center'>
-            <WaveformVideo />
+        <div className='grid h-full grid-rows-[20%_1fr] bg-neutral-700 p-4'>
+          <div className='flex flex-col place-content-center'>
+            <h1 className='text-center text-3xl font-bold text-white'>Mum</h1>
+            <CallTimer />
           </div>
 
-          <div className='mx-auto grid w-[80%] grid-cols-3 gap-2 border text-center text-neutral-700 sm:gap-5'>
-            <div className='aspect-square place-content-center rounded-full bg-neutral-200 max-sm:text-[clamp(0.8rem,4vw,1.5rem)] sm:text-[clamp(0.8rem,4vw,1.5rem)]'>
+          <div className='mx-auto grid w-[80%] grid-cols-3 gap-2 border text-center text-neutral-700 sm:gap-3'>
+            <div className='aspect-square place-content-center rounded-full bg-neutral-300 max-sm:text-[clamp(0.8rem,4vw,1.5rem)] sm:text-[clamp(0.8rem,4vw,1.5rem)]'>
               1
             </div>
-            <div className='aspect-square place-content-center rounded-full bg-neutral-200 max-sm:text-[clamp(0.8rem,4vw,1.5rem)] sm:text-[clamp(0.8rem,4vw,1.5rem)]'>
+            <div className='aspect-square place-content-center rounded-full bg-neutral-300 max-sm:text-[clamp(0.8rem,4vw,1.5rem)] sm:text-[clamp(0.8rem,4vw,1.5rem)]'>
               2
             </div>
-            <div className='aspect-square place-content-center rounded-full bg-neutral-200 max-sm:text-[clamp(0.8rem,4vw,1.5rem)] sm:text-[clamp(0.8rem,4vw,1.5rem)]'>
+            <div className='aspect-square place-content-center rounded-full bg-neutral-300 max-sm:text-[clamp(0.8rem,4vw,1.5rem)] sm:text-[clamp(0.8rem,4vw,1.5rem)]'>
               3
             </div>
-            <div className='aspect-square place-content-center rounded-full bg-neutral-200 max-sm:text-[clamp(0.8rem,4vw,1.5rem)] sm:text-[clamp(0.8rem,4vw,1.5rem)]'>
+            <div className='aspect-square place-content-center rounded-full bg-neutral-300 max-sm:text-[clamp(0.8rem,4vw,1.5rem)] sm:text-[clamp(0.8rem,4vw,1.5rem)]'>
               4
             </div>
-            <div className='aspect-square place-content-center rounded-full bg-neutral-200 max-sm:text-[clamp(0.8rem,4vw,1.5rem)] sm:text-[clamp(0.8rem,4vw,1.5rem)]'>
+            <div className='aspect-square place-content-center rounded-full bg-neutral-300 max-sm:text-[clamp(0.8rem,4vw,1.5rem)] sm:text-[clamp(0.8rem,4vw,1.5rem)]'>
               5
             </div>
-            <div className='aspect-square place-content-center rounded-full bg-neutral-200 max-sm:text-[clamp(0.8rem,4vw,1.5rem)] sm:text-[clamp(0.8rem,4vw,1.5rem)]'>
+            <div className='aspect-square place-content-center rounded-full bg-neutral-300 max-sm:text-[clamp(0.8rem,4vw,1.5rem)] sm:text-[clamp(0.8rem,4vw,1.5rem)]'>
               6
             </div>
-            <div className='aspect-square place-content-center rounded-full bg-neutral-200 max-sm:text-[clamp(0.8rem,4vw,1.5rem)] sm:text-[clamp(0.8rem,4vw,1.5rem)]'>
+            <div className='aspect-square place-content-center rounded-full bg-neutral-300 max-sm:text-[clamp(0.8rem,4vw,1.5rem)] sm:text-[clamp(0.8rem,4vw,1.5rem)]'>
               7
             </div>
-            <div className='aspect-square place-content-center rounded-full bg-neutral-200 max-sm:text-[clamp(0.8rem,4vw,1.5rem)] sm:text-[clamp(0.8rem,4vw,1.5rem)]'>
+            <div className='aspect-square place-content-center rounded-full bg-neutral-300 max-sm:text-[clamp(0.8rem,4vw,1.5rem)] sm:text-[clamp(0.8rem,4vw,1.5rem)]'>
               8
             </div>
-            <div className='aspect-square place-content-center rounded-full bg-neutral-200 max-sm:text-[clamp(0.8rem,4vw,1.5rem)] sm:text-[clamp(0.8rem,4vw,1.5rem)]'>
+            <div className='aspect-square place-content-center rounded-full bg-neutral-300 max-sm:text-[clamp(0.8rem,4vw,1.5rem)] sm:text-[clamp(0.8rem,4vw,1.5rem)]'>
               9
             </div>
-            <div className='aspect-square place-content-center rounded-full bg-neutral-200 pt-2 max-sm:text-[clamp(0.8rem,4vw,1.5rem)] sm:text-[clamp(0.8rem,4vw,1.5rem)]'>
+            <div className='aspect-square place-content-center rounded-full bg-neutral-300 pt-2 max-sm:text-[clamp(0.8rem,4vw,1.5rem)] sm:text-[clamp(0.8rem,4vw,1.5rem)]'>
               *
             </div>
-            <div className='aspect-square place-content-center rounded-full bg-neutral-200 max-sm:text-[clamp(0.8rem,4vw,1.5rem)] sm:text-[clamp(0.8rem,4vw,1.5rem)]'>
+            <div className='aspect-square place-content-center rounded-full bg-neutral-300 max-sm:text-[clamp(0.8rem,4vw,1.5rem)] sm:text-[clamp(0.8rem,4vw,1.5rem)]'>
               0
             </div>
-            <div className='aspect-square place-content-center rounded-full bg-neutral-200 max-sm:text-[clamp(0.8rem,4vw,1.5rem)] sm:text-[clamp(0.8rem,4vw,1.5rem)]'>
+            <div className='aspect-square place-content-center rounded-full bg-neutral-300 max-sm:text-[clamp(0.8rem,4vw,1.5rem)] sm:text-[clamp(0.8rem,4vw,1.5rem)]'>
               #
             </div>
-            <div className='col-start-2 flex aspect-square items-center justify-center rounded-full bg-green-500 max-sm:text-[clamp(0.8rem,4vw,1.5rem)] sm:text-[clamp(0.8rem,4vw,1.5rem)]'>
+            <div className='col-start-2 flex aspect-square items-center justify-center rounded-full bg-red-500 max-sm:text-[clamp(0.8rem,4vw,1.5rem)] sm:text-[clamp(0.8rem,4vw,1.5rem)]'>
               <svg
                 version='1.1'
                 id='Layer_1'
@@ -62,7 +61,7 @@ export default function MessagePart1b({ className }: { className: string }) {
                 x='0px'
                 y='0px'
                 viewBox='0 0 122.88 122.27'
-                className='aspect-square h-6'
+                className='aspect-square h-6 rotate-[137deg]'
               >
                 <g>
                   <path

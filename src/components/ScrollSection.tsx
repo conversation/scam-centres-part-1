@@ -158,18 +158,13 @@ export function ScrollSection({
           scrollTrigger: {
             // markers: true,
             trigger: steps[0],
-            start: 'top 90%',
-            end: 'center 60%',
+            start: 'top 70%',
+            end: 'top 40%',
             scrub: true
           }
         })
-        .to('.aunt_phone', { scale: 0.6, xPercent: -30, yPercent: 10, ease: 'power1.inOut' })
-        .fromTo(
-          '.mum_phone',
-          { xPercent: -20, yPercent: -20, autoAlpha: 0, ease: 'power1.inOut' },
-          { xPercent: 0, yPercent: 0, autoAlpha: 1, ease: 'power1.inOut' },
-          0
-        )
+        .to('.ben_phone', { scale: 0.6, xPercent: -30, yPercent: 10, ease: 'power1.inOut' })
+        .to('.mum_phone', { xPercent: 0, yPercent: 0, autoAlpha: 1, ease: 'power1.inOut' }, 0)
 
       ScrollTrigger.create({
         // markers: true,
