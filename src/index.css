@@ -7,7 +7,7 @@
     @apply overflow-x-clip;
   }
 
-  img {
+  /* img {
     will-change: opacity;
     opacity: 0;
   }
@@ -15,7 +15,7 @@
   img[loaded] {
     opacity: 1;
     animation: fadeIn 0.5s ease-in-out;
-  }
+  } */
 
   @keyframes fadeIn {
     0% {
