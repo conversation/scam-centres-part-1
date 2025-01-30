@@ -64,7 +64,7 @@ export function Author({
           className='not-prose float-left mb-5 mr-4 block h-12 w-12 rounded-full'
           src={imgSrc}
         />
-        <span className='text-xs'>{name}</span>
+        <span className='text-sm'>{name}</span>
       </a>
 
       <p className='not-prose m-0 ml-16 block text-xs'>
