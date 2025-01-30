@@ -60,15 +60,15 @@ export default function JobAdTranslation() {
         src='https://images.theconversation.com/files/643962/original/file-20250122-15-qmfqy7.png'
         align='right'
         className=''
-        imgClassName='aspect-[95/166] object-contain jobAdImg max-h-[80vh]'
+        imgClassName='aspect-[95/166] object-contain jobAdImg max-h-[600px]'
         loading='lazy'
         alt='A job ad in Mandarin promising ¥19,000 (A$4,169) a month salary and 8 working hours, 5 days a week.'
-        source='Source: Ben Yeo/Telegram'
+        source='Source: Telegram/Author provided'
         sourceLink=''
         caption='A telegram ad promising ¥19,000 (A$4,169) a month salary and 8 working hours, 5 days a week.'
       />
 
-      <div className='sm:imgfloat-right not-prose absolute right-1/2 top-0 aspect-[95/166] h-screen max-h-[80vh] w-auto translate-x-1/2 sm:right-0 sm:h-auto sm:w-full sm:translate-x-0'>
+      <div className='sm:imgfloat-right not-prose absolute right-1/2 top-0 aspect-[95/166] h-screen max-h-[600px] w-auto translate-x-1/2 sm:right-0 sm:h-auto sm:w-full sm:translate-x-0'>
         <div className='absolute left-[9%] top-[10%]'>
           <span className='translation bg-neutral-900 p-1 opacity-0'>Position: General worker; Finance; Business</span>
         </div>

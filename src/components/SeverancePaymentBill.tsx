@@ -59,15 +59,15 @@ export default function SeverancePaymentBill() {
         src='https://images.theconversation.com/files/639930/original/file-20241220-17-2ecnyg.jpeg'
         align=''
         className=''
-        imgClassName='aspect-[103/121] max-h-[80vh] object-contain  bill_wrapperImg'
+        imgClassName='aspect-[103/121] max-h-[600px] object-contain  bill_wrapperImg'
         loading='eager'
         alt='A list of charges for scam centre employees, including fees for using the toilet and viewing the sea air.'
-        source='Source: Tencent QQ'
+        source='Source: Tencent QQ/Author provided'
         sourceLink='https://news.qq.com/rain/a/20221031A05BT400'
         caption='Internet fraud companies charge their employees all sorts of fees, including using the toilet and breathing fresh air.'
       />
 
-      <div className='not-prose absolute left-1/2 top-0 aspect-[103/121] h-auto max-h-[80vh] w-full -translate-x-1/2 sm:h-screen sm:w-auto'>
+      <div className='not-prose absolute left-1/2 top-0 aspect-[103/121] h-auto max-h-[600px] w-full -translate-x-1/2 sm:h-screen sm:w-auto'>
         <div className='absolute right-[23.8%] top-[41.66%] rotate-[6.1deg]'>
           <span className='severenceTranslation bg-neutral-900 p-1 opacity-0'>Floor Damage Fee</span>
         </div>
