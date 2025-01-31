@@ -15,7 +15,7 @@ export default function SeverancePaymentBill() {
         .timeline({
           scrollTrigger: {
             trigger: '.bill_wrapperImg',
-            start: 'center center',
+            start: 'top center',
             end: 'center center',
             onEnterBack: () => {
               if (tl.paused()) {

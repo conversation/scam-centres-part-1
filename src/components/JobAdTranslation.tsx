@@ -16,8 +16,8 @@ export default function JobAdTranslation() {
           scrollTrigger: {
             // markers: true,
             trigger: '.jobAdImg',
-            start: 'center center',
-            end: 'center center',
+            start: 'top center',
+            // end: 'center center',
             onEnterBack: () => {
               if (tl.paused()) {
                 tl.play()
