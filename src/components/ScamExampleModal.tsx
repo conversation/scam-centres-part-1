@@ -13,24 +13,24 @@ export default function ScamExampleModal({ className }: { className: string }) {
   }
 
   useEffect(() => {
-    function dialogClickHandler(e) {
-      if (e.target.tagName !== 'DIALOG')
-        //This prevents issues with forms
-        return
+    function dialogClickHandler(e: MouseEvent) {
+      const target = e.target as HTMLElement
 
-      const rect = e.target.getBoundingClientRect()
+      if (target.tagName !== 'DIALOG') return // Prevents issues with forms
+
+      const dialog = target as HTMLDialogElement
+      const rect = dialog.getBoundingClientRect()
 
       const clickedInDialog =
-        rect.top <= e.clientY &&
-        e.clientY <= rect.top + rect.height &&
-        rect.left <= e.clientX &&
-        e.clientX <= rect.left + rect.width
+        rect.top <= e.clientY && e.clientY <= rect.bottom && rect.left <= e.clientX && e.clientX <= rect.right
 
-      if (clickedInDialog === false) e.target.close()
+      if (!clickedInDialog) dialog.close()
     }
 
-    if (dialogRef.current) {
-      dialogRef.current!.addEventListener('click', dialogClickHandler)
+    const dialog = dialogRef.current
+    if (dialog) {
+      dialog.addEventListener('click', dialogClickHandler)
+      return () => dialog.removeEventListener('click', dialogClickHandler)
     }
   }, [])
 
