@@ -103,7 +103,7 @@ export function ScrollSection({
         .to(
           '.introTextMessage',
           {
-            backgroundColor: '#ecc3C0',
+            color: '#ecc3C0',
             duration: 0.3,
             ease: 'power1.inOut'
           },
@@ -161,12 +161,12 @@ export function ScrollSection({
       const steps = section.querySelectorAll('.pinned_foreground .step')
       const backgroundElements = section.querySelectorAll('.pinned_background_wrapper > *')
 
-      const cantWaitheight = document.querySelector('.cant_wait')?.clientHeight
-      const dontKnowheight = document.querySelector('.dont_know')?.clientHeight
+      const cantWaitheight = document.querySelector('.cant_wait')?.getBoundingClientRect().height
+      const dontKnowheight = document.querySelector('.dont_know')?.getBoundingClientRect().height
 
       if (!steps.length || !backgroundElements.length || !cantWaitheight || !dontKnowheight) return
 
-      gsap.set('.mum_message_section', { y: cantWaitheight + dontKnowheight })
+      gsap.set('.mum_message_section', { y: cantWaitheight + dontKnowheight + 8 })
 
       // First message animates on
       gsap
@@ -219,7 +219,7 @@ export function ScrollSection({
           }
         })
         .to('.cant_wait', { alpha: 1 })
-        .to('.mum_message_section', { y: cantWaitheight - 28 }, 0)
+        .to('.mum_message_section', { y: dontKnowheight }, 0)
 
       gsap
         .timeline({
@@ -232,7 +232,7 @@ export function ScrollSection({
           }
         })
         .to('.dont_know', { alpha: 1 })
-        .to('.mum_message_section', { y: cantWaitheight - dontKnowheight - 28 - 8 }, 0)
+        .to('.mum_message_section', { y: -8 }, 0)
     },
     { scope: sectionRef }
   )
