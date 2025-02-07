@@ -1,7 +1,93 @@
 import PhoneGraphic from './PhoneGraphic'
-import TextMessage from './TextMessage'
+import { TextMessage } from './TextMessage'
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
 
 export default function IntroPhoneScam() {
+  function getFormattedTime() {
+    const now = new Date()
+    let hours = now.getHours()
+    const minutes = now.getMinutes().toString().padStart(2, '0')
+    const ampm = hours >= 12 ? 'PM' : 'AM'
+    hours = hours % 12 || 12 // Convert 0 to 12 for AM/PM format
+    return `${hours}:${minutes} ${ampm}`
+  }
+
+  // Intro animation
+  useGSAP(() => {
+    const steps = document.querySelectorAll('.intro_section .pinned_foreground .step')
+
+    // Animate message delete
+    gsap
+      .timeline({
+        scrollTrigger: {
+          // markers: true,
+          trigger: steps[0],
+          start: 'top 90%',
+          end: 'center 60%',
+          scrub: true
+        }
+      })
+      .to('#introDeleteIcon', { autoAlpha: 1, duration: 0.3, ease: 'power1.inOut' })
+      .to(
+        '.introTextMessage',
+        {
+          color: '#ecc3C0',
+          duration: 0.3,
+          ease: 'power1.inOut'
+        },
+        0
+      )
+
+    // Animate angry reply
+    gsap
+      .timeline({
+        scrollTrigger: {
+          // markers: true,
+          trigger: steps[1],
+          start: 'top 90%',
+          end: 'center 60%',
+          scrub: true
+        }
+      })
+      .to(['#introDeleteIcon', '.introTextMessage'], {
+        xPercent: -150,
+        opacity: 0,
+        roundProps: 'xPercent',
+        ease: 'power1.inOut'
+      })
+      .fromTo(
+        '.introTextMessageReply',
+        { yPercent: 150, opacity: 0 },
+        { yPercent: 0, opacity: 1, roundProps: 'yPercent', ease: 'power1.inOut' },
+        0.15
+      )
+      .to('#introBlockBtn', { backgroundColor: '#d8352a', color: 'white', ease: 'power1.inOut' }, 0)
+
+    // Animate scammer reply
+    gsap
+      .timeline({
+        scrollTrigger: {
+          // markers: true,
+          trigger: steps[2],
+          start: 'top 90%',
+          end: 'center 60%',
+          scrub: true
+        }
+      })
+      .fromTo(
+        '.scammerReply',
+        { y: 200, autoAlpha: 0 },
+        {
+          y: document.querySelector('.introTextMessageReply')!.clientHeight + 16,
+          autoAlpha: 1,
+          ease: 'power1.inOut',
+          roundProps: 'y'
+        },
+        0
+      )
+  })
+
   return (
     <div className='phone_card_background full_screen_media make_visible place-content-center'>
       <PhoneGraphic className=''>
@@ -14,7 +100,7 @@ export default function IntroPhoneScam() {
             <TextMessage
               className='introTextMessage relative ml-4 mr-4 w-full max-w-[80%] animate-pulse rounded-md rounded-tl-none shadow-md'
               sender={false}
-              time=''
+              time={getFormattedTime()}
             >
               <p className='text-pretty text-base sm:text-lg'>
                 Do you want to make some money? Message "Yes" to earn $4,000 a week!
@@ -30,7 +116,7 @@ export default function IntroPhoneScam() {
             <TextMessage
               className='introTextMessageReply absolute right-0 top-0 ml-auto mr-4 w-fit max-w-[65%] rounded-md opacity-0 shadow-md'
               sender={true}
-              time=''
+              time={getFormattedTime()}
             >
               <p className='text-pretty text-base sm:text-lg'>Who are you?</p>
             </TextMessage>
@@ -38,7 +124,7 @@ export default function IntroPhoneScam() {
             <TextMessage
               className='scammerReply absolute left-0 top-0 ml-4 max-w-[60%] rounded-md bg-green-100 opacity-0 shadow-md'
               sender={false}
-              time=''
+              time={getFormattedTime()}
             >
               <p className='text-pretty text-base sm:text-lg'>I'm not who you think I am...</p>
               <div

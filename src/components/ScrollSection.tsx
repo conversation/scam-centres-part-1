@@ -80,78 +80,6 @@ export function ScrollSection({
     { scope: sectionRef }
   )
 
-  // Intro animation
-  useGSAP(
-    () => {
-      const section = sectionRef.current
-      if (!section || !className!.includes('intro_section')) return
-
-      const steps = section.querySelectorAll('.pinned_foreground .step')
-
-      // Animate message delete
-      gsap
-        .timeline({
-          scrollTrigger: {
-            // markers: true,
-            trigger: steps[0],
-            start: 'top 90%',
-            end: 'center 60%',
-            scrub: true
-          }
-        })
-        .to('#introDeleteIcon', { autoAlpha: 1, duration: 0.3, ease: 'power1.inOut' })
-        .to(
-          '.introTextMessage',
-          {
-            color: '#ecc3C0',
-            duration: 0.3,
-            ease: 'power1.inOut'
-          },
-          0
-        )
-
-      // Animate angry reply
-      gsap
-        .timeline({
-          scrollTrigger: {
-            // markers: true,
-            trigger: steps[1],
-            start: 'top 90%',
-            end: 'center 60%',
-            scrub: true
-          }
-        })
-        .to('#introDeleteIcon', { xPercent: -150, autoAlpha: 0, ease: 'power1.inOut' })
-        .to('.introTextMessage', { xPercent: -150, autoAlpha: 0, ease: 'power1.inOut' }, 0)
-        .fromTo('.introTextMessageReply', { yPercent: 150 }, { yPercent: 0, autoAlpha: 1, ease: 'power1.inOut' }, 0.2)
-        .to('#introBlockBtn', { backgroundColor: '#d8352a', color: 'white', ease: 'power1.inOut' }, 0)
-
-      // Animate scammer reply
-      gsap
-        .timeline({
-          scrollTrigger: {
-            // markers: true,
-            trigger: steps[2],
-            start: 'top 90%',
-            end: 'center 60%',
-            scrub: true
-          }
-        })
-        .to(['#introDeleteIcon', '.introTextMessage'], { display: 'none' })
-        .fromTo(
-          '.scammerReply',
-          { y: 200, autoAlpha: 0 },
-          {
-            y: document.querySelector('.introTextMessageReply')!.clientHeight + 16,
-            autoAlpha: 1,
-            ease: 'power1.inOut'
-          },
-          0
-        )
-    },
-    { scope: sectionRef }
-  )
-
   // Yeo messages animation
   useGSAP(
     () => {
@@ -218,8 +146,7 @@ export function ScrollSection({
             scrub: true
           }
         })
-        .to('.cant_wait', { alpha: 1 })
-        .to('.mum_message_section', { y: dontKnowheight }, 0)
+        .to('.mum_message_section', { y: dontKnowheight, roundProps: 'y' }, 0)
 
       gsap
         .timeline({
@@ -231,8 +158,7 @@ export function ScrollSection({
             scrub: true
           }
         })
-        .to('.dont_know', { alpha: 1 })
-        .to('.mum_message_section', { y: -8 }, 0)
+        .to('.mum_message_section', { y: -8, roundProps: 'y' }, 0)
     },
     { scope: sectionRef }
   )
