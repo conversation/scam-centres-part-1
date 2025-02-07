@@ -17,7 +17,8 @@ import Tweet1 from './components/Tweet1'
 import SeverancePaymentBill from './components/SeverancePaymentBill'
 import JobAdTranslation from './components/JobAdTranslation'
 import ScamExampleModal from './components/ScamExampleModal'
-import TextMessage from './components/TextMessage'
+import {TextMessage} from './components/TextMessage'
+import PhrasebookScramble from './components/PhrasebookScramble'
 
 <ArticleSetup
   theme='dark'
@@ -55,6 +56,8 @@ import TextMessage from './components/TextMessage'
   </ScrollForeground>
 </ScrollSection>
 
+
+
 <div className='place-content-center mt-20 mb-32'>
 
   <div className='mx-auto max-w-[45ch] text-center'>
@@ -84,7 +87,7 @@ import TextMessage from './components/TextMessage'
 
 Ben Yeo is trapped in a scam centre in Cambodia, desperately trying to escape. It's early 2024 and he's been here for 30 days.
 
-{/* <ScamExampleModal /> */}
+
 
 <figure >
   <picture className='aspect-[16/7] border'></picture>
@@ -187,13 +190,8 @@ Now they have to choose: pay their captors a US$20,000 ransom or get to work in 
   </ScrollForeground>
 </ScrollSection>
 
-{/* Ben Yeo was a self-made businessman from Malaysia who had travelled all over Southeast Asia for work – organising government investment conferences in Cambodia and Myanmar. But by early 2024, he found himself trapped in a scam centre in Cambodia, desperately trying to escape. */}
 
-{/* <ScamExampleModal /> */}
-
-
-
-<ScrollSection className='yeo_messages ' pinType='pin_clipped'>
+<ScrollSection pinType='pin_clipped' className='yeo_messages'>
   <ScrollBackground  className='pointer-events-none' bgClassName='sm:max-w-[min((100%-40px)/2,750px/2)] sm:!ml-[calc((100%-min(100%-40px,750px))/2)]'>
     <MessagePart1 className="full_screen_media make_visible z-[1]"/>
     <MessagePart1b className="full_screen_media make_visible"/>
@@ -452,8 +450,6 @@ There are often promises of high salaries, year-end bonuses and promotion opport
 
 Others are tempted into the industry through brokers, who may spend months building personal connections with their victims before approaching them with an “unmissable” job opportunity. They are typically paid a fee by the scam company, which then becomes a debt the victim or their family must later pay to secure their freedom. 
 
-Some are duped by people in their social circles, friends or even relatives. 
-
 Some are duped by people in their social circles, friends or even relatives. Other victims are kidnapped right off the street. During the pandemic, out of work gangsters turned to kidnapping people for scam operations to make a living.
 
 ## Punishment and manipulation
@@ -474,6 +470,14 @@ Victims often begin their new "jobs" with a massive debt for flights, visas, per
 These debts grow the longer they are held, with accommodation, food and even "seaside air" added to their final bill.
 
 <SeverancePaymentBill />
+
+Newcomers must also be instructed in how to pull off a scam. Some are highly scripted frauds that require intensive training and dedicated phrasebooks.
+
+<PhrasebookScramble />
+
+The time involved in approaching a victim and earning their trust can sometimes take months. Here's how one scammer tricked a victim in China over WhatsApp, texting daily and presenting himself as a successful cryptocurrency investor. 
+
+<ScamExampleModal />
 
 In many compounds, the shifts begin with everyone chanting a slogan, such as:
 
@@ -519,19 +523,25 @@ Skilled workers fluent in Mandarin can fetch anywhere between US$10,000-30,000.
 
 ## Getting out
 
-For two weeks, Ben and Moira sat at their desks, refusing to make calls.
-
-The threats escalated.
-
-Then Ben was separated from his wife. He was forced to sit in a chair facing a wall with a knife positioned between his legs.
-
-The next day, he was moved to a locked room and the scam bosses ordered Ben and Moira to phone their families to demand a US$10,000 (A$16,000) "penalty" each to allow them to walk free. 
+Ben is eventually separated from his wife and locked in a room by himself.
 
 <Pullquote className='' quote="It's a combination between a prison and a madhouse. So the walls are like padded with, I think, four-inch pads. If you start screaming in there, no one will be able to hear you." />
 
 <Pullquote className='' quote="And in the room, there's only one railing, which is half a foot above the ground. And basically they handcuffed me on that railing. So I wasn't even able to stand up and they were starving me, depriving me of toilets, water, food." startQuoteIcon={false} endQuoteIcon={true}/>
 
-After eight days, help finally arrived. Ben's father alerted the Malaysian embassy in Phnom Penh, the capital, and the local police intervened. But securing their freedom would still be a distressing ordeal, with the scam centre loathe to let them go.
+His family doesn't pay the ransom, though. They go to the Malaysian embassy in Cambodia instead. And eight days after Ben was put in isolation, the police finally arrive.
+
+Ben and Moira's ordeal doesn't end there, however. When they give their statement to the police, they are astonished to see a negotiator for the scam company in the room. Ben fears the police may be compromised.
+
+With the help of a well-connected family friend in Cambodia, they are eventually transferred to another police station. The scam company follows them there, too, and offers them a bribe in exchange for their silence.
+
+The questioning by Cambodian authorities continues for weeks. Ben doesn't understand why he and Moira aren't being treated by victims.
+
+<Pullquote className='' quote="The human trafficking department was constantly seeking areas of which they can press charges on me." />
+
+<Pullquote className='' quote="From a victim of kidnapping, I become the perpetrator." startQuoteIcon={false} endQuoteIcon={true}/>
+
+Eventually, he and Moira are deemed victims of human trafficking and are taken to a shelter run by a nongovernmental organisation. Three months later, the group finally arranges tickets for them to return home.
 
 _In [part 2 of our series](https://scam-factories-anatomy-of-a-scam.netlify.app/), published today, we break down the anatomy of a scam. And tomorrow, in part 3, we will explain how the industry has exploded overnight to become a multi-billion-dollar industry._
 
