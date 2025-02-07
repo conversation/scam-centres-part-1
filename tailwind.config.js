@@ -79,7 +79,9 @@ export default {
         900: '#331f00'
       },
       white: '#ffffff',
-      black: '#000000'
+      black: '#000000',
+      transparent: 'transparent',
+      current: 'currentcolor'
     },
     fontFamily: {
       base: '"Montserrat", "Helvetica Neue", "Helvetica", sans-serif',
