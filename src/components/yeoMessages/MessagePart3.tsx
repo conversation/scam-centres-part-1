@@ -1,7 +1,7 @@
 import { cn } from '../../util/helpers'
 import BackgroundImage from '../BackgroundImage'
 import PhoneGraphic from '../PhoneGraphic'
-import TextMessage from '../TextMessage'
+import { TextMessage } from '../TextMessage'
 
 export default function MessagePart3({ className }: { className: string }) {
   return (
