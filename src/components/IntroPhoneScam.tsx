@@ -1,4 +1,5 @@
 import PhoneGraphic from './PhoneGraphic'
+import TextMessage from './TextMessage'
 
 export default function IntroPhoneScam() {
   return (
@@ -10,7 +11,11 @@ export default function IntroPhoneScam() {
           <div className='mx-auto w-min rounded bg-neutral-300 px-2 py-1 text-center text-xs'>Today</div>
 
           <div className='relative w-full'>
-            <div className='introTextMessage relative ml-3 max-w-[80%] animate-pulse rounded-md bg-green-100 p-2 shadow-md'>
+            <TextMessage
+              className='introTextMessage relative ml-4 mr-4 w-full max-w-[80%] animate-pulse rounded-md rounded-tl-none shadow-md'
+              sender={false}
+              time=''
+            >
               <p className='text-pretty text-base sm:text-lg'>
                 Do you want to make some money? Message "Yes" to earn $4,000 a week!
               </p>
@@ -20,13 +25,21 @@ export default function IntroPhoneScam() {
               >
                 <p className='text-xs'>Delete</p>
               </div>
-            </div>
+            </TextMessage>
 
-            <div className='introTextMessageReply absolute right-0 top-0 ml-auto mr-3 max-w-[65%] rounded-md bg-indigo-50 p-2 opacity-0 shadow-md'>
+            <TextMessage
+              className='introTextMessageReply absolute right-0 top-0 ml-auto mr-4 w-fit max-w-[65%] rounded-md opacity-0 shadow-md'
+              sender={true}
+              time=''
+            >
               <p className='text-pretty text-base sm:text-lg'>Who are you?</p>
-            </div>
+            </TextMessage>
 
-            <div className='scammerReply absolute left-0 top-0 ml-3 max-w-[80%] rounded-md bg-green-100 p-2 opacity-0 shadow-md'>
+            <TextMessage
+              className='scammerReply absolute left-0 top-0 ml-4 max-w-[60%] rounded-md bg-green-100 opacity-0 shadow-md'
+              sender={false}
+              time=''
+            >
               <p className='text-pretty text-base sm:text-lg'>I'm not who you think I am...</p>
               <div
                 className='absolute bottom-[-2rem] right-0 max-w-[80%] rounded-md bg-red-300 p-1 opacity-0 shadow-md'
@@ -34,7 +47,7 @@ export default function IntroPhoneScam() {
               >
                 <p className='text-xs'>Delete</p>
               </div>
-            </div>
+            </TextMessage>
           </div>
         </div>
 

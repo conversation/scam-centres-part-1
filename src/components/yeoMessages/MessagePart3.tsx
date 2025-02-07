@@ -1,6 +1,7 @@
 import { cn } from '../../util/helpers'
 import BackgroundImage from '../BackgroundImage'
 import PhoneGraphic from '../PhoneGraphic'
+import TextMessage from '../TextMessage'
 
 export default function MessagePart3({ className }: { className: string }) {
   return (
@@ -45,39 +46,37 @@ export default function MessagePart3({ className }: { className: string }) {
 
           {/* Messages */}
           <div className='relative flex-grow overflow-clip bg-neutral-700'>
-            <div className='mum_message_section absolute flex h-full w-full flex-grow flex-col justify-end space-y-2'>
-              <div className='relative ml-auto mr-3 w-full max-w-[80%] rounded-md bg-indigo-50 p-2 shadow-md'>
-                <div className='aspect-[1/2] h-auto w-full'>
+            <div className='mum_message_section absolute flex h-full w-full flex-grow flex-col justify-end gap-2'>
+              <TextMessage
+                className='relative ml-auto mr-4 w-full max-w-[75%] p-2 shadow-md'
+                sender={true}
+                time='March 13 7:22pm'
+              >
+                <div className='mb-5 aspect-[1/2] h-auto w-full'>
                   <BackgroundImage
                     className='not_fullscreen_media'
                     src='https://images.theconversation.com/files/643968/original/file-20250122-15-141x3m.png'
                   />
                 </div>
+              </TextMessage>
 
-                <p className='mt-1 text-right align-middle text-xs text-neutral-500 [font-size:x-small]'>
-                  March 13 7:22pm
-                </p>
-              </div>
-              {/* <div className='relative ml-auto mr-3 max-w-[50%] rounded-md bg-indigo-50 p-2 shadow-md'>
-                <p className='text-xs sm:text-lg text-pretty'>Here's my location.</p>
-                <p className='mt-1 text-right align-middle text-xs text-neutral-500 [font-size:x-small]'>
-                  March 13 7:22pm
-                </p>
-              </div> */}
-              <div className='cant_wait relative ml-auto mr-3 max-w-[70%] rounded-md bg-indigo-50 p-2 opacity-0 shadow-md'>
+              <TextMessage
+                className='cant_wait relative ml-auto mr-4 w-full max-w-[75%] p-2 shadow-md'
+                sender={true}
+                time='March 14 8:21pm'
+              >
                 <p className='text-pretty text-base sm:text-lg'>
                   Don’t think can wait anymore. Deadline is by tomorrow evening.
                 </p>
-                <p className='mt-1 text-right align-middle text-xs text-neutral-500 [font-size:x-small]'>
-                  March 14 8:21pm
-                </p>
-              </div>
-              <div className='dont_know relative ml-auto mr-3 max-w-[75%] rounded-md bg-indigo-50 p-2 opacity-0 shadow-md'>
+              </TextMessage>
+
+              <TextMessage
+                className='dont_know relative ml-auto mr-4 w-full max-w-[75%] p-2 shadow-md'
+                sender={true}
+                time='March 14 10:27pm'
+              >
                 <p className='text-pretty text-base sm:text-lg'>I don’t know what is going to happen later on.</p>
-                <p className='mt-1 text-right align-middle text-xs text-neutral-500 [font-size:x-small]'>
-                  March 14 10:27pm
-                </p>
-              </div>
+              </TextMessage>
             </div>
           </div>
 
