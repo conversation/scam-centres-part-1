@@ -42,6 +42,37 @@
   .imgfloat-left figcaption {
     @apply !max-w-none;
   }
+
+  .message_bubble {
+    transition: opacity ease-in-out 0.4s;
+    background-color: currentColor;
+  }
+
+  .message_bubble_left:after {
+    content: '';
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 10px solid transparent;
+    border-right: 10px solid currentColor;
+    border-top: 15px solid currentColor;
+    border-bottom: 10px solid transparent;
+    left: -10px;
+    top: 0;
+  }
+
+  .message_bubble_right:after {
+    content: '';
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-right: 10px solid transparent;
+    border-left: 10px solid currentColor;
+    border-top: 15px solid currentColor;
+    border-bottom: 10px solid transparent;
+    right: -10px;
+    top: 0;
+  }
 }
 
 @layer components {
@@ -94,17 +125,17 @@
   }
 
   .chapter_wrapper.right {
-    @apply items-center sm:items-end;
+    @apply items-center sm:w-1/2 sm:ml-auto;
   }
   .chapter_wrapper.right p {
-    @apply text-center sm:max-w-[50%];
+    @apply text-center;
   }
 
   .chapter_wrapper.left {
-    @apply items-center sm:items-start;
+    @apply items-center sm:w-1/2 sm:mr-auto;
   }
   .chapter_wrapper.left > * {
-    @apply text-center sm:max-w-[50%];
+    @apply text-center;
   }
 
   .chapter_wrapper.center {
