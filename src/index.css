@@ -7,6 +7,7 @@
     @apply overflow-x-clip;
   }
 
+
   /* img {
     will-change: opacity;
     opacity: 0;
@@ -44,7 +45,6 @@
   }
 
   .message_bubble {
-    transition: opacity ease-in-out 0.4s;
     background-color: currentColor;
   }
 
@@ -72,6 +72,45 @@
     border-bottom: 10px solid transparent;
     right: -10px;
     top: 0;
+  }
+
+  .loader {
+    width: 60px;
+    aspect-ratio: 2;
+    --_g: no-repeat radial-gradient(circle closest-side, #d6d6da 90%, transparent);
+    background:
+      var(--_g) 0% 50%,
+      var(--_g) 50% 50%,
+      var(--_g) 100% 50%;
+    background-size: calc(100% / 3) 50%;
+    animation: loading_circles 1s infinite linear;
+  }
+
+  @keyframes loading_circles {
+    20% {
+      background-position:
+        0% 0%,
+        50% 50%,
+        100% 50%;
+    }
+    40% {
+      background-position:
+        0% 100%,
+        50% 0%,
+        100% 50%;
+    }
+    60% {
+      background-position:
+        0% 50%,
+        50% 100%,
+        100% 0%;
+    }
+    80% {
+      background-position:
+        0% 50%,
+        50% 50%,
+        100% 100%;
+    }
   }
 }
 
