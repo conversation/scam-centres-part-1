@@ -4,14 +4,12 @@ import ScrollTrigger from 'gsap/ScrollTrigger'
 export default function Tweet1() {
   useEffect(() => {
     const observer = new ResizeObserver(() => {
-      console.log('tweet resize')
       ScrollTrigger.refresh()
     })
 
     observer.observe(document.querySelector('.tweet1')!)
 
     window.addEventListener('load', () => {
-      console.log('window resize')
       ScrollTrigger.refresh()
     })
   }, [])
