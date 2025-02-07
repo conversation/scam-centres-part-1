@@ -25,7 +25,7 @@ export default function MessagePart2({ className }: { className: string }) {
               <img
                 src='https://images.theconversation.com/files/641408/original/file-20250109-15-kx43t5.png?ixlib=rb-4.1.0&q=10&auto=format&w=100&h=100&fit=crop&dpr=1'
                 alt=''
-                className='not_fullscreen_media mx-auto aspect-square h-7 sm:h-10'
+                className='not_fullscreen_media mx-auto aspect-square'
               />
               <div>
                 <div>
@@ -43,7 +43,7 @@ export default function MessagePart2({ className }: { className: string }) {
               <img
                 src='https://images.theconversation.com/files/641408/original/file-20250109-15-kx43t5.png?ixlib=rb-4.1.0&q=10&auto=format&w=100&h=100&fit=crop&dpr=1'
                 alt=''
-                className='not_fullscreen_media mx-auto aspect-square h-7 sm:h-10'
+                className='not_fullscreen_media mx-auto aspect-square'
               />
               <div>
                 <div>
@@ -61,7 +61,7 @@ export default function MessagePart2({ className }: { className: string }) {
               <img
                 src='https://images.theconversation.com/files/641408/original/file-20250109-15-kx43t5.png?ixlib=rb-4.1.0&q=10&auto=format&w=100&h=100&fit=crop&dpr=1'
                 alt=''
-                className='not_fullscreen_media mx-auto aspect-square h-7 sm:h-10'
+                className='not_fullscreen_media mx-auto aspect-square'
               />
               <div>
                 <div>
@@ -79,7 +79,7 @@ export default function MessagePart2({ className }: { className: string }) {
               <img
                 src='https://images.theconversation.com/files/641408/original/file-20250109-15-kx43t5.png?ixlib=rb-4.1.0&q=10&auto=format&w=100&h=100&fit=crop&dpr=1'
                 alt=''
-                className='not_fullscreen_media mx-auto aspect-square h-7 sm:h-10'
+                className='not_fullscreen_media mx-auto aspect-square'
               />
               <div>
                 <div>
@@ -97,7 +97,7 @@ export default function MessagePart2({ className }: { className: string }) {
               <img
                 src='https://images.theconversation.com/files/641408/original/file-20250109-15-kx43t5.png?ixlib=rb-4.1.0&q=10&auto=format&w=100&h=100&fit=crop&dpr=1'
                 alt=''
-                className='not_fullscreen_media mx-auto aspect-square h-7 sm:h-10'
+                className='not_fullscreen_media mx-auto aspect-square'
               />
               <div>
                 <div>
@@ -115,7 +115,7 @@ export default function MessagePart2({ className }: { className: string }) {
               <img
                 src='https://images.theconversation.com/files/641408/original/file-20250109-15-kx43t5.png?ixlib=rb-4.1.0&q=10&auto=format&w=100&h=100&fit=crop&dpr=1'
                 alt=''
-                className='not_fullscreen_media mx-auto aspect-square h-7 sm:h-10'
+                className='not_fullscreen_media mx-auto aspect-square'
               />
               <div>
                 <div>
@@ -133,7 +133,7 @@ export default function MessagePart2({ className }: { className: string }) {
               <img
                 src='https://images.theconversation.com/files/641408/original/file-20250109-15-kx43t5.png?ixlib=rb-4.1.0&q=10&auto=format&w=100&h=100&fit=crop&dpr=1'
                 alt=''
-                className='not_fullscreen_media mx-auto aspect-square h-7 sm:h-10'
+                className='not_fullscreen_media mx-auto aspect-square'
               />
               <div>
                 <div>
