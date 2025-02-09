@@ -296,7 +296,7 @@ export default function ScamExampleModal() {
               <TextMessage
                 className='relative ml-auto mr-4 w-full max-w-[30%] snap-end scroll-my-4'
                 sender={true}
-                time='10:24 pm'
+                time='10:25 pm'
               >
                 <p className='text-pretty text-base sm:text-lg'>Yes.</p>
               </TextMessage>
@@ -319,7 +319,7 @@ export default function ScamExampleModal() {
               <TextMessage
                 className='relative ml-4 w-full max-w-[75%] snap-end scroll-my-4'
                 sender={false}
-                time='1:19 pm'
+                time='1:20 pm'
               >
                 <p className='text-pretty text-base sm:text-lg'>
                   I've already told you, if you deposit three to five thousand, I'll help you make a profit, and I’ll
@@ -330,7 +330,7 @@ export default function ScamExampleModal() {
               <TextMessage
                 className='relative ml-auto mr-4 w-full max-w-[60%] snap-end scroll-my-4'
                 sender={true}
-                time='10:24 pm'
+                time='1:25 pm'
               >
                 <p className='text-pretty text-base sm:text-lg'>Ok, you can introduce me to your clients.</p>
               </TextMessage>
