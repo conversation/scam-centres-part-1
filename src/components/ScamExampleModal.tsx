@@ -58,7 +58,7 @@ export default function ScamExampleModal() {
       <dialog
         id='phoneModal'
         ref={dialogRef}
-        className='not-prose top-1/2 m-0 mx-auto aspect-[1/2] h-auto max-h-[85vh] w-auto -translate-y-1/2 rounded-xl bg-transparent shadow-2xl shadow-white/20 backdrop:backdrop-blur-sm backdrop:backdrop-brightness-50 max-sm:max-w-[75%] sm:max-w-[90%]'
+        className='not-prose top-1/2 m-0 mx-auto aspect-[1/2] h-auto max-h-[85vh] w-auto -translate-y-1/2 rounded-xl bg-transparent shadow-2xl shadow-white/20  backdrop:backdrop-brightness-50 max-sm:max-w-[75%] sm:max-w-[90%]'
       >
         <PhoneGraphic className='modalPhone !m-0 !h-full !max-h-none !w-full !max-w-none'>
           <button
@@ -75,8 +75,11 @@ export default function ScamExampleModal() {
             {/* <div className='mx-auto w-min rounded bg-neutral-300 px-2 py-1 text-center text-xs'>Today</div> */}
 
             <div className='flex-grow snap-y snap-mandatory space-y-4 overflow-y-scroll py-4'>
+
+<p className='mx-4 text-neutral-50 my-8 firstModalMessage snap-end scroll-my-4'>This is a real message thread sent to us by Laura, a victim in China. It starts with what seems like an innocent conversation.</p>
+              
               <TextMessage
-                className='firstModalMessage relative ml-4 w-full max-w-[75%] snap-end scroll-my-4'
+                className=' relative ml-4 w-full max-w-[75%] snap-end scroll-my-4'
                 sender={false}
                 time='9:56 am'
               >
@@ -177,6 +180,9 @@ export default function ScamExampleModal() {
                 </p>
               </TextMessage>
 
+
+              <p className='mx-4 text-neutral-50 my-8 snap-end scroll-my-4'>Then the scammer began messaging the victim daily, sharing details of his life. Over the course of 2-3 months, they became quite close. The scammer presented himself as a succesful investor in cryptocurrency, futures contracts, and similar ventures – he even shared a photo.</p>
+
               <TextMessage
                 className='relative ml-4 w-full max-w-[75%] snap-end scroll-my-4'
                 sender={false}
@@ -204,6 +210,8 @@ export default function ScamExampleModal() {
               <div className='my-8 grid w-full place-items-center'>
                 <div className='loader'></div>
               </div>
+
+              <p className='mx-4 text-neutral-50 my-8 snap-end scroll-my-4'>As their relationship deepened, the scammer encouraged the victim to invest with him.</p>
 
               <TextMessage
                 className='relative ml-4 w-full max-w-[75%] snap-end scroll-my-4'
