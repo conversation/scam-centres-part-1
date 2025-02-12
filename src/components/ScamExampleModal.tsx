@@ -1,8 +1,8 @@
 import { useEffect, useRef } from 'react'
 import PhoneGraphic from './PhoneGraphic'
 import { TextMessage } from './TextMessage'
-import Imgix from 'react-imgix'
-import gsap from 'gsap'
+// import Imgix from 'react-imgix'
+// import gsap from 'gsap'
 
 export default function ScamExampleModal() {
   const dialogRef = useRef<HTMLDialogElement | null>(null)
@@ -12,12 +12,13 @@ export default function ScamExampleModal() {
     document.body.style.overflow = 'hidden'
     const firstMessage = document.querySelector('.firstModalMessage')
     const modalMessageWrapper = document.querySelector('.modalMessageWrapper')
+    const messageScrollWrapper = document.querySelector('.messageScrollWrapper')
 
-    if (!firstMessage || !modalMessageWrapper) return
+    if (!firstMessage || !modalMessageWrapper || !messageScrollWrapper) return
 
-    gsap.set('.firstModalMessage', {
-      marginTop: modalMessageWrapper.clientHeight - firstMessage.clientHeight + 'px'
-    })
+    // gsap.set('.firstModalMessage', {
+    //   marginTop: messageScrollWrapper.clientHeight - firstMessage.clientHeight - 16 + 'px'
+    // })
   }
 
   const hideModal = () => {
@@ -51,14 +52,24 @@ export default function ScamExampleModal() {
     <div className='flex justify-center'>
       <button
         onClick={showModal}
-        className='mx-auto w-fit text-balance border bg-red-500/20 px-3 py-2 transition-colors duration-150 ease-in-out hover:bg-red-500/30'
+        className='mx-auto flex w-fit items-center text-balance border border-white bg-red-500/20 px-3 py-2 text-2xl transition-colors duration-150 ease-in-out hover:bg-red-500/30'
       >
-        Click here to see how a real scam unfolded
+        <div className='animate-bounce'>
+          <svg className='h-10 w-10 rotate-6' viewBox='0 0 1000 1024' xmlns='http://www.w3.org/2000/svg'>
+            <path
+              d='M551.424 0H176.128c-47.104 0-85.504 38.4-85.504 85.504v852.992c0 47.104 38.4 85.504 85.504 85.504h375.296c47.104 0 85.504-38.4 85.504-85.504V85.504C636.928 38.4 598.528 0 551.424 0M312.832 68.096h102.4c9.216 0 16.896 7.68 16.896 16.896s-7.68 16.896-16.896 16.896h-102.4c-9.216 0-16.896-7.68-16.896-16.896-.512-9.216 7.168-16.896 16.896-16.896m51.2 921.6c-28.16 0-51.2-23.04-51.2-51.2s23.04-51.2 51.2-51.2 51.2 23.04 51.2 51.2-23.04 51.2-51.2 51.2m238.592-136.704H124.928V170.496h477.696z'
+              fill='white'
+            />
+          </svg>
+        </div>
+        <p className='not-prose max-md:hidden'>See how a scammer initiates a conversation, click here</p>
+        <p className='not-prose w-fit text-wrap text-center text-lg md:hidden'>Watch a real scam begin</p>
       </button>
+
       <dialog
         id='phoneModal'
         ref={dialogRef}
-        className='not-prose top-1/2 m-0 mx-auto aspect-[1/2] h-auto max-h-[85vh] w-auto -translate-y-1/2 rounded-xl bg-transparent shadow-2xl shadow-white/20  backdrop:backdrop-brightness-50 max-sm:max-w-[75%] sm:max-w-[90%]'
+        className='not-prose top-1/2 m-0 mx-auto aspect-[1/2] h-auto max-h-[85vh] w-auto -translate-y-1/2 rounded-xl bg-transparent shadow-2xl shadow-white/20 backdrop:backdrop-brightness-50 max-sm:max-w-[75%] sm:max-w-[90%]'
       >
         <PhoneGraphic className='modalPhone !m-0 !h-full !max-h-none !w-full !max-w-none'>
           <button
@@ -72,14 +83,30 @@ export default function ScamExampleModal() {
           <div className='modalMessageWrapper flex h-[calc(100%-32px)] flex-col bg-neutral-700'>
             <div className='bg-neutral-400 p-1 text-center text-xs font-light opacity-55'>UNKNOWN CONTACT</div>
 
-            {/* <div className='mx-auto w-min rounded bg-neutral-300 px-2 py-1 text-center text-xs'>Today</div> */}
+            <div className='messageScrollWrapper flex-grow space-y-4 overflow-y-scroll py-4'>
+              {/* <div className='flex-grow snap-y snap-mandatory space-y-4 overflow-y-scroll py-4'> */}
+              <div className='firstModalMessage h-full place-content-center'>
+                <p className='relative mx-4 my-8 snap-end scroll-my-4 font-body text-lg font-bold text-neutral-50 md:text-2xl'>
+                  This is a real message thread sent to us by Laura, a victim in China. It starts with what seems like
+                  an innocent conversation.
+                  <span className='absolute left-1/2 top-full -translate-x-1/2 translate-y-1/3 text-sm text-neutral-400'>
+                    <svg
+                      className='mx-auto mt-2 h-6 w-6 animate-bounce text-neutral-400'
+                      fill='none'
+                      strokeLinecap='round'
+                      strokeLinejoin='round'
+                      strokeWidth='3'
+                      viewBox='0 0 24 24'
+                      stroke='currentColor'
+                    >
+                      <path d='M19 14l-7 7m0 0l-7-7m7 7V3'></path>
+                    </svg>
+                  </span>
+                </p>
+              </div>
 
-            <div className='flex-grow snap-y snap-mandatory space-y-4 overflow-y-scroll py-4'>
-
-<p className='mx-4 text-neutral-50 my-8 firstModalMessage snap-end scroll-my-4'>This is a real message thread sent to us by Laura, a victim in China. It starts with what seems like an innocent conversation.</p>
-              
               <TextMessage
-                className=' relative ml-4 w-full max-w-[75%] snap-end scroll-my-4'
+                className='relative ml-4 w-full max-w-[75%] snap-end scroll-my-4'
                 sender={false}
                 time='9:56 am'
               >
@@ -94,7 +121,7 @@ export default function ScamExampleModal() {
                 time='9:56 am'
               >
                 <p className='text-pretty text-base sm:text-lg'>
-                  No, sorry, I do not know Anna and cannot do translation.
+                  No, sorry, I don't know Anna and can't do translations.
                 </p>
               </TextMessage>
 
@@ -104,7 +131,7 @@ export default function ScamExampleModal() {
                 time='9:56 am'
               >
                 <p className='text-pretty text-base sm:text-lg'>
-                  No way, it is so important, how did Anna mess this up. I told her that I need a Cantonese speaker for
+                  No way, it's so important, how did Anna mess this up. I told her that I need a Cantonese speaker for
                   today’s conference. Do you have time?
                 </p>
               </TextMessage>
@@ -115,8 +142,8 @@ export default function ScamExampleModal() {
                 time='9:56 am'
               >
                 <p className='text-pretty text-base sm:text-lg'>
-                  Sorry again, but I really do not know this Anna, and I've never done a translation job, you are
-                  talking to the wrong person.
+                  Sorry again, but I really don't know this Anna, and I've never done a translation job, you are talking
+                  to the wrong person.
                 </p>
               </TextMessage>
 
@@ -125,7 +152,7 @@ export default function ScamExampleModal() {
                 sender={false}
                 time='9:57 am'
               >
-                <p className='text-pretty text-base sm:text-lg'>Oh, so sorry, you are not Jia Li?</p>
+                <p className='text-pretty text-base sm:text-lg'>Oh, so sorry, you're not Jia Li?</p>
               </TextMessage>
 
               <TextMessage
@@ -133,7 +160,7 @@ export default function ScamExampleModal() {
                 sender={true}
                 time='9:57 am'
               >
-                <p className='text-pretty text-base sm:text-lg'>No, I am not Jia Li, you've got wrong number.</p>
+                <p className='text-pretty text-base sm:text-lg'>No, I'm not Jia Li, you've got the wrong number.</p>
               </TextMessage>
 
               <TextMessage
@@ -141,9 +168,7 @@ export default function ScamExampleModal() {
                 sender={false}
                 time='9:57 am'
               >
-                <p className='text-pretty text-base sm:text-lg'>
-                  I am so sorry, please accept my apologisies for this.
-                </p>
+                <p className='text-pretty text-base sm:text-lg'>I am so sorry, please accept my apologisies.</p>
               </TextMessage>
 
               <TextMessage
@@ -160,7 +185,7 @@ export default function ScamExampleModal() {
                 time='10:01 am'
               >
                 <p className='text-pretty text-base sm:text-lg'>
-                  Thank you, you too! I am so lucky you are such a nice person and didn't mind my rudeness.
+                  Thank you, you too! I'm so lucky you're such a nice person and didn't mind my rudeness.
                 </p>
               </TextMessage>
 
@@ -175,13 +200,28 @@ export default function ScamExampleModal() {
               >
                 <p className='text-pretty text-base sm:text-lg'>
                   I did my conference successfully despite the small translation problem. Again, apologisies for talking
-                  so rudely to you and the inconvenience. How was your day? It is my first time in Hong Kong, I'm just
-                  so excited to e-meet you because of that "accident".
+                  so rudely to you and the inconvenience. How was your day? It's my first time in Hong Kong, I'm just so
+                  excited to e-meet you because of that "accident".
                 </p>
               </TextMessage>
 
+              <div className='relative mx-4 my-12 snap-end scroll-my-4 pt-10 font-body text-neutral-50'>
+                <p>
+                  After this introduction, the scammer begins messaging Laura daily, sharing details of his life. Over
+                  the course of 2–3 months, they become quite close, and her guard lowers. Eventually, he scams her with
+                  a cryptocurrency investment scheme.
+                </p>
+                <p className='mt-4 text-balance text-center text-xs text-neutral-400'>
+                  Click the red 'x' in the top left to close this window.
+                </p>
+              </div>
 
-              <p className='mx-4 text-neutral-50 my-8 snap-end scroll-my-4'>Then the scammer began messaging the victim daily, sharing details of his life. Over the course of 2-3 months, they became quite close. The scammer presented himself as a succesful investor in cryptocurrency, futures contracts, and similar ventures – he even shared a photo.</p>
+              {/* 
+              <p className='mx-4 my-8 snap-end scroll-my-4 text-neutral-50'>
+                Then the scammer began messaging the victim daily, sharing details of his life. Over the course of 2-3
+                months, they became quite close. The scammer presented himself as a succesful investor in
+                cryptocurrency, futures contracts, and similar ventures – he even shared a photo.
+              </p>
 
               <TextMessage
                 className='relative ml-4 w-full max-w-[75%] snap-end scroll-my-4'
@@ -211,7 +251,9 @@ export default function ScamExampleModal() {
                 <div className='loader'></div>
               </div>
 
-              <p className='mx-4 text-neutral-50 my-8 snap-end scroll-my-4'>As their relationship deepened, the scammer encouraged the victim to invest with him.</p>
+              <p className='mx-4 my-8 snap-end scroll-my-4 text-neutral-50'>
+                As their relationship deepened, the scammer encouraged the victim to invest with him.
+              </p>
 
               <TextMessage
                 className='relative ml-4 w-full max-w-[75%] snap-end scroll-my-4'
@@ -341,7 +383,7 @@ export default function ScamExampleModal() {
                 time='1:25 pm'
               >
                 <p className='text-pretty text-base sm:text-lg'>Ok, you can introduce me to your clients.</p>
-              </TextMessage>
+              </TextMessage> */}
             </div>
 
             {/* Send message */}
