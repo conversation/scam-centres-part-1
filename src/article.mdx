@@ -56,45 +56,50 @@ import PhrasebookScramble from './components/PhrasebookScramble'
   </ScrollForeground>
 </ScrollSection>
 
-
-
 <div className='place-content-center mt-20 mb-32'>
-
   <div className='mx-auto max-w-[45ch] text-center'>
     <TitleTextBorder
     as={'h1'}
-    className='text-balance text-center font-base text-5xl font-bold md:text-6xl lg:text-7xl'
+    bgClassName='bg-neutral-50'
+    className='text-neutral-800 text-balance text-center font-base text-5xl font-bold md:text-6xl lg:text-7xl'
     >Scam Factories</TitleTextBorder>
-    <h2 className='text-center font-body text-balance'>Inside Southeast Asia’s brutal fraud compounds</h2>
+    <br />
   </div>
 
-  {/* <div className='mx-auto max-w-[35ch] text-center'>
+  <div className='mx-auto max-w-[25ch] md:max-w-[40ch] text-center'>
     <TitleTextBorder
     as={'h1'}
-    className='text-center font-body text-xl font-bold md:text-3xl'
-    >Inside Southeast Asia’s brutal fraud compounds</TitleTextBorder>
-  </div> */}
-
-
-
-  {/* <h3 className='text-center font-body'>Part one: locked in</h3> */}
+    bgClassName='bg-neutral-900'
+    className='text-neutral-50 text-center font-body text-xl font-bold md:text-3xl'
+    >The inside story of Southeast Asia’s fraud compounds</TitleTextBorder>
+  </div>
 
   <div className='text-center mt-4'>
+    <h2>Part one: Locked in</h2>
     <span className='inline-block font-base text-sm'>By [Ivan Franceschini](https://theconversation.com/profiles/ivan-franceschini-1529038), [Ling
-    Li](https://theconversation.com/profiles/ling-li-1529042) and The Conversation Digital Storytelling Team. Photos by Roun Ry</span><br/><span className='font-base text-xs opacity-50'>Published: <time className=''>{new Date().toDateString()}</time></span>
+    Li](https://theconversation.com/profiles/ling-li-1529042) and The Conversation Digital Storytelling Team.</span><br/><span className='font-base text-xs opacity-50'>Published: <time className=''>{new Date().toDateString()}</time></span>
   </div>
 </div>
 
 Ben Yeo is trapped in a scam centre in Cambodia, desperately trying to escape. It's early 2024 and he's been here for 30 days.
 
-
-
-<figure >
-  <picture className='aspect-[16/7] border'></picture>
-  <figcaption>
-  Image here of Ben Yeo, coming this week <span className="opacity-70">Photo: external photographer</span>
-  </figcaption>
-</figure>
+<Picture
+  src='https://images.theconversation.com/files/648226/original/file-20250211-17-l69lff.JPG'
+  loading='eager'
+  className=''
+  imgClassName='aspect-[3/2]  object-cover object-[50%_57%]'
+  caption='Ben Yeo was looking for any way to escape.'
+  source='Photo: Kevin De A.'
+  sourceLink=''
+  alt='Ben Yeo looks out from a balcony in Manilla.'
+  focalPoint={{
+    mobile: { x: 0.5, y: 0.43 },
+    tablet: { x: 0.5, y: 0.43 },
+    tabletLandscape: { x: 0.5, y: 0.43 },
+    laptop: { x: 0.5, y: 0.43 },
+    desktop: { x: 0.5, y: 0.43 }
+  }}
+/>
 
 30 days since Ben and his wife Moira realised their well-paid new casino jobs were just an elaborate ruse.
 
@@ -119,8 +124,43 @@ Now they have to choose: pay their captors a US$20,000 ransom or get to work in 
         desktop: { x: 0.5, y: 0.5 }
       }}
     />
-     <Picture
+     {/* <Picture
       src='https://images.theconversation.com/files/644290/original/file-20250123-18-vql9fm.jpeg'
+      loading='eager'
+      className='full_screen_media '
+      imgClassName='brightness-50 object-[40%_70%]'
+      caption=''
+      source='Photo: Ivan Franceschini'
+      sourceLink=''
+      alt=''
+      focalPoint={{
+        mobile: { x: 0.5, y: 0.65 },
+        tablet: { x: 0.5, y: 0.65 },
+        tabletLandscape: { x: 0.5, y: 0.65 },
+        laptop: { x: 0.5, y: 0.65 },
+        desktop: { x: 0.5, y: 0.65 }
+      }}
+    /> */}
+    
+     <Picture
+      src='https://images.theconversation.com/files/644319/original/file-20250123-16-iyd33s.jpeg'
+      loading='eager'
+      className='full_screen_media '
+      imgClassName=' object-[40%_70%]'
+      caption=''
+      source='Photo: Ivan Franceschini'
+      sourceLink=''
+      alt=''
+      focalPoint={{
+        mobile: { x: 0.5, y: 0.65 },
+        tablet: { x: 0.5, y: 0.65 },
+        tabletLandscape: { x: 0.5, y: 0.65 },
+        laptop: { x: 0.5, y: 0.65 },
+        desktop: { x: 0.5, y: 0.65 }
+      }}
+    />
+     <Picture
+      src='https://images.theconversation.com/files/644317/original/file-20250123-15-gjki5i.jpeg'
       loading='eager'
       className='full_screen_media '
       imgClassName='brightness-50 object-[40%_70%]'
@@ -140,7 +180,7 @@ Now they have to choose: pay their captors a US$20,000 ransom or get to work in 
       src='https://images.theconversation.com/files/644335/original/file-20250123-18-8sequ9.jpeg'
       loading='eager'
       className='full_screen_media '
-      imgClassName='brightness-50 object-[40%_100%]'
+      imgClassName=' object-[40%_100%]'
       caption=''
       source='Photo: Ivan Franceschini'
       sourceLink=''
@@ -173,16 +213,17 @@ Now they have to choose: pay their captors a US$20,000 ransom or get to work in 
    
   </ScrollBackground>
   <ScrollForeground>
-    <ScrollTextChapter className='' position='center' >
-      <Pullquote className='text-white' quote="It had these tall walls, barbed wire and cameras everywhere […] And when we got into the compound, we were told we weren't allowed to get out." />
+    <ScrollTextChapter className='' position='' >
+      <Pullquote className='text-white' quoteClassname='opacity-20' quote="It had these tall walls, barbed wire and cameras everywhere […] And when we got into the compound, we were told we weren't allowed to get out." />
     </ScrollTextChapter>
     <ScrollTextChapter step={true} position='center' className='chapter_dark_background'>
      At first Ben and Moira try passive resistance, they sit at their desks and refuse to make any calls. It doesn't work.
     </ScrollTextChapter>
-    <ScrollTextChapter step={true} className='' position='center' >
-      <Pullquote className='text-white' quote='They said […] they would rape my wife if I do not sit and answer phone calls.' />
-
-      <Pullquote className='text-white' quote='They tried all kinds of coercive manoeuvres. You know, using a fire extinguisher to [pretend] to hit me to scare me, using a plastic bag over my head to suffocate me.' startQuoteIcon={false} endQuoteIcon={true}/>
+    <ScrollTextChapter step={true} className='' position='' >
+      <div>
+        <Pullquote className='text-white' quoteClassname='opacity-20' quote='They said […] they would rape my wife if I do not sit and answer phone calls.' />
+        <Pullquote className='text-white' quoteClassname='opacity-20' quote='They tried all kinds of coercive manoeuvres. You know, using a fire extinguisher to [pretend] to hit me to scare me, using a plastic bag over my head to suffocate me.' startQuoteIcon={false} endQuoteIcon={true}/>
+      </div>
     </ScrollTextChapter>
     <ScrollTextChapter step={true} position='center' className='chapter_dark_background'>
       Their only way out is to pay for their freedom.
@@ -241,6 +282,17 @@ Ben did some research on the company and everything seemed to check out. It was 
 
 They both negotiated new jobs, Ben doing business development and Moira as a card dealer in the casino.
 
+<Image
+  src='https://images.theconversation.com/files/648161/original/file-20250211-19-eb6e6d.jpg'
+  align=''
+  className=''
+  imgClassName='aspect-[3/2]'
+  loading='lazy'
+  alt='Ben Yeo looks out from a balcony in Manilla.'
+  source='Photo: Kevin De A.'
+  caption='Ben Yeo in Manila, Philippines.'
+/> 
+
 From the moment they arrived at the compound Ben had a bad feeling. Then his new employers told him he wasn't allowed to leave.
 
 <Pullquote className='' quote="They said, I'm sorry, this whole thing, it's not a casino. This is not a casino industry. As a matter of fact, we are doing scams."  />
@@ -251,7 +303,7 @@ Ben and Moira aren’t alone. Experts estimate there are hundreds of thousands o
   <div className='not-prose aspect-square w-full overflow-hidden rounded-md'>
     <img src="https://images.theconversation.com/files/645965/original/file-20250130-15-bubzm1.png?ixlib=rb-4.1.0&q=20&auto=format&w=300" alt='' className='not_fullscreen_media' />
   </div>
-  <p className='!mb-0 !mt-0 italic'>Scam Factories is a special multimedia and podcast series by The Conversation. Listen to part 1 of the <a href='#' target='_parent' className='text-neutral-100 hover:text-neutral-200'>podcast series here</a>. Read part 2 of the digital series, <a href='https://scam-factories-anatomy-of-a-scam.netlify.app/' target='_blank' className='text-neutral-100 hover:text-neutral-200'>Anatomy of a Scam, here</a>.</p>
+  <p className='!mb-0 !mt-0 italic'>Scam Factories is a special multimedia and podcast series by The Conversation. Listen to part 1 of the <a href='#' target='_parent' className='text-neutral-100 hover:text-neutral-200'>podcast series here</a>.</p>
 </div>
 
 ## On the trail of the scammers
@@ -419,18 +471,7 @@ We have spoken to nearly 100 people from compounds mostly located in Cambodia, L
   </ScrollForeground>
 </ScrollSection>
 
-{/* <Image
-  src='https://images.theconversation.com/files/611346/original/file-20240805-17-7z4xwb.jpg'
-  align=''
-  className=''
-  imgClassName='aspect-[103/58]'
-  loading='lazy'
-  alt='Drone shot of flats taken from the courtyard of the Jinshui compound in Otres Village, Sihanoukville'
-  source='Photo: Roun Ry'
-  caption='Drone shot taken from the courtyard of the Jinshui compound in Otres Village, Sihanoukville, September 2022. The complex, popularly known as ‘Chinatown’, has been implicated in dozens of reports detailing online scams and gambling operations, with former workers reporting conditions of bonded labour, violence, and suicides.'
-/>  */}
-
-## Predators or prey 
+## Predators or prey? 
 
 Those who become trapped in the compounds come from all walks of life. Many scammers are what Chinese authorities refer to as "_san di_" ("three lows"), meaning they have low income, education and age. Desperation drives many of them. As one former scammer told us:
 
@@ -456,17 +497,6 @@ Some are duped by people in their social circles, friends or even relatives. Oth
 
 Victims often begin their new "jobs" with a massive debt for flights, visas, permits and broker or trafficker fees.
 
-{/* <Image
-  src='https://images.theconversation.com/files/644345/original/file-20250123-17-ntscb6.jpeg'
-  align=''
-  className=''
-  imgClassName='aspect-[3/2]'
-  loading='lazy'
-  alt='Apartments towers in a scam compound in Sihanoukville, Cambodia'
-  source='Photo: Ivan Franceschini'
-  caption='Apartments towers in a scam compound in Sihanoukville, Cambodia'
-/>  */}
-
 These debts grow the longer they are held, with accommodation, food and even "seaside air" added to their final bill.
 
 <SeverancePaymentBill />
@@ -475,17 +505,17 @@ Newcomers must also be instructed in how to pull off a scam. Some are highly scr
 
 <PhrasebookScramble />
 
-The time involved in approaching a victim and earning their trust can sometimes take months. Here's how one scammer tricked a victim in China over WhatsApp, texting daily and presenting himself as a successful cryptocurrency investor. 
+Approaching a victim and earning their trust can sometimes take months. Here's how one scammer tricked a victim in China over WhatsApp, texting daily and presenting himself as a successful cryptocurrency investor. 
 
 <ScamExampleModal />
 
-In many compounds, the shifts begin with everyone chanting a slogan, such as:
+In many compounds, the scammers work long shifts. They typically begin with a slogan, such as:
 
 <Pullquote className='' quote='Two hands typing on a keyboard can earn you billions in gold; work hard on marketing and you will win. Go for it!' />
 
 But very few actually "win". Their performance benchmarks are extremely high. One employee in a Cambodian compound told us they were expected to generate US$10,000 (A$16,000) in revenue each month and entice two to three new victims a day.
 
-The most successful employees are held up as models. One former scammer, Tao, told us it's akin to brainwashing.
+The most successful employees are held up as models. One former scammer told us it's akin to brainwashing.
 
 <Pullquote className='' quote='The ‘excellent employee’ would get monetary awards, promotions, and, sometimes, the privilege to temporarily exit the compound. If you were one of them, they would buy you good food and take you to gamble or even pay for prostitutes to let you taste their rich life.' />
 
@@ -504,7 +534,7 @@ For those who cannot meet their targets, life quickly becomes a nightmare. They 
   caption='Barred balconies of apartment blocks used to house scam workers, Sihanoukville.'
 /> 
 
-Sexual violence is rife. A Taiwanese woman named Alice told us that when she refused to engage in scam work, she was sold numerous times between compounds and repeatedly raped. Before she was finally rescued, the gangsters threatened to lock her up in a brothel-like clubhouse at a scam compound to serve at the pleasure of the managers and workforce. Male victims are forced to perform sexual acts on each other as a form of punishment.
+Sexual violence is rife. A Taiwanese woman told us that when she refused to engage in scam work, she was sold numerous times between compounds and repeatedly raped. Before she was finally rescued, the gangsters threatened to lock her up in a brothel-like clubhouse at a scam compound to serve at the pleasure of the managers and workforce. Male victims are forced to perform sexual acts on each other as a form of punishment.
 
 <Image
   src='https://images.theconversation.com/files/611355/original/file-20240805-17-1q7sei.jpg'
@@ -521,29 +551,78 @@ Another harrowing aspect of life inside the compounds is the potential to be sol
 
 Skilled workers fluent in Mandarin can fetch anywhere between US$10,000-30,000.
 
-## Getting out
+## Freedom, finally
 
-Ben is eventually separated from his wife and locked in a room by himself.
+<Picture
+  src='https://images.theconversation.com/files/648228/original/file-20250211-19-w1120z.JPG'
+  loading='eager'
+  className=''
+  imgClassName='aspect-[3/2]  object-cover object-[50%_57%]'
+  caption='Ben Yeo was looking for any way to escape.'
+  source='Photo: Kevin De A.'
+  sourceLink=''
+  alt='Ben Yeo looks out from a balcony in Manilla.'
+  focalPoint={{
+    mobile: { x: 0.5, y: 0.43 },
+    tablet: { x: 0.5, y: 0.43 },
+    tabletLandscape: { x: 0.5, y: 0.43 },
+    laptop: { x: 0.5, y: 0.43 },
+    desktop: { x: 0.5, y: 0.43 }
+  }}
+/>
+
+Despite Ben's pleading text messages his family refuses to pay the ransom. As punishment he is separated from his wife and locked in a room by himself.
 
 <Pullquote className='' quote="It's a combination between a prison and a madhouse. So the walls are like padded with, I think, four-inch pads. If you start screaming in there, no one will be able to hear you." />
 
+{/* <Image
+  src='https://images.theconversation.com/files/648162/original/file-20250211-15-luyait.jpg'
+  align=''
+  className=''
+  imgClassName='aspect-[3/2]'
+  loading='lazy'
+  alt='Ben Yeo looks out from a balcony in Manilla.'
+  source='Photo: Kevin De A.'
+  caption='Ben Yeo in Manila, Philippines.'
+/> */}
+
 <Pullquote className='' quote="And in the room, there's only one railing, which is half a foot above the ground. And basically they handcuffed me on that railing. So I wasn't even able to stand up and they were starving me, depriving me of toilets, water, food." startQuoteIcon={false} endQuoteIcon={true}/>
 
-His family doesn't pay the ransom, though. They go to the Malaysian embassy in Cambodia instead. And eight days after Ben was put in isolation, the police finally arrive.
+<div className=''>
+  <figure className='sm:float-right aspect-[4/5] h-auto sm:w-1/2 mt-0'>
+    <video src='https://cdn.theconversation.com/infographics/1141/81f4f9b52ac690df8fb6aa7f19279763f13ed3a0/site/Svay%20Rieng%20Station.mp4' controls muted className=' not-prose' ></video>
+    <figcaption>
+    Moira and Ben were held at the Svay Rieng police station overnight{" "}<span className='opacity-75'>Source: Ben & Moira</span>
+    </figcaption>
+  </figure>
+</div>
 
-Ben and Moira's ordeal doesn't end there, however. When they give their statement to the police, they are astonished to see a negotiator for the scam company in the room. Ben fears the police may be compromised.
+In desperation Ben's family approaches the Malaysian embassy in Cambodia seeking help. Eight days later police arrive at the scam centre.
 
-With the help of a well-connected family friend in Cambodia, they are eventually transferred to another police station. The scam company follows them there, too, and offers them a bribe in exchange for their silence.
+But Ben and Moira's ordeal doesn't end there. When they give their statement to the police, they notice that someone from the scam compound is in the room. Ben fears his captors may have infiltrated the police.
 
-The questioning by Cambodian authorities continues for weeks. Ben doesn't understand why he and Moira aren't being treated by victims.
+With the help of an influential family friend in Cambodia, they're eventually transferred to another police station. The scam company follows them there, too. This time they are offered a bribe in exchange for their silence.
 
-<Pullquote className='' quote="The human trafficking department was constantly seeking areas of which they can press charges on me." />
+For weeks Ben and Moira are subjected to questioning by Cambodian authorities.
+
+<Pullquote className='clear-both' quote="The human trafficking department was constantly seeking areas of which they can press charges on me." />
 
 <Pullquote className='' quote="From a victim of kidnapping, I become the perpetrator." startQuoteIcon={false} endQuoteIcon={true}/>
 
-Eventually, he and Moira are deemed victims of human trafficking and are taken to a shelter run by a nongovernmental organisation. Three months later, the group finally arranges tickets for them to return home.
+Eventually, Ben and Moira are released by the police. They're taken to a shelter run by a charity. After three months there, they're finally told they'll be returning home.
 
-_Tomorrow, in part 3, we will explain how scamming has exploded overnight to become a multi-billion-dollar industry._
+<Image
+  src='https://images.theconversation.com/files/644243/original/file-20250122-18-fkko2l.jpg'
+  align=''
+  className=''
+  imgClassName='aspect-[377/264]'
+  loading='lazy'
+  alt='A family friend came to pick Ben and Moira up from the police station.'
+  source='Source: Ben Yeo'
+  caption="A family friend came to pick Ben and Moira up from the police station."
+/> 
+
+_Tomorrow, in part 2, we will explain how scamming has exploded overnight to become a multi-billion-dollar industry._
 
 <AuthorSection>
  <Acknowledgements>
