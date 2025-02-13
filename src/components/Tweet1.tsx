@@ -26,7 +26,9 @@ export default function Tweet1() {
         &mdash; South China Morning Post (@SCMPNews){' '}
         <a href='https://twitter.com/SCMPNews/status/1876946965793300485?ref_src=twsrc%5Etfw'>January 8, 2025</a>
       </blockquote>{' '}
-      <script async src='https://platform.twitter.com/widgets.js'></script>
+      <script async src='https://platform.twitter.com/widgets.js' charSet='utf-8'></script>
     </div>
   )
 }
+
+
