@@ -55,7 +55,7 @@ export default function JobAdTranslation() {
   )
 
   return (
-    <section className='jobAd relative w-full text-sm' ref={sectionRef}>
+    <section className='jobAd relative mt-6 w-full text-sm' ref={sectionRef}>
       <Image
         src='https://images.theconversation.com/files/643962/original/file-20250122-15-qmfqy7.png'
         align='right'
