@@ -1,11 +1,13 @@
 import { useEffect, useRef } from 'react'
 import PhoneGraphic from './PhoneGraphic'
 import { TextMessage } from './TextMessage'
-// import Imgix from 'react-imgix'
-// import gsap from 'gsap'
+import gsap from 'gsap'
+import { useGSAP } from '@gsap/react'
+import ScrollTrigger from 'gsap/ScrollTrigger'
 
 export default function ScamExampleModal() {
   const dialogRef = useRef<HTMLDialogElement | null>(null)
+  const phoneIconRef = useRef(null)
 
   const showModal = () => {
     dialogRef.current?.showModal()
@@ -48,13 +50,40 @@ export default function ScamExampleModal() {
     }
   }, [])
 
+  useGSAP(() => {
+    const phoneIcon = phoneIconRef.current
+    if (!phoneIcon) return
+
+    const tl = gsap
+      .timeline({ paused: true })
+      .to(phoneIcon, { yPercent: -100, duration: 1 / 4, ease: 'power2.out' })
+      .to(phoneIcon, { yPercent: 0, duration: 1 / 2, ease: 'bounce.out', delay: 1 / 4 }, 0)
+
+    ScrollTrigger.create({
+      trigger: phoneIcon,
+      start: 'top 70%',
+      end: 'top 30%',
+      onToggle: (self) => {
+        if (self.isActive) {
+          console.log('play')
+
+          tl.restart()
+        } else {
+          tl.pause(0)
+          console.log('revert')
+        }
+        console.log(self.isActive)
+      }
+    })
+  })
+
   return (
     <div className='flex justify-center'>
       <button
         onClick={showModal}
         className='mx-auto flex w-fit items-center text-balance border border-white bg-red-500/20 px-3 py-2 text-2xl transition-colors duration-150 ease-in-out hover:bg-red-500/30'
       >
-        <div className='animate-bounce'>
+        <div className='' ref={phoneIconRef}>
           <svg className='h-10 w-10 rotate-6' viewBox='0 0 1000 1024' xmlns='http://www.w3.org/2000/svg'>
             <path
               d='M551.424 0H176.128c-47.104 0-85.504 38.4-85.504 85.504v852.992c0 47.104 38.4 85.504 85.504 85.504h375.296c47.104 0 85.504-38.4 85.504-85.504V85.504C636.928 38.4 598.528 0 551.424 0M312.832 68.096h102.4c9.216 0 16.896 7.68 16.896 16.896s-7.68 16.896-16.896 16.896h-102.4c-9.216 0-16.896-7.68-16.896-16.896-.512-9.216 7.168-16.896 16.896-16.896m51.2 921.6c-28.16 0-51.2-23.04-51.2-51.2s23.04-51.2 51.2-51.2 51.2 23.04 51.2 51.2-23.04 51.2-51.2 51.2m238.592-136.704H124.928V170.496h477.696z'
@@ -87,8 +116,8 @@ export default function ScamExampleModal() {
               {/* <div className='flex-grow snap-y snap-mandatory space-y-4 overflow-y-scroll py-4'> */}
               <div className='firstModalMessage h-full place-content-center'>
                 <p className='relative mx-4 my-8 snap-end scroll-my-4 font-body text-lg font-bold text-neutral-50 md:text-2xl'>
-                  This is a real message thread sent to us by Laura, a victim in China. It starts with what seems like
-                  an innocent conversation.
+                  This is a real message thread sent to us by a scam victim in China. It starts with what seems like an
+                  innocent conversation
                   <span className='absolute left-1/2 top-full -translate-x-1/2 translate-y-1/3 text-sm text-neutral-400'>
                     <svg
                       className='mx-auto mt-2 h-6 w-6 animate-bounce text-neutral-400'
@@ -207,9 +236,8 @@ export default function ScamExampleModal() {
 
               <div className='relative mx-4 my-12 snap-end scroll-my-4 pt-10 font-body text-neutral-50'>
                 <p>
-                  After this introduction, the scammer begins messaging Laura daily, sharing details of his life. Over
-                  the course of 2–3 months, they become quite close, and her guard lowers. Eventually, he scams her with
-                  a cryptocurrency investment scheme.
+                  Over the course of several months, they become quite close, and she lowers her guard. Eventually, he
+                  scams her with a cryptocurrency investment scheme.
                 </p>
                 <p className='mt-4 text-balance text-center text-xs text-neutral-400'>
                   Click the red 'x' in the top left to close this window.
