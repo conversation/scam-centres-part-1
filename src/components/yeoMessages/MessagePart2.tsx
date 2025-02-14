@@ -23,10 +23,11 @@ export default function MessagePart2({ className }: { className: string }) {
           <div className='mx-auto w-full divide-y text-white sm:space-y-2'>
             <div className='grid w-full grid-cols-[15%_1fr_30%] items-center gap-4 py-1 sm:py-2'>
               <img
-                src='https://images.theconversation.com/files/641408/original/file-20250109-15-kx43t5.png?ixlib=rb-4.1.0&q=10&auto=format&w=100&h=100&fit=crop&dpr=1'
+                src='https://images.theconversation.com/files/641408/original/file-20250109-15-kx43t5.png?ixlib=rb-4.1.0&q=10&auto=format&w=40&h=40&fit=crop&dpr=1'
                 alt=''
-                className='not_fullscreen_media mx-auto aspect-square'
+                className='not_fullscreen_media mx-auto aspect-square w-10'
               />
+
               <div>
                 <div>
                   <p className='font-bold'>Mum</p>
@@ -41,9 +42,9 @@ export default function MessagePart2({ className }: { className: string }) {
             </div>
             <div className='grid w-full grid-cols-[15%_1fr_30%] items-center gap-4 py-1 sm:py-2'>
               <img
-                src='https://images.theconversation.com/files/641408/original/file-20250109-15-kx43t5.png?ixlib=rb-4.1.0&q=10&auto=format&w=100&h=100&fit=crop&dpr=1'
+                src='https://images.theconversation.com/files/641408/original/file-20250109-15-kx43t5.png?ixlib=rb-4.1.0&q=10&auto=format&w=40&h=40&fit=crop&dpr=1'
                 alt=''
-                className='not_fullscreen_media mx-auto aspect-square'
+                className='not_fullscreen_media mx-auto aspect-square w-10'
               />
               <div>
                 <div>
@@ -59,9 +60,9 @@ export default function MessagePart2({ className }: { className: string }) {
             </div>
             <div className='grid w-full grid-cols-[15%_1fr_30%] items-center gap-4 py-1 sm:py-2'>
               <img
-                src='https://images.theconversation.com/files/641408/original/file-20250109-15-kx43t5.png?ixlib=rb-4.1.0&q=10&auto=format&w=100&h=100&fit=crop&dpr=1'
+                src='https://images.theconversation.com/files/641408/original/file-20250109-15-kx43t5.png?ixlib=rb-4.1.0&q=10&auto=format&w=40&h=40&fit=crop&dpr=1'
                 alt=''
-                className='not_fullscreen_media mx-auto aspect-square'
+                className='not_fullscreen_media mx-auto aspect-square w-10'
               />
               <div>
                 <div>
@@ -77,9 +78,9 @@ export default function MessagePart2({ className }: { className: string }) {
             </div>
             <div className='grid w-full grid-cols-[15%_1fr_30%] items-center gap-4 py-1 sm:py-2'>
               <img
-                src='https://images.theconversation.com/files/641408/original/file-20250109-15-kx43t5.png?ixlib=rb-4.1.0&q=10&auto=format&w=100&h=100&fit=crop&dpr=1'
+                src='https://images.theconversation.com/files/641408/original/file-20250109-15-kx43t5.png?ixlib=rb-4.1.0&q=10&auto=format&w=40&h=40&fit=crop&dpr=1'
                 alt=''
-                className='not_fullscreen_media mx-auto aspect-square'
+                className='not_fullscreen_media mx-auto aspect-square w-10'
               />
               <div>
                 <div>
@@ -95,9 +96,9 @@ export default function MessagePart2({ className }: { className: string }) {
             </div>
             <div className='grid w-full grid-cols-[15%_1fr_30%] items-center gap-4 py-1 sm:py-2'>
               <img
-                src='https://images.theconversation.com/files/641408/original/file-20250109-15-kx43t5.png?ixlib=rb-4.1.0&q=10&auto=format&w=100&h=100&fit=crop&dpr=1'
+                src='https://images.theconversation.com/files/641408/original/file-20250109-15-kx43t5.png?ixlib=rb-4.1.0&q=10&auto=format&w=40&h=40&fit=crop&dpr=1'
                 alt=''
-                className='not_fullscreen_media mx-auto aspect-square'
+                className='not_fullscreen_media mx-auto aspect-square w-10'
               />
               <div>
                 <div>
@@ -113,9 +114,9 @@ export default function MessagePart2({ className }: { className: string }) {
             </div>
             <div className='grid w-full grid-cols-[15%_1fr_30%] items-center gap-4 py-1 sm:py-2'>
               <img
-                src='https://images.theconversation.com/files/641408/original/file-20250109-15-kx43t5.png?ixlib=rb-4.1.0&q=10&auto=format&w=100&h=100&fit=crop&dpr=1'
+                src='https://images.theconversation.com/files/641408/original/file-20250109-15-kx43t5.png?ixlib=rb-4.1.0&q=10&auto=format&w=40&h=40&fit=crop&dpr=1'
                 alt=''
-                className='not_fullscreen_media mx-auto aspect-square'
+                className='not_fullscreen_media mx-auto aspect-square w-10'
               />
               <div>
                 <div>
@@ -131,9 +132,9 @@ export default function MessagePart2({ className }: { className: string }) {
             </div>
             <div className='grid w-full grid-cols-[15%_1fr_30%] items-center gap-4 py-1 sm:py-2'>
               <img
-                src='https://images.theconversation.com/files/641408/original/file-20250109-15-kx43t5.png?ixlib=rb-4.1.0&q=10&auto=format&w=100&h=100&fit=crop&dpr=1'
+                src='https://images.theconversation.com/files/641408/original/file-20250109-15-kx43t5.png?ixlib=rb-4.1.0&q=10&auto=format&w=40&h=40&fit=crop&dpr=1'
                 alt=''
-                className='not_fullscreen_media mx-auto aspect-square'
+                className='not_fullscreen_media mx-auto aspect-square w-10'
               />
               <div>
                 <div>
