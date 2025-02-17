@@ -9,5 +9,9 @@ export default defineConfig({
     // Alternatively, we could add `<script>window.global = window;</script>` to index.html.
     // https://github.com/vitejs/vite/discussions/5912
     global: {}
+  },
+  server: {
+    port: 3001, // Change this to your desired port
+    host: 'localhost' // Or '0.0.0.0' to allow external access
   }
 })
