@@ -64,7 +64,7 @@ export default function SeverancePaymentBill() {
         alt='A list of charges for scam centre employees, including fees for using the toilet and viewing the sea air.'
         source='Source: Tencent QQ/Author provided'
         sourceLink='https://news.qq.com/rain/a/20221031A05BT400'
-        caption='Internet fraud companies charge their employees all sorts of fees, including using the toilet and breathing fresh air.'
+        caption='Internet fraud companies charge their employees all sorts of fees.'
       />
 
       <div className='not-prose absolute left-1/2 top-0 aspect-[103/121] h-auto max-h-[600px] w-full -translate-x-1/2 sm:h-screen sm:w-auto'>
