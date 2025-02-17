@@ -167,8 +167,8 @@
     @apply pointer-events-none flex h-screen w-full flex-col justify-center;
   }
 
-  .chapter_wrapper > * {
-    @apply pointer-events-auto text-balance;
+.chapter_wrapper > * {
+    @apply pointer-events-auto;
   }
 
   .chapter_dark_background > * {
@@ -176,24 +176,24 @@
   }
 
   .chapter_wrapper.right {
-    @apply items-center sm:w-1/2 sm:ml-auto;
+    @apply items-center sm:items-end;
   }
-  .chapter_wrapper.right p {
-    @apply text-center;
+  .chapter_wrapper.right > * {
+    @apply text-center sm:max-w-[50%];
   }
 
   .chapter_wrapper.left {
-    @apply items-center sm:w-1/2 sm:mr-auto;
+    @apply items-center sm:items-start;
   }
   .chapter_wrapper.left > * {
-    @apply text-center;
+    @apply text-center sm:max-w-[50%];
   }
 
   .chapter_wrapper.center {
     @apply items-center;
   }
   .chapter_wrapper.center > * {
-    @apply text-center sm:max-w-[80%];
+    @apply text-center sm:max-w-[60%];
   }
 
   /* ----- FOR THE PINNED BACKGROUND  ----- */
