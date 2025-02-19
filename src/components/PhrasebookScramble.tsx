@@ -104,13 +104,13 @@ export default function PhrasebookScramble() {
 
       <div className='not-prose absolute left-1/2 top-0 aspect-[927/634] w-image-width -translate-x-1/2 md:w-image-width-md'>
         <div className='absolute left-[3%] top-[5%]'>
-          <span id='scramble1' className='bg-neutral-900 py-1'></span>
+          <span id='scramble1' className='bg-neutral-900 py-1 leading-7'></span>
         </div>
         <div className='absolute left-[3%] top-[41%]'>
-          <span id='scramble2' className='bg-neutral-900 py-1'></span>
+          <span id='scramble2' className='bg-neutral-900 py-1 leading-7'></span>
         </div>
         <div className='absolute left-[3%] top-[69%] max-md:hidden'>
-          <span id='scramble3' className='bg-neutral-900 py-1'></span>
+          <span id='scramble3' className='bg-neutral-900 py-1 leading-7'></span>
         </div>
       </div>
     </section>
