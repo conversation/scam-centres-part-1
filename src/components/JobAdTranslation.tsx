@@ -62,10 +62,10 @@ export default function JobAdTranslation() {
         className=''
         imgClassName='aspect-[95/166] object-contain jobAdImg max-h-[600px]'
         loading='lazy'
-        alt='A job ad in Mandarin promising ¥19,000 (A$4,169) a month salary and 8 working hours, 5 days a week.'
+        alt='A Telegram ad for what sounds like a legitimate job.'
         source='Source: Telegram/Author provided'
         sourceLink=''
-        caption='A telegram ad promising ¥19,000 (A$4,169) a month salary and 8 working hours, 5 days a week.'
+        caption='A Telegram ad for what sounds like a legitimate job.'
       />
 
       <div className='sm:imgfloat-right not-prose absolute right-1/2 top-0 aspect-[95/166] h-screen max-h-[600px] w-auto translate-x-1/2 sm:right-0 sm:h-auto sm:w-full sm:translate-x-0'>
@@ -78,13 +78,15 @@ export default function JobAdTranslation() {
         <div className='absolute left-[9%] top-[20%]'>
           <span className='translation bg-neutral-900 p-1 opacity-0'>
             1: Work within park and follow up on project construction
-          </span>
-        </div>
-        <div className='absolute left-[9%] top-[23%]'>
-          <span className='translation bg-neutral-900 p-1 opacity-0'>
+            <br />
             2: Information management, file sorting, collection, registration
           </span>
         </div>
+        {/* <div className='absolute left-[9%] top-[23%]'>
+          <span className='translation bg-neutral-900 p-1 opacity-0'>
+            2: Information management, file sorting, collection, registration
+          </span>
+        </div> */}
         <div className='absolute left-[9%] top-[43%]'>
           <span className='translation bg-neutral-900 p-1 opacity-0'>Benefits</span>
         </div>
@@ -92,21 +94,29 @@ export default function JobAdTranslation() {
           <span className='translation bg-neutral-900 p-1 opacity-0'>Salary: workshop position ¥19,000/month</span>
         </div>
         <div className='absolute left-[9%] top-[52.7%]'>
-          <span className='translation bg-neutral-900 p-1 opacity-0'>1: Food and accommodation included</span>
-        </div>
-        <div className='absolute left-[9%] top-[56%]'>
           <span className='translation bg-neutral-900 p-1 opacity-0'>
+            1: Food and accommodation included
+            <br />
             2: Standard working system, 8 working hours per day, 5 days of work and 2 days of rest
           </span>
         </div>
-        <div className='absolute left-[9%] top-[73%]'>
-          <span className='translation bg-neutral-900 p-1 opacity-0'>4: Equipped with staff dormitory building</span>
-        </div>
-        <div className='absolute left-[9%] top-[77%]'>
+        {/* <div className='absolute left-[9%] top-[56%]'>
           <span className='translation bg-neutral-900 p-1 opacity-0'>
+            2: Standard working system, 8 working hours per day, 5 days of work and 2 days of rest
+          </span>
+        </div> */}
+        <div className='absolute left-[9%] top-[73%]'>
+          <span className='translation bg-neutral-900 p-1 opacity-0'>
+            4: Equipped with staff dormitory building
+            <br />
             5: Stable work income, focus on employee benefits and needs
           </span>
         </div>
+        {/* <div className='absolute left-[9%] top-[77%]'>
+          <span className='translation bg-neutral-900 p-1 opacity-0'>
+            5: Stable work income, focus on employee benefits and needs
+          </span>
+        </div> */}
       </div>
     </section>
   )

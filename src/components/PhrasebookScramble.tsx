@@ -65,10 +65,10 @@ export default function PhrasebookScramble() {
             duration: 2,
             text: {
               value: `
-                Man: I found that there is something in your eyes (to raise girl’s curiosity)<br>
+                Man: I found that there is something in your eyes (to raise the girl’s curiosity)<br>
                 Woman: What is that?<br>
                 Man: There is a goodlooking guy looking at you (link the answer to yourself)<br>
-                Woman: Haha, you are full of yourself (let the girl to make fun of you)<br>
+                Woman: Haha, you are full of yourself (let the girl make fun of you)<br>
                 Man: I have to look good to be able to talk to someone as cute as you.`,
               delimiter: ' '
             }
@@ -98,7 +98,7 @@ export default function PhrasebookScramble() {
         loading='eager'
         caption='Handwritten copy of some passages of a scam phrase book'
         alt='Handwritten copy of some passages of a scam phrase book'
-        source='Fujian Police, China'
+        source='Source: Author provided.'
         sourceLink='https://mp.weixin.qq.com/s/zWe0PWrW3TUQlGnX67ZFKA'
       />
 

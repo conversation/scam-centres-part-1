@@ -197,7 +197,7 @@ export default function ScamExampleModal() {
                 sender={false}
                 time='9:57 am'
               >
-                <p className='text-pretty text-base sm:text-lg'>I am so sorry, please accept my apologisies.</p>
+                <p className='text-pretty text-base sm:text-lg'>I am so sorry, please accept my apologies.</p>
               </TextMessage>
 
               <TextMessage
@@ -228,7 +228,7 @@ export default function ScamExampleModal() {
                 time='12:04 pm'
               >
                 <p className='text-pretty text-base sm:text-lg'>
-                  I did my conference successfully despite the small translation problem. Again, apologisies for talking
+                  I did my conference successfully despite the small translation problem. Again, apologies for talking
                   so rudely to you and the inconvenience. How was your day? It's my first time in Hong Kong, I'm just so
                   excited to e-meet you because of that "accident".
                 </p>
