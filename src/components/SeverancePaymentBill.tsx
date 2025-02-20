@@ -64,7 +64,7 @@ export default function SeverancePaymentBill() {
         alt='A list of charges for scam centre employees, including fees for using the toilet and viewing the sea air.'
         source='Source: Tencent QQ/Author provided'
         sourceLink='https://news.qq.com/rain/a/20221031A05BT400'
-        caption='Internet fraud companies charge their employees all sorts of fees.'
+        caption='An itemised bill for a scam worker in Cambodia.'
       />
 
       <div className='not-prose absolute left-1/2 top-0 aspect-[103/121] h-auto max-h-[600px] w-full -translate-x-1/2 sm:h-screen sm:w-auto'>
@@ -72,31 +72,31 @@ export default function SeverancePaymentBill() {
           <span className='severenceTranslation bg-neutral-900 p-1 opacity-0'>Floor Damage Fee</span>
         </div>
         <div className='absolute left-[76.5%] top-[42.7%] rotate-[6.1deg]'>
-          <span className='severenceTranslation bg-neutral-900 p-1 opacity-0'>~A$1,750</span>
+          <span className='severenceTranslation bg-neutral-900 p-1 opacity-0'>US$1,100</span>
         </div>
         <div className='absolute right-[24.2%] top-[45.3%] rotate-[6.1deg]'>
           <span className='severenceTranslation bg-neutral-900 p-1 opacity-0'>Chair Damage Fee</span>
         </div>
         <div className='absolute left-[76.5%] top-[46.8%] rotate-[6.1deg]'>
-          <span className='severenceTranslation bg-neutral-900 p-1 opacity-0'>~A$875</span>
+          <span className='severenceTranslation bg-neutral-900 p-1 opacity-0'>US$550</span>
         </div>
         <div className='absolute right-[25.4%] top-[56.1%] rotate-[6.8deg]'>
           <span className='severenceTranslation bg-neutral-900 p-1 opacity-0'>Drinking Water</span>
         </div>
         <div className='absolute left-[74.5%] top-[57.7%] rotate-[6.8deg]'>
-          <span className='severenceTranslation bg-neutral-900 p-1 opacity-0'>~A$650</span>
+          <span className='severenceTranslation bg-neutral-900 p-1 opacity-0'>US$410</span>
         </div>
         <div className='absolute right-[26.6%] top-[66.6%] rotate-[7.3deg]'>
           <span className='severenceTranslation bg-neutral-900 p-1 opacity-0'>Toilet Usage Fee</span>
         </div>
         <div className='absolute left-[73.5%] top-[67.9%] rotate-[7.3deg]'>
-          <span className='severenceTranslation bg-neutral-900 p-1 opacity-0'>~A$480</span>
+          <span className='severenceTranslation bg-neutral-900 p-1 opacity-0'>US$300</span>
         </div>
         <div className='absolute right-[27.4%] top-[69.5%] rotate-[7.6deg]'>
           <span className='severenceTranslation bg-neutral-900 p-1 opacity-0'>Seaside Air Breathing Fee</span>
         </div>
         <div className='absolute left-[73.5%] top-[71.5%] rotate-[7.6deg]'>
-          <span className='severenceTranslation bg-neutral-900 p-1 opacity-0'>~A$1,600</span>
+          <span className='severenceTranslation bg-neutral-900 p-1 opacity-0'>US$1,000</span>
         </div>
       </div>
     </section>
