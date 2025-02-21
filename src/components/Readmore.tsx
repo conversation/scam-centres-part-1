@@ -11,11 +11,19 @@ export default function Readmore() {
         </a>
       </div>
       <p className='!mb-0 !mt-0 italic'>
-        <a href='#' target='_parent' className='text-neutral-100 hover:text-neutral-200'>
+        <a
+          href='https://theconversation.com/scam-factories-the-inside-story-of-southeast-asias-brutal-fraud-compounds-250448'
+          target='_parent'
+          className='text-neutral-100 hover:text-neutral-200'
+        >
           Scam Factories
         </a>{' '}
         is a special multimedia and podcast series by The Conversation. Listen to the{' '}
-        <a href='#' target='_parent' className='text-neutral-100 hover:text-neutral-200'>
+        <a
+          href='https://theconversation.com/scam-factories-the-inside-story-of-southeast-asias-brutal-fraud-compounds-250448'
+          target='_parent'
+          className='text-neutral-100 hover:text-neutral-200'
+        >
           podcast series here
         </a>
         .
