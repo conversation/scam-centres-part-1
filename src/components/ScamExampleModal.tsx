@@ -65,12 +65,9 @@ export default function ScamExampleModal() {
       end: 'top 30%',
       onToggle: (self) => {
         if (self.isActive) {
-          console.log('play')
-
           tl.restart()
         } else {
           tl.pause(0)
-          console.log('revert')
         }
         console.log(self.isActive)
       }
