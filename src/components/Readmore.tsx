@@ -20,7 +20,7 @@ export default function Readmore() {
         </a>{' '}
         is a special multimedia and podcast series by The Conversation. Listen to the{' '}
         <a
-          href='https://theconversation.com/scam-factories-the-inside-story-of-southeast-asias-brutal-fraud-compounds-250448'
+          href='https://theconversation.com/it-seemed-like-a-good-job-at-first-how-people-are-trafficked-trapped-and-forced-to-scam-in-southeast-asia-scam-factories-podcast-ep-1-250444'
           target='_parent'
           className='text-neutral-100 hover:text-neutral-200'
         >
