@@ -48,7 +48,7 @@ export default function MessagePart3({ className }: { className: string }) {
           <div className='relative flex-grow overflow-clip bg-neutral-700'>
             <div className='mum_message_section absolute flex h-full w-full flex-grow flex-col justify-end gap-2'>
               <TextMessage
-                className='relative ml-auto mr-4 w-full max-w-[75%] p-2 shadow-md'
+                className='relative ml-auto mr-4 w-full max-w-[70%] p-2 shadow-md sm:max-w-[70%]'
                 sender={true}
                 time='March 13 7:22pm'
               >

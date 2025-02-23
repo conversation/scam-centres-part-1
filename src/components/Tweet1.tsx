@@ -15,7 +15,7 @@ export default function Tweet1() {
   }, [])
 
   return (
-    <div className='tweet1 flex w-[min(100%,750px)] justify-center'>
+    <div className='tweet1 mx-auto flex w-[min(100%-40px,750px)] justify-center'>
       <blockquote className='twitter-tweet'>
         <p lang='en' dir='ltr'>
           A Chinese actor reported missing at the Thailand-Myanmar border has been found after fears that he might have

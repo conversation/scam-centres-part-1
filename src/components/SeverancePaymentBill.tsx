@@ -68,36 +68,38 @@ export default function SeverancePaymentBill() {
       />
 
       <div className='not-prose absolute left-1/2 top-0 aspect-[103/121] h-auto max-h-[600px] w-full -translate-x-1/2 sm:h-screen sm:w-auto'>
-        <div className='absolute right-[23.8%] top-[41.66%] rotate-[6.1deg]'>
-          <span className='severenceTranslation bg-neutral-900 p-1 opacity-0'>Floor Damage Fee</span>
+        <div className='absolute right-[5%] top-[41.6%] rotate-[6.1deg]'>
+          <span className='severenceTranslation bg-neutral-900 p-1 opacity-0'>Floor Damage Fee - US$1,100</span>
         </div>
-        <div className='absolute left-[76.5%] top-[42.7%] rotate-[6.1deg]'>
+        {/* <div className='absolute left-[76.5%] top-[42.7%] rotate-[6.1deg]'>
           <span className='severenceTranslation bg-neutral-900 p-1 opacity-0'>US$1,100</span>
+        </div> */}
+        <div className='absolute right-[5.5%] top-[45.3%] rotate-[6.1deg]'>
+          <span className='severenceTranslation bg-neutral-900 p-1 opacity-0'>Chair Damage Fee - US$550</span>
         </div>
-        <div className='absolute right-[24.2%] top-[45.3%] rotate-[6.1deg]'>
-          <span className='severenceTranslation bg-neutral-900 p-1 opacity-0'>Chair Damage Fee</span>
-        </div>
-        <div className='absolute left-[76.5%] top-[46.8%] rotate-[6.1deg]'>
+        {/* <div className='absolute left-[76.5%] top-[46.8%] rotate-[6.1deg]'>
           <span className='severenceTranslation bg-neutral-900 p-1 opacity-0'>US$550</span>
+        </div> */}
+        <div className='absolute right-[7.3%] top-[56.1%] rotate-[6.8deg]'>
+          <span className='severenceTranslation bg-neutral-900 p-1 opacity-0'>Drinking Water - US$410</span>
         </div>
-        <div className='absolute right-[25.4%] top-[56.1%] rotate-[6.8deg]'>
-          <span className='severenceTranslation bg-neutral-900 p-1 opacity-0'>Drinking Water</span>
-        </div>
-        <div className='absolute left-[74.5%] top-[57.7%] rotate-[6.8deg]'>
+        {/* <div className='absolute left-[74.5%] top-[57.7%] rotate-[6.8deg]'>
           <span className='severenceTranslation bg-neutral-900 p-1 opacity-0'>US$410</span>
+        </div> */}
+        <div className='absolute right-[9.5%] top-[66.6%] rotate-[7.3deg]'>
+          <span className='severenceTranslation bg-neutral-900 p-1 opacity-0'>Toilet Usage Fee - US$300</span>
         </div>
-        <div className='absolute right-[26.6%] top-[66.6%] rotate-[7.3deg]'>
-          <span className='severenceTranslation bg-neutral-900 p-1 opacity-0'>Toilet Usage Fee</span>
-        </div>
-        <div className='absolute left-[73.5%] top-[67.9%] rotate-[7.3deg]'>
+        {/* <div className='absolute left-[73.5%] top-[67.9%] rotate-[7.3deg]'>
           <span className='severenceTranslation bg-neutral-900 p-1 opacity-0'>US$300</span>
+        </div> */}
+        <div className='absolute right-[10%] top-[69.5%] rotate-[7.6deg]'>
+          <span className='severenceTranslation bg-neutral-900 p-1 opacity-0'>
+            Seaside Air Breathing Fee - US$1,000
+          </span>
         </div>
-        <div className='absolute right-[27.4%] top-[69.5%] rotate-[7.6deg]'>
-          <span className='severenceTranslation bg-neutral-900 p-1 opacity-0'>Seaside Air Breathing Fee</span>
-        </div>
-        <div className='absolute left-[73.5%] top-[71.5%] rotate-[7.6deg]'>
+        {/* <div className='absolute left-[73.5%] top-[71.5%] rotate-[7.6deg]'>
           <span className='severenceTranslation bg-neutral-900 p-1 opacity-0'>US$1,000</span>
-        </div>
+        </div> */}
       </div>
     </section>
   )
