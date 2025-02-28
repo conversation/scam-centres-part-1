@@ -17,46 +17,96 @@ import Tweet1 from './components/Tweet1'
 import SeverancePaymentBill from './components/SeverancePaymentBill'
 import JobAdTranslation from './components/JobAdTranslation'
 import ScamExampleModal from './components/ScamExampleModal'
-import {TextMessage} from './components/TextMessage'
+import { TextMessage } from './components/TextMessage'
 import PhrasebookScramble from './components/PhrasebookScramble'
 
 <ArticleSetup
   theme='dark'
-  title="Locked in"
+  title='Locked in'
   dropCap={true}
   author='Ivan Franceschini & Ling Li'
   image='https://images.theconversation.com/files/611349/original/file-20240805-17-1jy5jj.jpg?ixlib=rb-4.1.0&q=15&auto=format&w=500&dpr=1'
   keywords={['Southeast Asia', 'Cambodia', 'Myanmar', 'scam', 'scam centre', 'scammers', 'Chinese scams']}
-  standfirst="Life inside the huge scam factories across Southeast Asia using modern slavery to staff their secret compounds."
+  standfirst='Life inside the huge scam factories across Southeast Asia using modern slavery to staff their secret compounds.'
 />
 
 <ScrollSection className='intro_section' pinType='pin_block'>
-  <ScrollBackground className='pointer-events-none sm:!w-1/2 sm:max-w-[min((100%-40px)/2,750px/2)] sm:!ml-[50vw]'>
+  <ScrollBackground className='pointer-events-none sm:!ml-[50vw] sm:!w-1/2 sm:max-w-[min((100%-40px)/2,750px/2)]'>
     <IntroPhoneScam />
   </ScrollBackground>
   <ScrollForeground className=''>
     <ScrollTextChapter className='max-sm:chapter_dark_background' position='left'>
       <div className='relative'>
         Chances are you’ve received a text message like this.
-        <span className='text-neutral-400 text-sm absolute top-full left-1/2 -translate-x-1/2 translate-y-1/3'>Scroll down<svg className="mx-auto animate-bounce mt-2 h-6 w-6 text-neutral-400" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" viewBox="0 0 24 24" stroke="currentColor"><path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg></span>
+        <span className='absolute left-1/2 top-full -translate-x-1/2 translate-y-1/3 text-sm text-neutral-400'>
+          Scroll down
+          <svg
+            className='mx-auto mt-2 h-6 w-6 animate-bounce text-neutral-400'
+            fill='none'
+            strokeLinecap='round'
+            strokeLinejoin='round'
+            strokeWidth='3'
+            viewBox='0 0 24 24'
+            stroke='currentColor'
+          >
+            <path d='M19 14l-7 7m0 0l-7-7m7 7V3'></path>
+          </svg>
+        </span>
       </div>
     </ScrollTextChapter>
-    <ScrollTextChapter step={true} position='left' className='max-sm:chapter_dark_background '>
-     <div className='relative'>
-        Most likely you just deleted it.
-        <span className='text-neutral-400 text-sm absolute top-full left-1/2 -translate-x-1/2 translate-y-1/3'> <svg className="mx-auto animate-bounce mt-2 h-6 w-6 text-neutral-400" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" viewBox="0 0 24 24" stroke="currentColor"><path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg></span>
-      </div>
-    </ScrollTextChapter>
-    <ScrollTextChapter step={true} position='left' className='max-sm:chapter_dark_background ' id='introLastTrigger'  >
+    <ScrollTextChapter step={true} position='left' className='max-sm:chapter_dark_background'>
       <div className='relative'>
-    But have you ever wondered who's sending them?
-    <span className='text-neutral-400 text-sm absolute top-full left-1/2 -translate-x-1/2 translate-y-1/3'><svg className="mx-auto animate-bounce mt-2 h-6 w-6 text-neutral-400" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" viewBox="0 0 24 24" stroke="currentColor"><path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg></span>
+        Most likely you just deleted it.
+        <span className='absolute left-1/2 top-full -translate-x-1/2 translate-y-1/3 text-sm text-neutral-400'>
+          {' '}
+          <svg
+            className='mx-auto mt-2 h-6 w-6 animate-bounce text-neutral-400'
+            fill='none'
+            strokeLinecap='round'
+            strokeLinejoin='round'
+            strokeWidth='3'
+            viewBox='0 0 24 24'
+            stroke='currentColor'
+          >
+            <path d='M19 14l-7 7m0 0l-7-7m7 7V3'></path>
+          </svg>
+        </span>
       </div>
     </ScrollTextChapter>
-    <ScrollTextChapter step={true} position='left' className='pb-4 max-sm:chapter_dark_background' >
+    <ScrollTextChapter step={true} position='left' className='max-sm:chapter_dark_background' id='introLastTrigger'>
+      <div className='relative'>
+        But have you ever wondered who's sending them?
+        <span className='absolute left-1/2 top-full -translate-x-1/2 translate-y-1/3 text-sm text-neutral-400'>
+          <svg
+            className='mx-auto mt-2 h-6 w-6 animate-bounce text-neutral-400'
+            fill='none'
+            strokeLinecap='round'
+            strokeLinejoin='round'
+            strokeWidth='3'
+            viewBox='0 0 24 24'
+            stroke='currentColor'
+          >
+            <path d='M19 14l-7 7m0 0l-7-7m7 7V3'></path>
+          </svg>
+        </span>
+      </div>
+    </ScrollTextChapter>
+    <ScrollTextChapter step={true} position='left' className='max-sm:chapter_dark_background pb-4'>
       <div className='relative'>
         We're going to take you inside their world.
-        <span className='text-neutral-400 text-sm absolute top-full left-1/2 -translate-x-1/2 translate-y-1/3'><svg className="mx-auto animate-bounce mt-2 h-6 w-6 text-neutral-400" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" viewBox="0 0 24 24" stroke="currentColor"><path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg></span>
+        <span className='absolute left-1/2 top-full -translate-x-1/2 translate-y-1/3 text-sm text-neutral-400'>
+          <svg
+            className='mx-auto mt-2 h-6 w-6 animate-bounce text-neutral-400'
+            fill='none'
+            strokeLinecap='round'
+            strokeLinejoin='round'
+            strokeWidth='3'
+            viewBox='0 0 24 24'
+            stroke='currentColor'
+          >
+            <path d='M19 14l-7 7m0 0l-7-7m7 7V3'></path>
+          </svg>
+        </span>
       </div>
     </ScrollTextChapter>
   </ScrollForeground>
@@ -72,13 +122,17 @@ import PhrasebookScramble from './components/PhrasebookScramble'
     <br />
   </div>
 
-  <div className='mx-auto max-w-[25ch] md:max-w-[40ch] text-center'>
-    <TitleTextBorder
+{' '}
+
+<div className='mx-auto max-w-[25ch] text-center md:max-w-[40ch]'>
+  <TitleTextBorder
     as={'h1'}
     bgClassName='bg-neutral-900'
-    className='text-neutral-50 text-center font-body text-xl font-bold md:text-3xl'
-    >The inside story of Southeast Asia’s fraud compounds</TitleTextBorder>
-  </div>
+    className='text-center font-body text-xl font-bold text-neutral-50 md:text-3xl'
+  >
+    The inside story of Southeast Asia’s fraud compounds
+  </TitleTextBorder>
+</div>
 
   <div className='text-center mt-4'>
     <h2>Part 1</h2>
@@ -111,12 +165,12 @@ Thirty days since Ben and his wife Moira realised their well-paid new casino job
 
 Now they have to choose: pay their captors a US$20,000 ransom or get to work in the scam compound.
 
-<ScrollSection pinType='pin_clipped' className='mt-12 barbedWireQuotes'>
+<ScrollSection pinType='pin_clipped' className='barbedWireQuotes mt-12'>
   <ScrollBackground>
     <Picture
       src='https://images.theconversation.com/files/644291/original/file-20250123-16-f8y3ci.jpeg'
       loading='eager'
-      className='full_screen_media make_visible '
+      className='full_screen_media make_visible'
       imgClassName='brightness-50 object-center'
       caption=''
       source='Photo: Ivan Franceschini'
@@ -130,10 +184,10 @@ Now they have to choose: pay their captors a US$20,000 ransom or get to work in 
         desktop: { x: 0.5, y: 0.5 }
       }}
     />
-     <Picture
+    <Picture
       src='https://images.theconversation.com/files/644319/original/file-20250123-16-iyd33s.jpeg'
       loading='eager'
-      className='full_screen_media '
+      className='full_screen_media'
       imgClassName='brightness-50 object-[40%_70%]'
       caption=''
       source='Photo: Ivan Franceschini'
@@ -147,10 +201,10 @@ Now they have to choose: pay their captors a US$20,000 ransom or get to work in 
         desktop: { x: 0.5, y: 0.65 }
       }}
     />
-     <Picture
+    <Picture
       src='https://images.theconversation.com/files/644317/original/file-20250123-15-gjki5i.jpeg'
       loading='eager'
-      className='full_screen_media '
+      className='full_screen_media'
       imgClassName='brightness-50 object-[40%_70%]'
       caption=''
       source='Photo: Ivan Franceschini'
@@ -167,7 +221,7 @@ Now they have to choose: pay their captors a US$20,000 ransom or get to work in 
     <Picture
       src='https://images.theconversation.com/files/644334/original/file-20250123-21-ol6945.JPG'
       loading='eager'
-      className='full_screen_media '
+      className='full_screen_media'
       imgClassName='brightness-50 object-[80%_50%]'
       caption=''
       source='Photo: Ivan Franceschini'
@@ -183,16 +237,31 @@ Now they have to choose: pay their captors a US$20,000 ransom or get to work in 
     />
   </ScrollBackground>
   <ScrollForeground>
-    <ScrollTextChapter className='' position='' >
-      <Pullquote className='text-white' quoteClassname='opacity-20' quote="It had these tall walls, barbed wire and cameras everywhere […] And when we got into the compound, we were told we weren't allowed to get out." />
+    <ScrollTextChapter className='' position=''>
+      <Pullquote
+        className='text-white'
+        quoteClassname='opacity-20'
+        quote="It had these tall walls, barbed wire and cameras everywhere […] And when we got into the compound, we were told we weren't allowed to get out."
+      />
     </ScrollTextChapter>
     <ScrollTextChapter step={true} position='center' className='chapter_dark_background'>
-     At first Ben and Moira try passive resistance: they sit at their desks and refuse to make any calls. It doesn't work.
+      At first Ben and Moira try passive resistance: they sit at their desks and refuse to make any calls. It doesn't
+      work.
     </ScrollTextChapter>
-    <ScrollTextChapter step={true} className='' position='' >
+    <ScrollTextChapter step={true} className='' position=''>
       <div>
-        <Pullquote className='text-white' quoteClassname='opacity-20' quote='They said […] they would rape my wife if I do not sit and answer phone calls.' />
-        <Pullquote className='text-white' quoteClassname='opacity-20' quote='They tried all kinds of coercive manoeuvres. You know, using a fire extinguisher to [pretend] to hit me to scare me, using a plastic bag over my head to suffocate me.' startQuoteIcon={false} endQuoteIcon={true}/>
+        <Pullquote
+          className='text-white'
+          quoteClassname='opacity-20'
+          quote='They said […] they would rape my wife if I do not sit and answer phone calls.'
+        />
+        <Pullquote
+          className='text-white'
+          quoteClassname='opacity-20'
+          quote='They tried all kinds of coercive manoeuvres. You know, using a fire extinguisher to [pretend] to hit me to scare me, using a plastic bag over my head to suffocate me.'
+          startQuoteIcon={false}
+          endQuoteIcon={true}
+        />
       </div>
     </ScrollTextChapter>
     <ScrollTextChapter step={true} position='center' className='chapter_dark_background'>
@@ -201,13 +270,15 @@ Now they have to choose: pay their captors a US$20,000 ransom or get to work in 
   </ScrollForeground>
 </ScrollSection>
 
-
 <ScrollSection pinType='pin_clipped' className='yeo_messages'>
-  <ScrollBackground  className='pointer-events-none' bgClassName='sm:max-w-[min((100%-40px)/2,750px/2)] sm:!ml-[calc((100%-min(100%-40px,750px))/2)]'>
-    <MessagePart1 className="full_screen_media make_visible z-[1]"/>
-    <MessagePart1b className="full_screen_media make_visible"/>
-    <MessagePart2 className="full_screen_media  z-[2]" />
-    <MessagePart3 className="full_screen_media z-[2]" />
+  <ScrollBackground
+    className='pointer-events-none'
+    bgClassName='sm:max-w-[min((100%-40px)/2,750px/2)] sm:!ml-[calc((100%-min(100%-40px,750px))/2)]'
+  >
+    <MessagePart1 className='full_screen_media make_visible z-[1]' />
+    <MessagePart1b className='full_screen_media make_visible' />
+    <MessagePart2 className='full_screen_media z-[2]' />
+    <MessagePart3 className='full_screen_media z-[2]' />
   </ScrollBackground>
   <ScrollForeground className=''>
     <ScrollTextChapter step={true} position='right' className='max-sm:chapter_dark_background'>
@@ -216,16 +287,16 @@ Now they have to choose: pay their captors a US$20,000 ransom or get to work in 
     <ScrollTextChapter position='right' className='max-sm:chapter_dark_background'>
       He tells her she must pay US$20,000 for him and his wife to be released.
     </ScrollTextChapter>
-    <ScrollTextChapter step={true} position='right' className='max-sm:chapter_dark_background' id=''  >
+    <ScrollTextChapter step={true} position='right' className='max-sm:chapter_dark_background' id=''>
       Ben makes seven more calls pleading for the money.
     </ScrollTextChapter>
-    <ScrollTextChapter step={true} position='right' className='max-sm:chapter_dark_background'  >
+    <ScrollTextChapter step={true} position='right' className='max-sm:chapter_dark_background'>
       At night, he secretly sends her his Google location.
     </ScrollTextChapter>
-    <ScrollTextChapter step={true} position='right' className='max-sm:chapter_dark_background'  >
+    <ScrollTextChapter step={true} position='right' className='max-sm:chapter_dark_background'>
       He's becoming increasingly anxious.
     </ScrollTextChapter>
-    <ScrollTextChapter step={true} position='right' className='max-sm:chapter_dark_background'  >
+    <ScrollTextChapter step={true} position='right' className='max-sm:chapter_dark_background'>
       He sends a final text.
     </ScrollTextChapter>
   </ScrollForeground>
@@ -248,7 +319,7 @@ They saw a recruitment agency was hiring staff for a casino in the town of Bavet
   alt='A scam job ad from WhatsApp.'
   source='Source: Ben Yeo'
   caption='The scam job ad that lured Ben and Moira to Cambodia.'
-/> 
+/>{' '}
 
 Ben did some research on the company and everything seemed to check out. It was registered and had a recruitment licence from the Cambodian government.
 
@@ -263,11 +334,14 @@ They both negotiated new jobs, Ben doing business development and Moira as a car
   alt='Ben Yeo looks out from a balcony in Manilla.'
   source='Photo: KDA.'
   caption='Ben Yeo in Manila, Philippines.'
-/> 
+/>{' '}
 
 From the moment they arrived at the compound, Ben had a bad feeling. Then his new employers told him he wasn't allowed to leave.
 
-<Pullquote className='' quote="They said, I'm sorry, this whole thing, it's not a casino. This is not a casino industry. As a matter of fact, we are doing scams."  />
+<Pullquote
+  className=''
+  quote="They said, I'm sorry, this whole thing, it's not a casino. This is not a casino industry. As a matter of fact, we are doing scams."
+/>
 
 Ben and Moira aren’t alone. Experts estimate there are hundreds of thousands of scammers in the industry across Southeast Asia. Some of them are unrepentant criminals, ruthlessly exploiting victims across the world. Others are victims themselves, trafficked and held against their will. Others still are desperate people willing to participate in the industry to survive, but once inside, find they can no longer leave.
 
@@ -298,7 +372,7 @@ We've spoken to nearly 100 survivors from compounds mostly located in Cambodia, 
         desktop: { x: 0.5, y: 0.5 }
       }}
     />
-  
+
     <Picture
       src='https://images.theconversation.com/files/644305/original/file-20250123-17-nq1665.JPG'
       loading='lazy'
@@ -367,33 +441,43 @@ We've spoken to nearly 100 survivors from compounds mostly located in Cambodia, 
         desktop: { x: 0.5, y: 0.9 }
       }}
     />
+
   </ScrollBackground>
   <ScrollForeground>
     <ScrollTextChapter position='' className='chapter_dark_background text-center'>
-      Because the industry is hidden behind high walls mounted with barbed wire and surveillance cameras, we’ve also spent countless hours tracking the scammers online.
+      Because the industry is hidden behind high walls mounted with barbed wire and surveillance cameras, we’ve also
+      spent countless hours tracking the scammers online.
     </ScrollTextChapter>
     <ScrollTextChapter step={true} position='' className='chapter_dark_background text-center'>
-       We've scoured Telegram channels and messages, online job advertisement websites and social media platforms to understand how criminal groups lure people into the industry.
+      We've scoured Telegram channels and messages, online job advertisement websites and social media platforms to
+      understand how criminal groups lure people into the industry.
     </ScrollTextChapter>
     <ScrollTextChapter step={true} position='' className='chapter_dark_background text-center'>
-      And we gathered a wealth of data through years of observing the power networks and money flows that underpin the industry.
+      And we gathered a wealth of data through years of observing the power networks and money flows that underpin the
+      industry.
     </ScrollTextChapter>
     <ScrollTextChapter step={true} position='center' className='chapter_dark_background'>
       Everybody's situation is different. Every story of how they got trapped varies.
     </ScrollTextChapter>
     <ScrollTextChapter step={true} position='' className='chapter_dark_background text-center'>
-      Alongside our research partner, Mark Bo, we will be publishing a book in mid-2025, [Scam: Inside Southeast Asia’s Cybercrime Compounds](https://www.versobooks.com/en-gb/products/3234-scam).
+      Alongside our research partner, Mark Bo, we will be publishing a book in mid-2025, [Scam: Inside Southeast Asia’s
+      Cybercrime Compounds](https://www.versobooks.com/en-gb/products/3234-scam).
     </ScrollTextChapter>
   </ScrollForeground>
 </ScrollSection>
 
-## Predators or prey? 
+## Predators or prey?
 
 Those who become trapped in the compounds come from all walks of life. Many scammers [from mainland China](https://link.springer.com/article/10.1007/s12117-024-09552-2) are what Chinese authorities refer to as "_san di_" ("three lows"), meaning they have low income, education and age. Desperation drives them to the industry. As one former scammer told us:
 
 <Pullquote className='' quote='I didn’t care if it was Cambodia or Colombia: I really needed a job.' />
 
-<Pullquote className='' quote="At that point, my children were starving. […] I really could not afford to be unemployed anymore." startQuoteIcon={false} endQuoteIcon={true} />
+<Pullquote
+  className=''
+  quote='At that point, my children were starving. […] I really could not afford to be unemployed anymore.'
+  startQuoteIcon={false}
+  endQuoteIcon={true}
+/>
 
 Many are lured by vague-sounding ads on job recruitment websites or social media, while others are directly targeted.
 
@@ -405,7 +489,7 @@ Telegram is a popular platform for recruiters. The jobs often sound like legitim
 
 There are often promises of high salaries, year-end bonuses and promotion opportunities. Yet, many ads have minimal skill requirements, such as basic computer literacy and fluency in a specific language. This is a red flag. As is the offer to cover food, accommodation and travel expenses.
 
-Others are tempted into the industry through brokers, who may spend months building personal connections with their victims before approaching them with an “unmissable” job opportunity. These brokers are typically paid a fee by the scam company, which then becomes a debt the victim or their family must later pay to secure their freedom. 
+Others are tempted into the industry through brokers, who may spend months building personal connections with their victims before approaching them with an “unmissable” job opportunity. These brokers are typically paid a fee by the scam company, which then becomes a debt the victim or their family must later pay to secure their freedom.
 
 Some are duped by people in their social circles, friends or even relatives. Other victims are kidnapped right off the street. During the pandemic, out-of-work gangsters turned to kidnapping people for scam operations to make a living.
 
@@ -421,23 +505,32 @@ Newcomers must also be instructed in how to pull off a scam. Some are highly scr
 
 <PhrasebookScramble />
 
-Approaching a scam target and earning their trust can sometimes take months. Here's how one scammer first ensnared a woman in China over WhatsApp, texting daily and presenting himself as a successful cryptocurrency investor. 
+Approaching a scam target and earning their trust can sometimes take months. Here's how one scammer first ensnared a woman in China over WhatsApp, texting daily and presenting himself as a successful cryptocurrency investor.
 
 <ScamExampleModal />
 
 In many compounds, the scammers work long shifts, sometimes as many as 17 hours. Some begin their day shouting a slogan, such as:
 
-<Pullquote className='' quote='Two hands typing on a keyboard can earn you billions in gold; work hard on marketing and you will win. Go for it!' />
+<Pullquote
+  className=''
+  quote='Two hands typing on a keyboard can earn you billions in gold; work hard on marketing and you will win. Go for it!'
+/>
 
 But very few actually "win". Their performance benchmarks are extremely high. One employee in a Cambodian compound told us they were expected to generate US$10,000 in revenue each month and entice two to three new victims a day.
 
 The most successful employees are held up as models. One former scammer told us it's akin to brainwashing.
 
-<Pullquote className='' quote='The ‘excellent employee’ would get monetary awards, promotions and, sometimes, the privilege to temporarily exit the compound. If you were one of them, they would buy you good food and take you to gamble or even pay for sex workers to let you taste their rich life.' />
+<Pullquote
+  className=''
+  quote='The ‘excellent employee’ would get monetary awards, promotions and, sometimes, the privilege to temporarily exit the compound. If you were one of them, they would buy you good food and take you to gamble or even pay for sex workers to let you taste their rich life.'
+/>
 
 For those who cannot meet their targets, life quickly becomes a nightmare. They can be beaten, subjected to electric shocks and even have their nails extracted.
 
-<Pullquote className='' quote='We could hear the screams continuing until midnight […] They made sure you understand that you do not want to be the next one to end up in the punishment room.' />
+<Pullquote
+  className=''
+  quote='We could hear the screams continuing until midnight […] They made sure you understand that you do not want to be the next one to end up in the punishment room.'
+/>
 
 <Image
   src='https://images.theconversation.com/files/611286/original/file-20240805-23-wjps1j.jpeg'
@@ -448,7 +541,7 @@ For those who cannot meet their targets, life quickly becomes a nightmare. They 
   alt='One of the many buildings across Sihanoukville, Cambodia, surrounded by barbed wire with barred windows.'
   source='Photo: Roun Ry'
   caption='One of the many buildings across Sihanoukville, Cambodia, surrounded by barbed wire with barred windows.'
-/> 
+/>{' '}
 
 Sexual violence is rife. Alice, a Taiwanese woman using a pseudonym, told us that when she refused to engage in scam work, she was sold numerous times between compounds and repeatedly raped. Before she was finally rescued, the gangsters threatened to lock her up in a brothel-like clubhouse at a scam compound to serve at the pleasure of the managers and workforce.
 
@@ -463,7 +556,7 @@ Male victims are also forced to perform sexual acts on each other as a form of p
   alt='Aerial view of a compound in Sihanoukville, Cambodia.'
   source='Photo: Roun Ry'
   caption='Aerial view of a compound (right) in Sihanoukville, Cambodia, reported to have housed online scam operations.'
-/> 
+/>{' '}
 
 Another harrowing aspect of life inside the compounds is the potential to be sold like a slave to the highest bidder. We have heard of skilled workers fluent in Mandarin fetching anywhere between US$10,000-30,000.
 
@@ -489,15 +582,30 @@ Another harrowing aspect of life inside the compounds is the potential to be sol
 
 Despite Ben's pleading text messages, his family refuses to pay the ransom. As punishment, he is separated from his wife and locked in a room by himself.
 
-<Pullquote className='' quote="It's a combination between a prison and a madhouse. So the walls are like padded with, I think, four-inch pads. If you start screaming in there, no one will be able to hear you." />
+<Pullquote
+  className=''
+  quote="It's a combination between a prison and a madhouse. So the walls are like padded with, I think, four-inch pads. If you start screaming in there, no one will be able to hear you."
+/>
 
-<Pullquote className='' quote="And in the room, there's only one railing, which is half a foot above the ground. And basically they handcuffed me on that railing. So I wasn't even able to stand up and they were starving me, depriving me of the toilet, water, food." startQuoteIcon={false} endQuoteIcon={true}/>
+<Pullquote
+  className=''
+  quote="And in the room, there's only one railing, which is half a foot above the ground. And basically they handcuffed me on that railing. So I wasn't even able to stand up and they were starving me, depriving me of the toilet, water, food."
+  startQuoteIcon={false}
+  endQuoteIcon={true}
+/>
 
 <div className=''>
-  <figure className='sm:float-right sm:ml-4 aspect-[4/5] h-auto sm:w-1/2 my-0'>
-    <video poster='https://images.theconversation.com/files/649431/original/file-20250217-50-nmmsca.png?ixlib=rb-4.1.0&q=10&auto=format&w=400' src='https://cdn.theconversation.com/infographics/1141/81f4f9b52ac690df8fb6aa7f19279763f13ed3a0/site/Svay%20Rieng%20Station.mp4' controls muted className='not-prose' ></video>
+  <figure className='my-0 aspect-[4/5] h-auto sm:float-right sm:ml-4 sm:w-1/2'>
+    <video
+      poster='https://images.theconversation.com/files/649431/original/file-20250217-50-nmmsca.png?ixlib=rb-4.1.0&q=10&auto=format&w=400'
+      src='https://cdn.theconversation.com/infographics/1141/81f4f9b52ac690df8fb6aa7f19279763f13ed3a0/site/Svay%20Rieng%20Station.mp4'
+      controls
+      muted
+      className='not-prose'
+    ></video>
     <figcaption>
-    Moira and Ben were held at a police station with other scam compound survivors.{" "}<span className='opacity-75'>Source: Ben Yeo</span>
+      Moira and Ben were held at a police station with other scam compound survivors.{' '}
+      <span className='opacity-75'>Source: Ben Yeo</span>
     </figcaption>
   </figure>
 </div>
@@ -510,9 +618,17 @@ With the help of an influential family friend in Cambodia, they're transferred t
 
 For weeks, Ben and Moira are subjected to questioning by Cambodian authorities.
 
-<Pullquote className='clear-both' quote="The human trafficking department was constantly seeking areas where they can press charges on me." />
+<Pullquote
+  className='clear-both'
+  quote='The human trafficking department was constantly seeking areas where they can press charges on me.'
+/>
 
-<Pullquote className='' quote="From a victim of kidnapping, I become the perpetrator." startQuoteIcon={false} endQuoteIcon={true}/>
+<Pullquote
+  className=''
+  quote='From a victim of kidnapping, I become the perpetrator.'
+  startQuoteIcon={false}
+  endQuoteIcon={true}
+/>
 
 Eventually, they are released by the police and taken to a shelter run by a charity. But even then, the anti-trafficking authorities try to paint them as criminals. After three months there, they're finally told they'll be returning home. But only if they sign a document agreeing not to pursue charges against their captors.
 
@@ -524,16 +640,22 @@ Eventually, they are released by the police and taken to a shelter run by a char
   loading='lazy'
   alt='A family friend came to pick Ben and Moira up from the police station.'
   source='Source: Ben Yeo'
-  caption="A family friend came to pick Ben (right) and Moira up from the police station."
-/> 
+  caption='A family friend came to pick Ben (right) and Moira up from the police station.'
+/>{' '}
 
-<Pullquote className='' quote="We have to build again from the ground up. We are just very thankful that, you know, we have all these good people around us." />
+<Pullquote
+  className=''
+  quote='We have to build again from the ground up. We are just very thankful that, you know, we have all these good people around us.'
+/>
 
 _In [part two of our series](https://scam-factories-rise-of-an-industry.netlify.app/), we explore how scamming exploded overnight in Southeast Asia to become a multi-billion-dollar industry._
 
-
-<img src="https://counter.theconversation.com/content/250515/count.gif?distributor=republish-lightbox-advanced" alt="The Conversation" className='!border-0 !shadow-none !m-0 !max-h-[1px] !max-w-[1px] !min-h-[1px] !min-w-[1px] !opacity-0 !outline-none !p-0 w-px h-px' referrerPolicy='no-referrer-when-downgrade' />
-
+<img
+  src='https://counter.theconversation.com/content/250515/count.gif?distributor=republish-lightbox-advanced'
+  alt='The Conversation'
+  className='!m-0 h-px !max-h-[1px] !min-h-[1px] w-px !min-w-[1px] !max-w-[1px] !border-0 !p-0 !opacity-0 !shadow-none !outline-none'
+  referrerPolicy='no-referrer-when-downgrade'
+/>
 
 <AuthorSection>
  <Acknowledgements>
@@ -597,11 +719,24 @@ _In [part two of our series](https://scam-factories-rise-of-an-industry.netlify.
         title='Head of Audio, The Conversation UK'
       />
     </Editors>
+
   </Editorial>
 
   <Disclosures>
     The Conversation contacted all the companies mentioned in the series for comment (with the exception of Jinshui, which couldn't be contacted). We didn't receive any responses.
 
     In 2024, Ivan, Ling, Mark, and others co-founded EOS Collective, a non-profit organisation dedicated to investigating the dynamics of the online scam industry and the criminal networks behind it, and supporting survivors of forced criminality in these operations.
+
+<hr />
+<div className='text-lg'>
+_If this article has raised issues for you, or you’re concerned about someone you know, you can contact these organisations working to combat human trafficking in Southeast Asia:_
+
+- _[Blue Dragon](https://www.bluedragon.org/who-we-are/)_
+
+- _[Global Alms Inc](https://www.globalalms.com/protection)_
+
+_And if you've been the [victim of a scam](https://www.cyber.gov.au/report-and-recover/recover-from/scams), or you think you may have been targeted by a scammer, you can reach out to the [National Anti-Scam Centre](https://www.scamwatch.gov.au/report-a-scam) and [ReportCyber](https://www.cyber.gov.au/report-and-recover/report) for information._
+
+</div>
   </Disclosures>
 </AuthorSection>
